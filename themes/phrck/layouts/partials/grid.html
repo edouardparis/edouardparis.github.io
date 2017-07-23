@@ -1,0 +1,18 @@
+<div class="hidden-xs">
+  <div class="column">
+    {{ $length := len .Data.Pages}}
+    {{ range $square := (seq 1 365)}}
+    <div class="square square-grey">
+      {{range $index, $page := $.Data.Pages}}
+      {{$yd := $page.Date.YearDay}}
+      {{ if eq $square $yd }}
+      <div class="square square-black"></div>
+      {{ end }}
+      {{end}}
+    </div>
+    {{if modBool . 7}}
+  </div><div class="column">
+    {{end}}
+    {{end}}
+  </div>
+</div>
