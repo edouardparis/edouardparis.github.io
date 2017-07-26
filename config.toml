@@ -1,3 +1,17 @@
-title = "edouard.paris"
+title = "Edouard Paris"
 baseURL = "https://edouard.paris"
 theme = "phrck"
+DefaultContentLanguage = "en"
+
+[blackfriday]
+angledQuotes = false
+
+[languages]
+[languages.en]
+copyright= "my copyright"
+
+[languages.fr]
+copyright= ""
+
+[languages.fr.blackfriday]
+angledQuotes = true
