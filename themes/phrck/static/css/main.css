@@ -52,21 +52,22 @@ code {
 
 nav {
   display: block;
+  width: 100%;
 }
 
 nav ul {
-  padding: 0;
+  padding-top: 2em;
   margin: 0;
   margin-left: auto;
   margin-right: auto;
 }
 
-nav li {
-  display: inline;
-}
-
 nav a {
  text-decoration: none; 
+}
+
+nav li {
+  list-style-type: none;
 }
 
 .date {
@@ -77,6 +78,8 @@ section {
   padding: 2em;
   display: block;
   max-width: 75ch;
+  position: relative;
+  display: block;
 }
 
 section li {
@@ -92,8 +95,8 @@ section ul {
   max-width: 68ch;
 }
 
-.main-header {
-  margin-top: 1em;
+.main-header h1 {
+  margin-top: 0;
 }
 
 article {
@@ -228,4 +231,26 @@ hr::before {
 
 .language-red {
   color: #ff5f56;
+}
+
+@media only screen and (min-width: 768px) {
+  nav {
+    position: relative;
+    float: left;
+    width: 110px;
+    /* reset style */
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    text-align: right;
+  }
+  nav ul {
+    position: fixed; 
+  }
+  article {
+    margin-left: 110px; 
+  }
+  section {
+    margin-left: 110px; 
+  }
 }
