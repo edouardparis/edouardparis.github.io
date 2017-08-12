@@ -237,7 +237,7 @@ hr::before {
   nav {
     position: relative;
     float: left;
-    width: 110px;
+    width: 200px;
     /* reset style */
     visibility: visible;
     opacity: 1;
@@ -248,9 +248,9 @@ hr::before {
     position: fixed; 
   }
   article {
-    margin-left: 110px; 
+    margin-left: 200px; 
   }
   section {
-    margin-left: 110px; 
+    margin-left: 200px; 
   }
 }

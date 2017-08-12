@@ -2,12 +2,36 @@
   "name": "2017",
   "readings": [
     {
-      "title": "harry potter", 
-      "author": "JK"
+      "title": "La symphonie des nombres premiers", 
+      "author": "Markus du Sautoy"
     },
     {
-      "title": "Le choeur des femmes", 
-      "author": "JK"
+      "title": "Vernon Subutex", 
+      "author": "Virginie Despentes"
+    },
+    {
+      "title": "Lolita", 
+      "author": "Vladimir Nabokov"
+    },
+    {
+      "title": "Le Chœur des femmes", 
+      "author": "Martin Winckler"
+    },
+    {
+      "title": "Ne tirez pas sur l'oiseau moqueur", 
+      "author": "Harper Lee"
+    },
+    {
+      "title": "Bonjour tristesse", 
+      "author": "Françoise Sagan"
+    },
+    {
+      "title": "Charlotte", 
+      "author": "David Foenkinos"
+    },
+    {
+      "title": "L'hibiscus pourpre", 
+      "author": "Chimamanda Ngozi Adichie"
     }
   ]
 }
