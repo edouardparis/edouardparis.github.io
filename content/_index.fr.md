@@ -11,12 +11,14 @@ date = "2017-01-14T16:20:16+01:00"
  /::\:\__\ /:/\:\__\ /::|/\__\ /\/::\__\ /:/\:\__\ /:/_/\__\ /::\:\__\
  \:\::/  / \:\/:/  / \/|::/  / \::/\/__/ \:\/:/  / \:\/:/  / \;:::/  /
   \::/  /   \::/  /    |:/  /   \/__/     \::/  /   \::/  /   |:\/__/ 
-   \/__/     \/__/     \/__/               \/__/     \/__/     \|__| 
+   \/__/     \/__/     \/__/               \/__/     \/__/     \|__| ,
 ```
+Je m'appelle Edouard Paris.
 
-Je suis élève ingénieur en informatique et en mathématiques, vous pouvez me retrouver sur :
+Je suis élève ingénieur en informatique et mathématiques appliquées, 
+vous pouvez me retrouver sur :
 
-* [Twitter](https://twitter.com/edouardparis)
-* [GitHub](https://github.com/edouardparis)
-* [LinkedIn](https://www.linkedin.com/in/parisedouard/)
-* [Keybase](https://www.keybase.io/edouardparis)
+  [Twitter](https://twitter.com/edouardparis)
+/ [GitHub](https://github.com/edouardparis)
+/ [LinkedIn](https://www.linkedin.com/in/parisedouard/)
+/ [Keybase](https://www.keybase.io/edouardparis)

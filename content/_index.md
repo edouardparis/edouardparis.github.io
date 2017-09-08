@@ -14,10 +14,11 @@ date = "2017-01-14T16:20:16+01:00"
 
 My name is Edouard Paris.
 
-I am a French engineering student in computer science and mathematics.  
+I am a French engineering student in computer science and applied mathematics.  
 Find me on:
 
-* [Twitter](https://twitter.com/edouardparis)
-* [GitHub](https://github.com/edouardparis)
-* [LinkedIn](https://www.linkedin.com/in/parisedouard/)
-* [Keybase](https://www.keybase.io/edouardparis)
+  [Twitter](https://twitter.com/edouardparis)
+/ [GitHub](https://github.com/edouardparis)
+/ [LinkedIn](https://www.linkedin.com/in/parisedouard/)
+/ [Keybase](https://www.keybase.io/edouardparis)
+
