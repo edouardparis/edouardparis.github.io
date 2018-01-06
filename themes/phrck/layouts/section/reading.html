@@ -3,7 +3,7 @@
   <div class="article-body">
     {{ .Content }}
   </div>
-  {{ range $.Site.Data.readings}}
+  {{ range sort $.Site.Data.readings "name" "desc" }}
     <h2>{{ .name }}</h2>
     {{ range .readings }}
       {{ partial "reading" . }}
