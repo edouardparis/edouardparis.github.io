@@ -7,6 +7,10 @@ body {
   font-family: 'Inconsolata', 'Monospace';
   color: #1F2429;
   background-color: #fff;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75ch;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -52,22 +56,30 @@ code {
 
 nav {
   display: block;
-  width: 100%;
+  margin-top: 10px;
 }
 
 nav ul {
-  padding-top: 2em;
   margin: 0;
-  margin-left: auto;
-  margin-right: auto;
+  display: inline-block;
+}
+
+.menu-section {
+  float: right;
+}
+
+.menu-lang {
+  padding: 0;
 }
 
 nav a {
- text-decoration: none; 
+ text-decoration: none;
+ font-weight: bold;
 }
 
 nav li {
   list-style-type: none;
+  display: inline;
 }
 
 .date {
@@ -75,9 +87,8 @@ nav li {
 }
 
 section {
-  padding: 2em;
   display: block;
-  max-width: 75ch;
+  margin-top: 10%;
   position: relative;
   display: block;
 }
@@ -101,7 +112,6 @@ section ul {
 
 article {
   display: block;
-  max-width: 75ch;
   border-top: none;
   margin-left: auto;
   margin-right: auto;
@@ -119,10 +129,10 @@ article {
 }
 
 .article-body table>thead>tr>th,
-.article-body table>tbody>tr>th, 
-.article-body table>tfoot>tr>th, 
-.article-body table>thead>tr>td, 
-.article-body table>tbody>tr>td, 
+.article-body table>tbody>tr>th,
+.article-body table>tfoot>tr>th,
+.article-body table>thead>tr>td,
+.article-body table>tbody>tr>td,
 .article-body table>tfoot>tr>td {
   padding-left: 1ch;
   padding-right: 1ch;
@@ -152,7 +162,7 @@ article {
 .article-body a {
   color: #067df7;
 }
-.article-body a:hover, 
+.article-body a:hover,
 .article-body a:focus {
   color: #fff;
   background-color: #067df7;
@@ -196,12 +206,12 @@ hr::before {
   text-align: left;
 }
 
-.article-body ul li:before { 
-  content: "- "; 
+.article-body ul li:before {
+  content: "- ";
 }
 
-.article-body ol li:before { 
-  content: counters(item, ".") ". "; 
+.article-body ol li:before {
+  content: counters(item, ".") ". ";
   counter-increment: item;
 }
 
@@ -231,26 +241,4 @@ hr::before {
 
 .language-red {
   color: #ff5f56;
-}
-
-@media only screen and (min-width: 768px) {
-  nav {
-    position: relative;
-    float: left;
-    width: 200px;
-    /* reset style */
-    visibility: visible;
-    opacity: 1;
-    display: block;
-    text-align: right;
-  }
-  nav ul {
-    position: fixed; 
-  }
-  article {
-    margin-left: 200px; 
-  }
-  section {
-    margin-left: 200px; 
-  }
 }

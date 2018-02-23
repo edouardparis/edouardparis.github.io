@@ -1,28 +1,25 @@
-<nav>
-  <div class="menu">
-    <ul class="sidebar-menu">
-      {{ $currentPage := . }}
-      <li>
-        {{ range $index := .Site.Menus.lang}}
-          {{ .Pre }}
-          <a href="{{.URL}}">
-            <span>{{ .Name }}</span>
-          </a>
-        {{ end }}
-      </li>
-      {{ range .Site.Menus.main }}
-        <li>
-          <a href="{{.URL}}">
-            {{ .Pre }}
-            <span>{{ .Name }}</span>
-          </a>
-        </li>
-        {{end}}
-    </ul>
-  </div>
-  <div class="table-of-content">
-    {{ .TableOfContents }}
-  </div>
+<nav class="menu">
+  <ul class="menu-lang">
+    {{ $currentPage := . }}
+    <li>
+      {{ range $index := .Site.Menus.lang}}
+      {{ .Pre }}
+      <a href="{{.URL}}">
+        <span>{{ .Name }}</span>
+      </a>
+      {{ end }}
+    </li>
+  </ul>
+  <ul class="menu-section">
+    {{ range .Site.Menus.main }}
+    <li>
+      <a href="{{.URL}}">
+        {{ .Pre }}
+        <span>{{ .Name }}</span>
+      </a>
+    </li>
+    {{end}}
+  </ul>
 </nav>
 
 
