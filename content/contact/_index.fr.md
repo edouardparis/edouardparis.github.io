@@ -10,4 +10,3 @@ Pour me contacter :
 * [Twitter](https://twitter.com/edouardparis)
 *  email : m[at]edouard[dot]paris
 *  irc : /query Ed0 chez freenode or /ted chez irc.iiens.net
-*  GPG: [here](https://keybase.io/edouardparis/pgp_keys.asc)

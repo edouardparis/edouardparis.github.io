@@ -10,4 +10,3 @@ If you want to contact me please use :
 *  Twitter
 *  email : m[at]edouard[dot]paris
 *  irc : /query Ed0 on freenode or /ted on irc.iiens.net
-*  GPG: [here](https://keybase.io/edouardparis/pgp_keys.asc)
