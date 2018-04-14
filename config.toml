@@ -1,13 +1,14 @@
-title = "Edouard Paris"
+title = "edouard.paris"
 baseURL = "https://edouard.paris"
 theme = "phrck"
 DefaultContentLanguage = "en"
+pluralizeListTitles = false
 
 [blackfriday]
 angledQuotes = false
 
 [languages.en]
-copyright = "my copyright"
+copyright = "2018 EdouardParis."
 
 [[languages.en.menu.lang]]
 url = "/fr"
@@ -20,18 +21,34 @@ url = "/"
 name = "en"
 weight = 0
 
-[[languages.en.menu.main]]
-url = "/contact"
-name = "contact"
-weight = 0
 
 [[languages.en.menu.main]]
 url = "/reading"
 name = "reading"
+identifier = "reading"
+weight = 1
+
+[[languages.en.menu.main]]
+url = "/reading/books"
+name = "books"
+parent = "reading"
 weight = 0
 
+[[languages.en.menu.main]]
+name = "about"
+identifier = "about"
+weight = 0
+
+
+[[languages.en.menu.main]]
+url = "/contact"
+name = "contact"
+parent = "about"
+weight = 0
+
+
 [languages.fr]
-copyright= ""
+copyright = "2018 EdouardParis."
 
 [[languages.fr.menu.lang]]
 url = "/fr"
@@ -45,13 +62,26 @@ name = "en"
 weight = 0
 
 [[languages.fr.menu.main]]
-url = "/fr/contact"
-name = "contact"
+url = "/fr/reading"
+name = "lecture"
+identifier = "lecture"
 weight = 0
 
 [[languages.fr.menu.main]]
-url = "/fr/lecture"
-name = "lecture"
+url = "/fr/reading/books"
+name = "livres"
+parent = "lecture"
+weight = 0
+
+[[languages.fr.menu.main]]
+name = "à propos"
+identifier = "a-propos"
+weight = 0
+
+[[languages.fr.menu.main]]
+url = "/fr/contact"
+name = "contact"
+parent = "a-propos"
 weight = 0
 
 [[languages.fr.blackfriday]]

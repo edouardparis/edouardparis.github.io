@@ -11,3 +11,5 @@ aliases = "/fr/lecture"
  / / -_) __/ __/ // / __/ -_)
 /_/\__/\__/\__/\_,_/_/  \__/
 ```
+
+liste exhaustive de mes derniers livres lus: [./books](/fr/reading/books)

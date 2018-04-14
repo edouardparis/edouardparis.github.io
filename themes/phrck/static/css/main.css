@@ -7,10 +7,6 @@ body {
   font-family: 'Inconsolata', 'Monospace';
   color: #1F2429;
   background-color: #fff;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  width: 75ch;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -65,15 +61,24 @@ nav ul {
 }
 
 .menu-section {
-  float: right;
+  width: 20%;
+}
+
+.copyright {
+  width: 30%;
+}
+
+.menu-section h3 {
+  text-transform: uppercase;
+}
+
+.menu-section ul {
+  padding: 0;
+  margin: 0;
 }
 
 .menu-lang {
   padding: 0;
-}
-
-nav a {
-  text-transform: uppercase;
 }
 
 nav li {
@@ -88,8 +93,11 @@ nav li {
 section {
   display: block;
   margin-top: 10%;
+  margin-bottom: 10%;
   position: relative;
-  display: block;
+  width: 75ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 section li {
@@ -214,16 +222,15 @@ hr::before {
   counter-increment: item;
 }
 
-.copyright li {
-  padding: 0px;
-}
-
 #footer {
-  display: block;
-  max-width: 75ch;
+  position: relative;
+  width: 75ch;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 3em;
+}
+
+.menu {
+  display: flex;
 }
 
 .language-ascii {
@@ -258,6 +265,14 @@ hr::before {
 		margin: 5px;
 		padding: 0;
 	}
+
+  section {
+    width: auto;
+  }
+
+  #footer {
+    width: auto;
+  }
 
 	/* fixer une largeur maximale de 100% aux éléments potentiellement problématiques */
 
@@ -321,5 +336,13 @@ hr::before {
     font-size: 8px;
     display: block;
     line-height: 0.8;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .menu-section {
+    width: 100%;
   }
 }

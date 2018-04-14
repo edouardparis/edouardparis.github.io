@@ -1,8 +1,6 @@
 {{ partial "head.html" . }}
 <section>
-  <div class="article-body">
-    {{ .Content }}
-  </div>
+  {{ partial "body" .}}
   {{ range sort $.Site.Data.readings "name" "desc" }}
     <h2>{{ .name }}</h2>
     {{ range .readings }}

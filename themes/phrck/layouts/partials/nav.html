@@ -1,25 +1,39 @@
 <nav class="menu">
-  <ul class="menu-lang">
+  <div class="menu-section">
     {{ $currentPage := . }}
-    <li>
+    <h3>
       {{ range $index := .Site.Menus.lang}}
       {{ .Pre }}
       <a href="{{.URL}}">
         <span>{{ .Name }}</span>
       </a>
       {{ end }}
-    </li>
-  </ul>
-  <ul class="menu-section">
+    </h3>
+  </div>
     {{ range .Site.Menus.main }}
-    <li>
-      <a href="{{.URL}}">
-        {{ .Pre }}
-        <span>{{ .Name }}</span>
-      </a>
-    </li>
+  <div class="menu-section">
+    {{ if .HasChildren }}
+        <h3><a>{{ .Name }}</a></h3>
+    <ul class="submenu">
+      {{ range .Children }}
+      <li>
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      </li>
+      {{ end }}
+    </ul>
+    {{ else }}
+      <h3><a href="{{.URL}}">
+        {{ .Name }}
+        </a></h3>
     {{end}}
-  </ul>
+  </div>
+    {{end}}
+  <div class="menu-section copyright">
+    <h3>Copyright</h3>
+    <p>&copy; {{ .Site.Copyright }}
+    <br />Powered by <a href="http://gohugo.io" target="_blank">Hugo</a></a>
+    </p>
+  </div>
 </nav>
 
 
