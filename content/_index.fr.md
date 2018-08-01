@@ -15,7 +15,7 @@ date = "2017-01-14T16:20:16+01:00"
 ```
 Je m'appelle Edouard Paris.
 
-Je suis élève ingénieur en informatique et mathématiques appliquées,
+Je suis ingénieur en informatique et mathématiques appliquées,
 vous pouvez me retrouver sur :
 
   [Twitter](https://twitter.com/edouardparis)

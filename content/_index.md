@@ -14,7 +14,7 @@ date = "2017-01-14T16:20:16+01:00"
 
 My name is Edouard Paris.
 
-I am a French engineering student in computer science and applied mathematics.
+I am a French engineer in computer science and applied mathematics.
 Find me on:
 
   [Twitter](https://twitter.com/edouardparis)
