@@ -19,6 +19,6 @@ This list, started in 2017 follows no topic or particular guideline per
 year. Books are chosen by my curiosity and the recommendations of my friends.
 
 Computer science and programming manuals are not included. I mostly
-cherry pick information in them.
+cherry pick information from them.
 
-If the title is translated in french: I read the french translation.
+If the title is translated in French: I read the French translation.
