@@ -1,11 +1,14 @@
 {{ partial "head.html" . }}
 <section>
   {{ partial "body" .}}
+  <hr>
   {{ range sort $.Site.Data.readings "name" "desc" }}
     <h2>{{ .name }}</h2>
+    <p>
     {{ range .readings }}
       {{ partial "reading" . }}
     {{ end }}
+    </p>
   {{ end }}
 </section>
 {{ partial "foot" . }}
