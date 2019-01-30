@@ -57,6 +57,11 @@ name = "contact"
 parent = "about"
 weight = 0
 
+[[languages.en.menu.main]]
+url = "https://tippin.me/@edouardparis"
+name = "tip ⚡ "
+parent = "about"
+weight = 0
 
 [languages.fr]
 copyright = "2018 EdouardParis."
@@ -105,6 +110,13 @@ url = "/fr/contact"
 name = "contact"
 parent = "a-propos"
 weight = 0
+
+[[languages.fr.menu.main]]
+url = "https://tippin.me/@edouardparis"
+name = "tip ⚡ "
+parent = "a-propos"
+weight = 0
+
 
 [[languages.fr.blackfriday]]
 angledQuotes = true
