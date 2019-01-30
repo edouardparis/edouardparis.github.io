@@ -1,11 +1,11 @@
 body {
-  font-family: 'Inconsolata', 'Monospace';
+  font-family: 'Courier New', 'Courier', 'Monospace';
   color: #1F2429;
   background-color: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Inconsolata', 'Monospace';
+  font-family: 'Courier New', 'Courier', 'Monospace';
   font-size: 1em;
   font-weight: bold;
 }
