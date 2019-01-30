@@ -35,6 +35,17 @@ parent = "reading"
 weight = 0
 
 [[languages.en.menu.main]]
+name = "writing"
+identifier = "writing"
+weight = 2
+
+[[languages.en.menu.main]]
+url = "https://github.com/edouardparis"
+name = "code"
+parent = "writing"
+weight = 0
+
+[[languages.en.menu.main]]
 name = "about"
 identifier = "about"
 weight = 0
@@ -65,12 +76,23 @@ weight = 0
 url = "/fr/reading"
 name = "lecture"
 identifier = "lecture"
-weight = 0
+weight = 1
 
 [[languages.fr.menu.main]]
 url = "/fr/reading/books"
 name = "livres"
 parent = "lecture"
+weight = 0
+
+[[languages.fr.menu.main]]
+name = "écrits"
+identifier = "écrits"
+weight = 2
+
+[[languages.fr.menu.main]]
+url = "https://github.com/edouardparis"
+name = "code"
+parent = "écrits"
 weight = 0
 
 [[languages.fr.menu.main]]
