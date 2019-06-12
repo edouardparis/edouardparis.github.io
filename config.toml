@@ -1,11 +1,16 @@
 title = "edouard.paris"
 baseURL = "https://edouard.paris"
-theme = "phrck"
+theme = ["phrck", "reveal-hugo"]
 DefaultContentLanguage = "en"
 pluralizeListTitles = false
 
 [blackfriday]
 angledQuotes = false
+
+[outputFormats.Reveal]
+baseName = "index"
+mediaType = "text/html"
+isHTML = true
 
 [languages.en]
 copyright = "2018 EdouardParis."
