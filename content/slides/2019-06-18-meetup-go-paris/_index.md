@@ -38,4 +38,8 @@ secp256k1: y² = x³ + 7
 
 ![example transactions bitcoin](transac.svg)
 
+---
+
+![bidirectional-channel](bidirectional-channel.svg)
+
 
