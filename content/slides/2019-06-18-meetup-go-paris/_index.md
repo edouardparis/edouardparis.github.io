@@ -16,18 +16,20 @@ An example with LND and lntop
 
 ## Bitcoin
 
-* 1976 Asymetric encryption - Diffie-Hellman
-* 1992 ECDSA - Scott Vanstone
-* 1992 Cypherpunk: E. Hughes - T. May - J. Gilmore
-* 1997 Hashcash - A. Black
-* 1998 b-money - Wei Dai  | BitGold - N. Szabo
-* 2008 Bitcoin whitepaper - S. Nakamoto
-* 2009 first block mined
+{{% fragment %}}* 1976 Asymetric encryption - Diffie-Hellman{{% /fragment %}}
+{{% fragment %}}* 1992 ECDSA - Scott Vanstone{{% /fragment %}}
+{{% fragment %}}* 1992 Cypherpunk: E. Hughes - T. May - J. Gilmore{{% /fragment %}}
+{{% fragment %}}* 1997 Hashcash - A. Black{{% /fragment %}}
+{{% fragment %}}* 1998 b-money - Wei Dai  | BitGold - N. Szabo{{% /fragment %}}
+{{% fragment %}}* 2008 Bitcoin whitepaper - S. Nakamoto{{% /fragment %}}
+{{% fragment %}}* 2009 first block mined{{% /fragment %}}
 
 
-secp256k1: y² = x³ + 7
+{{% fragment %}}secp256k1: y² = x³ + 7{{% /fragment %}}
 
 ---
+
+{{% section %}}
 
 ## Lightning Network
 
@@ -53,14 +55,24 @@ explication sigkey and bitcoin script
 
 explication HTLC
 
+{{% /section %}}
+
 ---
 
+{{% section %}}
 ## The Lightning Daemon LND
 
 - src: https://github.com/LightningNetwork/lnd
 - doc: https://api.lightning.community/
 - version: v0.7.0
 - support: https://lightningcommunity.slack.com/
+
+---
+
+
+{{< slide id="api-docs" background-iframe="https://api.lightning.community/">}}
+
+{{% /section %}}
 
 ---
 
@@ -174,3 +186,7 @@ Schema MVC
 ---
 
 Code MVC
+
+---
+
+{{< slide id="" background-iframe="https://tippin.me/@edouardparis">}}
