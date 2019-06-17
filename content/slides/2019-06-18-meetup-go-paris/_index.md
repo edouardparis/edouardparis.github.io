@@ -114,12 +114,10 @@ func NewConn(c *Config) (*grpc.ClientConn, error) {
 		return nil, errors.WithStack(err)
 	}
 
-	macConstraints := []macaroons.Constraint{
+	constrainedMac, err := macaroons.AddConstraints(mac,
 		macaroons.TimeoutConstraint(c.MacaroonTimeOut),
 		macaroons.IPLockConstraint(c.MacaroonIP),
-	}
-
-	constrainedMac, err := macaroons.AddConstraints(mac, macConstraints...)
+    )
 	if err != nil {
 		return nil, errors.WithStack(err)
 	}
@@ -134,14 +132,12 @@ func NewConn(c *Config) (*grpc.ClientConn, error) {
 		return nil, err
 	}
 
-	opts := []grpc.DialOption{
+	conn, err := grpc.Dial(u.Hostname(),
 		grpc.WithTransportCredentials(cred),
 		grpc.WithPerRPCCredentials(macaroons.NewMacaroonCredential(constrainedMac)),
 		grpc.WithDialer(lncfg.ClientAddressDialer(u.Port())),
 		grpc.WithDefaultCallOptions(grpc.MaxCallRecvMsgSize(c.MaxMsgRecvSize)),
-	}
-
-	conn, err := grpc.Dial(u.Hostname(), opts...)
+    )
 	if err != nil {
 		return nil, errors.WithStack(err)
 	}
