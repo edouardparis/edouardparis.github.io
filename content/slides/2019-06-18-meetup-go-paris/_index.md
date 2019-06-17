@@ -45,7 +45,7 @@ An example with LND and lntop
 
 ---
 
-explication sigkey and bitcoin script
+![P2PKH](P2PKH.svg)
 
 ---
 
