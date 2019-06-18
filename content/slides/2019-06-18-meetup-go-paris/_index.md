@@ -101,12 +101,22 @@ Payment = **Amount** + **Payment Hash** + **Delay**
 
 {{< slide id="api-docs" background-iframe="https://api.lightning.community/">}}
 
-{{% /section %}}
+---
+
+## Macaroons
+
+*Macaroons: Cookies with Contextual Caveats for Decentralized Authorization in the Cloud"* (http://theory.stanford.edu/~ataly/Papers/macaroons.pdf)
+
+code: https://gopkg.in/macaroon.v1
+
+* `admin.macaroon`
+* `readonly.macaroon`
+* `invoice.macaroon`
 
 ---
 
 ```go
-package lnd
+package client
 
 import (
 	"io/ioutil"
@@ -175,11 +185,7 @@ func NewConn(c *Config) (*grpc.ClientConn, error) {
 }
 ```
 
-
-
----
-
-Macaroon
+{{% /section %}}
 
 ---
 
@@ -195,14 +201,305 @@ architecture
 
 ---
 
+{{% section %}}
+
 ### grpc connexion pool
-
+https://github.com/processout/grpc-go-pool
+![conn-pool](conn-pool.svg)
 
 ---
 
+```go
+type Factory func() (*grpc.ClientConn, error)
+
+type Pool struct {
+	conns   chan Conn
+	factory Factory
+	mu      sync.RWMutex
+	timeout time.Duration
+}
+
+func (p *Pool) Get(ctx context.Context) (*Conn, error) {
+    p.mu.Lock()
+	conns := p.conns
+	p.mu.Unlock()
+
+	if conns == nil {
+		return nil, ErrClosed
+	}
+
+	conn := Conn{
+		pool: p,
+	}
+
+	select {
+	case conn = <-conns:
+	case <-ctx.Done():
+		return nil, ErrTimeout
+	}
+
+	if conn.ClientConn != nil &&
+		p.timeout > 0 &&
+		conn.usedAt.Add(p.timeout).Before(time.Now()) {
+		conn.ClientConn.Close()
+		conn.ClientConn = nil
+	}
+
+	var err error
+	if conn.ClientConn == nil {
+		conn.ClientConn, err = p.factory()
+		if err != nil {
+			conns <- Conn{
+				pool: p,
+			}
+		}
+	}
+
+	return &conn, err
+}
+
+func (p *Pool) Close() {
+	p.mu.Lock()
+	conns := p.conns
+	p.conns = nil
+	p.mu.Unlock()
+
+	if conns == nil {
+		return
+	}
+
+	close(conns)
+	for i := 0; i < p.Capacity(); i++ {
+		client := <-conns
+		if client.ClientConn == nil {
+			continue
+		}
+		client.ClientConn.Close()
+	}
+}
+```
+
+---
+
+
+```go
+
+package pool
+
+import (
+	"time"
+
+	"google.golang.org/grpc"
+)
+
+type Conn struct {
+	*grpc.ClientConn
+	pool   *Pool
+	usedAt time.Time
+}
+
+func (c *Conn) Close() error {
+	if c == nil {
+		return nil
+	}
+	if c.ClientConn == nil {
+		return ErrAlreadyClosed
+	}
+	if c.pool.IsClosed() {
+		return ErrClosed
+	}
+
+	conn := Conn{
+		pool:       c.pool,
+		ClientConn: c.ClientConn,
+	}
+	select {
+	case c.pool.conns <- conn:
+	default:
+		return ErrFullPool
+	}
+	return nil
+}
+```
+{{% /section %}}
+
+---
+
+
+{{% section %}}
 ### pubsub
+![pubsub](pubsub.svg)
 
 ---
+
+```go
+
+package pubsub
+
+import (
+	"context"
+	"sync"
+
+	"github.com/edouardparis/lntop/events"
+	"github.com/edouardparis/lntop/logging"
+	"github.com/edouardparis/lntop/network"
+	"github.com/edouardparis/lntop/network/models"
+)
+
+type PubSub struct {
+	stop    chan bool
+	logger  logging.Logger
+	network *network.Network
+	wg      *sync.WaitGroup
+}
+
+func New(logger logging.Logger, network *network.Network) *PubSub {
+	return &PubSub{
+		logger:  logger.With(logging.String("logger", "pubsub")),
+		network: network,
+		wg:      &sync.WaitGroup{},
+		stop:    make(chan bool),
+	}
+}
+
+```
+
+---
+
+```go
+
+func (p *PubSub) invoices(ctx context.Context, sub chan *events.Event) {
+	p.wg.Add(3)
+	invoices := make(chan *models.Invoice)
+	ctx, cancel := context.WithCancel(ctx)
+
+	go func() {
+		for invoice := range invoices {
+			p.logger.Debug("received invoice", logging.Object("invoice", invoice))
+			if invoice.Settled {
+				sub <- events.New(events.InvoiceSettled)
+			} else {
+				sub <- events.New(events.InvoiceCreated)
+			}
+		}
+		p.wg.Done()
+	}()
+
+	go func() {
+		err := p.network.SubscribeInvoice(ctx, invoices)
+		if err != nil {
+			p.logger.Error("SubscribeInvoice returned an error", logging.Error(err))
+		}
+		p.wg.Done()
+	}()
+
+	go func() {
+		<-p.stop
+		cancel()
+		close(invoices)
+		p.wg.Done()
+	}()
+}
+
+```
+
+---
+```go
+
+func (l Backend) SubscribeInvoice(ctx context.Context, channelInvoice chan *models.Invoice) error {
+	clt, err := l.Client(ctx)
+	if err != nil {
+		return err
+	}
+	defer clt.Close()
+
+	cltInvoices, err := clt.SubscribeInvoices(ctx, &lnrpc.InvoiceSubscription{})
+	if err != nil {
+		return err
+	}
+
+	for {
+		select {
+		case <-ctx.Done():
+			break
+		default:
+			invoice, err := cltInvoices.Recv()
+			if err != nil {
+				st, ok := status.FromError(err)
+				if ok && st.Code() == codes.Canceled {
+					l.logger.Debug("stopping subscribe invoice: context canceled")
+					return nil
+				}
+				return err
+			}
+
+			channelInvoice <- lookupInvoiceProtoToInvoice(invoice)
+		}
+	}
+}
+```
+
+{{% /section %}}
+
+---
+
+{{% section %}}
+# gocui
+
+https://github.com/jroimartin/gocui
+
+---
+
+```go
+package main
+
+import (
+	"fmt"
+	"log"
+
+	"github.com/jroimartin/gocui"
+)
+
+func main() {
+	g, err := gocui.NewGui(gocui.OutputNormal)
+	if err != nil {
+		log.Panicln(err)
+	}
+	defer g.Close()
+
+	g.SetManagerFunc(layout)
+
+	if err := g.SetKeybinding("", gocui.KeyCtrlC, gocui.ModNone, quit); err != nil {
+		log.Panicln(err)
+	}
+
+	if err := g.MainLoop(); err != nil && err != gocui.ErrQuit {
+		log.Panicln(err)
+	}
+}
+
+func layout(g *gocui.Gui) error {
+	maxX, maxY := g.Size()
+	if v, err := g.SetView("hello", maxX/2-7, maxY/2, maxX/2+7, maxY/2+2); err != nil {
+		if err != gocui.ErrUnknownView {
+			return err
+		}
+		fmt.Fprintln(v, "Hello world!")
+	}
+	return nil
+}
+
+func quit(g *gocui.Gui, v *gocui.View) error {
+	return gocui.ErrQuit
+}
+```
+
+{{% /section %}}
+
+---
+
+
+{{% section %}}
 
 ### Ui - MVC
 
@@ -210,7 +507,49 @@ Schema MVC
 
 ---
 
-Code MVC
+```go
+
+func (c *controller) Listen(ctx context.Context, g *gocui.Gui,
+    sub chan *events.Event) {
+
+	c.logger.Debug("Listening...")
+	refresh := func(fn ...func(context.Context) error) {
+		for i := range fn {
+			err := fn[i](ctx)
+			if err != nil {
+				c.logger.Error("failed", logging.Error(err))
+			}
+		}
+		g.Update(func(*gocui.Gui) error { return nil })
+	}
+
+	for event := range sub {
+		c.logger.Debug("event received",
+            logging.String("type", event.Type))
+		switch event.Type {
+		case events.TransactionCreated:
+			refresh(
+				c.models.RefreshInfo,
+				c.models.RefreshWalletBalance,
+				c.models.RefreshTransactions,
+			)
+		case events.BlockReceived:
+			refresh(
+				c.models.RefreshInfo,
+				c.models.RefreshTransactions,
+
+    ...
+```
+
+---
+
+```go
+
+```
+
+---
+
+{{% /section %}}
 
 ---
 
