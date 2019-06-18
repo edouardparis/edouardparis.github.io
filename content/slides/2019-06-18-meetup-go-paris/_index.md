@@ -14,18 +14,41 @@ An example with LND and lntop
 
 ---
 
+{{% section %}}
+
 ## Bitcoin
 
-{{% fragment %}}* 1976 Asymetric encryption - Diffie-Hellman{{% /fragment %}}
-{{% fragment %}}* 1992 ECDSA - Scott Vanstone{{% /fragment %}}
-{{% fragment %}}* 1992 Cypherpunk: E. Hughes - T. May - J. Gilmore{{% /fragment %}}
-{{% fragment %}}* 1997 Hashcash - A. Black{{% /fragment %}}
-{{% fragment %}}* 1998 b-money - Wei Dai  | BitGold - N. Szabo{{% /fragment %}}
-{{% fragment %}}* 2008 Bitcoin whitepaper - S. Nakamoto{{% /fragment %}}
-{{% fragment %}}* 2009 first block mined{{% /fragment %}}
+* 1976 Asymetric encryption - Diffie-Hellman
+* 1992 ECDSA - Scott Vanstone
+* 1992 Cypherpunk: E. Hughes - T. May - J. Gilmore
+* 1997 Hashcash - A. Black
+* 1998 b-money - Wei Dai  | BitGold - N. Szabo
+* 2008 Bitcoin whitepaper - S. Nakamoto
+* 2009 first block mined
 
 
 {{% fragment %}}secp256k1: y² = x³ + 7{{% /fragment %}}
+
+---
+
+![example transactions bitcoin](transac.svg)
+
+---
+
+![P2PKH](P2PKH.svg)
+
+---
+
+{{< slide id="api-docs" background-iframe="https://en.bitcoin.it/wiki/Script">}}
+
+---
+
+# 7 tx / s
+
+<img style="max-height:200px;" src="dealwithit.jpeg"/>
+
+
+{{% /section %}}
 
 ---
 
@@ -41,19 +64,25 @@ An example with LND and lntop
 
 ---
 
-![example transactions bitcoin](transac.svg)
-
----
-
-![P2PKH](P2PKH.svg)
-
----
-
 ![bidirectional-channel](bidirectional-channel.svg)
 
 ---
 
-explication HTLC
+# HTLC
+
+*Hash Time Locked Contract*
+
+* "I will give you X if you give me the preimage of H"
+* H = **Payment Hash**, R = **Payment Preimage**
+* **Time Locked**: If you don't give me R, I can get my money back after
+    delay
+
+Payment = **Amount** + **Payment Hash** + **Delay**
+
+---
+
+![payreq](htlc-forwarding-payreq.svg)
+
 
 {{% /section %}}
 

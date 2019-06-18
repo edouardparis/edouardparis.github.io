@@ -93,6 +93,7 @@ body {
   max-width: 95%;
   max-height: 95%; }
 
+
 .reveal strong,
 .reveal b {
   font-weight: bold; }
@@ -260,6 +261,10 @@ body {
   background: rgba(255, 255, 255, 0.2);
   border-color: #00008B;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
+
+.small-image {
+  max-height: 200px;
+}
 
 /*********************************************
  * NAVIGATION CONTROLS
