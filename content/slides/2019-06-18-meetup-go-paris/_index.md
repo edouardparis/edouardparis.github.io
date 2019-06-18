@@ -514,6 +514,7 @@ type controller struct {
 }
 ```
 
+![pointer](pointer.svg)
 
 ---
 
@@ -828,8 +829,6 @@ func NewTransaction(transactions *models.Transactions) *Transaction {
 }
 
 ```
-
----
 
 {{% /section %}}
 
