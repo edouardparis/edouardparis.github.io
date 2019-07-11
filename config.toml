@@ -7,10 +7,22 @@ pluralizeListTitles = false
 [blackfriday]
 angledQuotes = false
 
+[outputFormats]
 [outputFormats.Reveal]
 baseName = "index"
 mediaType = "text/html"
 isHTML = true
+
+[outputFormats.Txt]
+name = "txt"
+baseName = "index"
+mediaType = "text/plain"
+isPlainText = true
+
+[outputs]
+ home = ["HTML", "txt"]
+ page = ["HTML", "txt"]
+ section = ["HTML", "txt"]
 
 [languages.en]
 copyright = "2018 EdouardParis."
