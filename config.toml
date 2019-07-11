@@ -3,6 +3,11 @@ baseURL = "https://edouard.paris"
 theme = ["phrck", "reveal-hugo"]
 DefaultContentLanguage = "en"
 pluralizeListTitles = false
+enableGitInfo = true
+
+[frontmatter]
+date = ["date", "lastmod"]
+lastmod = [":git"]
 
 [blackfriday]
 angledQuotes = false

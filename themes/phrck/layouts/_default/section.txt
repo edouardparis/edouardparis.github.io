@@ -1,2 +1,6 @@
+{{ partial "head.txt" . }}
+
 {{ .Title}}
 {{ .RawContent }}
+
+{{ partial "foot.txt" . }}

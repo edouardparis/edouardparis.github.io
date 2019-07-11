@@ -1,0 +1,2 @@
+------------------------------------------------
+[{{ range $index := .Site.Menus.lang}}{{ .Pre }}{{ .Name }}{{ end }}] Copyright: {{ .Site.Copyright }}
