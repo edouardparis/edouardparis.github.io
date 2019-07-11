@@ -8,7 +8,7 @@ draft = false
 ## Connect yourself to the Lightning Network with Go
 2019-06-18 for the meetup Go Paris
 
-* [slides](https://edouard.paris/slides/2019-06-18-meetup-go-paris)
+* [slides](/slides/2019-06-18-meetup-go-paris)
 
 ---
 

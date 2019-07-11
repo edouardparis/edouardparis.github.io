@@ -21,3 +21,6 @@ vous pouvez me retrouver sur :
   [Twitter](https://twitter.com/edouardparis)
 / [GitHub](https://github.com/edouardparis)
 / [LinkedIn](https://www.linkedin.com/in/parisedouard/)
+
+Ce site est aussi accessible dans un terminal:
+**$ curl -L edouard.paris**
