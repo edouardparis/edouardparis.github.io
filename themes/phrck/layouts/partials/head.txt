@@ -1,5 +1,4 @@
 {{if .GitInfo}}------------------------------------------------
 commit: {{.GitInfo.Hash}}
-Author: {{.GitInfo.AuthorName}} <{{.GitInfo.AuthorEmail}}>
 Date:   {{.GitInfo.AuthorDate}}{{end}}
 ------------------------------------------------
