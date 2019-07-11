@@ -1,4 +1,3 @@
-~/{{.Site.Title }}{{.Site.LanguagePrefix }}{{ if .IsHome }}{{ else if .IsNode }}/{{ lower .Title }}{{ else if .IsPage }}/{{ .Section }}/{{ lower .Title }}{{ end }}
 {{if .GitInfo}}------------------------------------------------
 commit: {{.GitInfo.Hash}}
 Author: {{.GitInfo.AuthorName}} <{{.GitInfo.AuthorEmail}}>
