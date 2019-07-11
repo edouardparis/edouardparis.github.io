@@ -15,7 +15,7 @@ isHTML = true
 
 [outputFormats.Txt]
 name = "txt"
-baseName = "index"
+baseName = "src"
 mediaType = "text/plain"
 isPlainText = true
 
