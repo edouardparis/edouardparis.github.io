@@ -1,4 +1,5 @@
 <footer id="footer">
+  <p>{{ .Site.Params.Redirect | markdownify }}<strong>{{ .RelPermalink }}</strong></p>
   {{ partial "nav" . }}
 </footer>
 </body>

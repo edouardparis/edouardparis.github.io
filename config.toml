@@ -30,6 +30,7 @@ isPlainText = true
  section = ["HTML", "txt"]
 
 [languages.en]
+redirect = "Read this page in your terminal with the command: <br /> **$ curl -L edouard.paris**"
 copyright = "2018 EdouardParis."
 
 [[languages.en.menu.lang]]
@@ -97,6 +98,7 @@ parent = "about"
 weight = 0
 
 [languages.fr]
+redirect = "Lisez cette page dans un terminal avec la commande: <br /> **$ curl -L edouard.paris**"
 copyright = "2018 EdouardParis."
 
 [[languages.fr.menu.lang]]

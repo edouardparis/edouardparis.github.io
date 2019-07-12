@@ -20,7 +20,3 @@ Find me on:
   [Twitter](https://twitter.com/edouardparis)
 / [GitHub](https://github.com/edouardparis)
 / [LinkedIn](https://www.linkedin.com/in/parisedouard/)
-
-Most of the content of this website can be read directly through
-the terminal with command:
-**$ curl -L edouard.paris**
