@@ -1,0 +1,7 @@
+{{ partial "head.txt" . }}
+{{ .RawContent }}
+{{ range sort $.Site.Data.readings "name" "desc" }}[ {{ .name }} ]
+
+{{ range .readings }}{{ partial "reading.txt" . }}{{ end }}
+{{ end }}
+{{ partial "foot.txt" . }}
