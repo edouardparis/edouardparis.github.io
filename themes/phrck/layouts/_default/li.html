@@ -1,12 +1,11 @@
 <span>
-  <time> 
+  <time>
     {{ with .Site.Params.DateForm }}
     {{ $.Date.Format . }}
     {{ else }}
     {{ $.Date.Format "Jan 02" }}
     {{ end }}
   </time>
-  <a href="{{ .Site.BaseURL }}{{ .LanguagePrefix }}/{{ .Section }}">{{ .Section }}</a>
 </span>|
 <a href="{{ .Permalink }}">{{ .Title }}</a>
 

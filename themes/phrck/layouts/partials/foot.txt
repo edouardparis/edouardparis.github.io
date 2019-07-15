@@ -1,4 +1,4 @@
 ------------------------------------------------
 Copyright: {{ .Site.Copyright }}
-$ pwd :    ~/{{.Site.Title }}{{.Site.LanguagePrefix }}{{ if .IsHome }}{{ else if .IsNode }}/{{ lower .Title }}{{ else if .IsPage }}/{{ .Section }}/{{ lower .Title }}{{ end }}
+$ pwd :    ~/{{.Site.Title }}{{.Site.LanguagePrefix }}{{ if .IsHome }}{{ else if .IsNode }}/{{ lower .Title }}{{ else if .IsPage }}/{{ .Section }}/{{ .File.TranslationBaseName }}{{ end }}
 ------------------------------------------------
