@@ -1,12 +1,12 @@
 body {
-  font-family: 'Courier New', 'Courier', 'Monospace';
+  font-size: 10pt;
+  font-family: monospace;
   color: #1F2429;
   background-color: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Courier New', 'Courier', 'Monospace';
-  font-size: 1em;
+  font-size: 10pt;
   font-weight: bold;
 }
 
@@ -37,12 +37,12 @@ table {
 blockquote {
   text-align: right;
   font-style: italic;
-  font-size: 1em;
+  font-size: 10pt;
 }
 
 code {
- font-size: 1em;
- font-family: 'Inconsolata', Monospace;
+ font-size: 10pt;
+ font-family: monospace;
 }
 
 nav {
@@ -89,7 +89,7 @@ section {
   margin-top: 10%;
   margin-bottom: 5%;
   position: relative;
-  width: 75ch;
+  width: 80ch;
   margin-left: auto;
   margin-right: auto;
 }
