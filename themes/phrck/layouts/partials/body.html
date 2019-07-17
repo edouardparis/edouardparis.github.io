@@ -1,5 +1,5 @@
 <div class="article-body">
-  <a href="{{ .Site.BaseURL }}{{ .LanguagePrefix }}">~/{{.Site.Title }}{{.LanguagePrefix }}</a>{{ if .IsHome }}{{ else if .IsNode }}<a href="{{ .Site.BaseURL }}{{ .LanguagePrefix }}/{{ lower .Title }}">/{{ lower .Title }}</a>
-  {{ else if .IsPage }}<a href="{{ .Site.BaseURL }}{{ .LanguagePrefix }}/{{ .Section }}">/{{ .Section }}</a><a>/{{ .File.TranslationBaseName }}</a>{{ end }}
+  <a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}">~/{{.Site.Title }}{{.Site.LanguagePrefix }}</a>{{ if .IsHome }}{{ else if .IsNode }}<a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}/{{ lower .Title }}">/{{ lower .Title }}</a>
+  {{ else if .IsPage }}<a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}/{{ .Section }}">/{{ .Section }}</a><a>/{{ .File.TranslationBaseName }}</a>{{ end }}
   {{ .Content }}
 </div>
