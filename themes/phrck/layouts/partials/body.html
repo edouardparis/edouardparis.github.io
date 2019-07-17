@@ -1,5 +1,9 @@
-<div class="article-body">
+<div class="article-header">
   <a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}">~/{{.Site.Title }}{{.Site.LanguagePrefix }}</a>{{ if .IsHome }}{{ else if .IsNode }}<a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}/{{ lower .Title }}">/{{ lower .Title }}</a>
   {{ else if .IsPage }}<a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}/{{ .Section }}">/{{ .Section }}</a><a>/{{ .File.TranslationBaseName }}</a>{{ end }}
+  {{ if .Params.toc }}{{.TableOfContents}}{{ end }}
+</div>
+<div class="article-body">
   {{ .Content }}
 </div>
+

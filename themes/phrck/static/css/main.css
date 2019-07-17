@@ -51,8 +51,7 @@ nav {
 }
 
 nav ul {
-  margin: 0;
-  display: inline-block;
+  list-style: none;
 }
 
 .menu-section {
@@ -102,13 +101,14 @@ section a {
   text-decoration: none;
 }
 
-section ul {
+.article-body ul {
   padding-left: 4ch;
   max-width: 68ch;
 }
 
-.main-header h1 {
-  margin-top: 0;
+.title {
+  margin: 7%;
+  text-align: center;
 }
 
 article {
@@ -160,6 +160,16 @@ article {
   width: 15ch;
   text-align: right;
 }
+
+.article-header a {
+  color: #067df7;
+}
+.article-header a:hover,
+.article-header a:focus {
+  color: #fff;
+  background-color: #067df7;
+}
+
 .article-body a {
   color: #067df7;
 }
@@ -172,11 +182,6 @@ article {
 img {
   display: block;
   max-width: 100%;
-}
-
-.article-header {
-  padding-top: 3em;
-  padding-bottom: 2em;
 }
 
 hr {
