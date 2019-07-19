@@ -3,6 +3,22 @@ title = "CV"
 draft = false
 +++
 
+```blue
+              .---.
+   ,---.    /.  ./|
+  /     \ .-' . ' |
+ /    / '/___/ \: |
+.    ' / .   \  ' .
+'   ; :__ \   \   '
+'   | '.'| \   \
+|   :    :  \   \ |
+ \   \  /    '---"
+  `----'
+```
+
+[GitHub](https://github.com/edouardparis)
+/ [LinkedIn](https://www.linkedin.com/in/parisedouard/)
+
 # [ Experience ] ---
 
 Sept 2017 - Today: **Software engineer, Ulule**, Paris.
