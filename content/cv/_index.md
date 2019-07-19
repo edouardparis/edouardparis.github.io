@@ -3,7 +3,7 @@ title = "CV"
 draft = false
 +++
 
-# [ Experience ]
+# [ Experience ] ---
 
 Sept 2017 - Today: **Software engineer, Ulule**, Paris.
 
@@ -27,7 +27,7 @@ Finance**, Paris.
 Development of software tools for derivatives finance in C++. Libraries
 used: QuantLib and TinyXml.
 
-# [ Education ]
+# [ Education ] ---
 
 2017: **French Engineer Diploma in CS and applied mathematics, ENSIIE**,
 Évry, FR.
