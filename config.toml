@@ -90,6 +90,11 @@ name = "about"
 identifier = "about"
 weight = 0
 
+[[languages.en.menu.main]]
+url = "/cv"
+name = "cv"
+parent = "about"
+weight = 0
 
 [[languages.en.menu.main]]
 url = "/contact"
