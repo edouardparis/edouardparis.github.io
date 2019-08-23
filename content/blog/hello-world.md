@@ -24,6 +24,7 @@ to the article (if it brings something valuable) without editing it.
 This website has a minimalistic design. I do not believe minimalistic or
 brutalistic design is better than everything else, I just like it. The
 sites that give me inspiration are:
+
 - http://www.phrack.org/
 - https://brutalistwebsites.com/
 - https://thegallery.io/
