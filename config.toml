@@ -103,6 +103,12 @@ parent = "about"
 weight = 0
 
 [[languages.en.menu.main]]
+url = "/blog/hello-world"
+name = "website"
+parent = "about"
+weight = 0
+
+[[languages.en.menu.main]]
 url = "https://tippin.me/@edouardparis"
 name = "tip ⚡ "
 parent = "about"
