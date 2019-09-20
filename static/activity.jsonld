@@ -1,0 +1,28 @@
+{
+	"@context": [
+		"https://www.w3.org/ns/activitystreams",
+		"https://w3id.org/security/v1"
+	],
+	"type": "Person",
+	"id": "https://edouard.paris/activity.jsonld",
+	"name": "Edouard Paris",
+	"preferredUsername": "Edouard Paris",
+	"summaryMap": {
+		"en": "Hello"
+	},
+	"inbox": "https://edouard.paris/.inbox",
+	"outbox": "https://edouard.paris/.outbox",
+	"url": [
+		{
+			"type": "Link",
+			"mediaType": "text/html",
+			"rel": "alternate",
+			"href": "https://edouard.paris/"
+		},
+  ],
+	"publicKey": {
+		"id": "https://edouard.paris/activity.jsonld#publicKey",
+		"owner": "https://edouard.paris/activity.jsonld",
+		"publicKeyPem": ""
+	}
+}

@@ -10,8 +10,8 @@
     },
     {
       "rel": "self",
-      "type": "application/activity+json",
-      "href": "https://edouard.paris/activity"
+      "type": "application/ld+json",
+      "href": "https://edouard.paris/activity.jsonld"
     }
   ]
 }
