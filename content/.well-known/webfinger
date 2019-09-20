@@ -1,0 +1,17 @@
+{
+  "subject": "acct:m@edouard.paris",
+  "aliases": [
+  ],
+  "links": [
+    {
+      "rel": "http://webfinger.net/rel/profile-page",
+      "type": "text/html",
+      "href": "https://edouard.paris"
+    },
+    {
+      "rel": "self",
+      "type": "application/activity+json",
+      "href": "https://edouard.paris/activity"
+    }
+  ]
+}
