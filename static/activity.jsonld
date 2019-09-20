@@ -8,7 +8,8 @@
 	"name": "Edouard Paris",
 	"preferredUsername": "edouardparis",
 	"summaryMap": {
-		"en": "Hello"
+		"en": "Hello",
+		"fr": "Bonjour"
 	},
 	"inbox": "https://edouard.paris/.inbox",
 	"outbox": "https://edouard.paris/.outbox",
