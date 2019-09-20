@@ -6,7 +6,7 @@
 	"type": "Person",
 	"id": "https://edouard.paris/activity.jsonld",
 	"name": "Edouard Paris",
-	"preferredUsername": "Edouard Paris",
+	"preferredUsername": "edouardparis",
 	"summaryMap": {
 		"en": "Hello"
 	},
@@ -23,6 +23,6 @@
 	"publicKey": {
 		"id": "https://edouard.paris/activity.jsonld#publicKey",
 		"owner": "https://edouard.paris/activity.jsonld",
-		"publicKeyPem": ""
+		"publicKeyPem": "-----BEGIN PUBLIC KEY-----\naaaaa\n-----END PUBLIC KEY-----"
 	}
 }
