@@ -19,7 +19,7 @@
 			"rel": "alternate",
 			"href": "https://edouard.paris/"
 		},
-  ],
+	],
 	"publicKey": {
 		"id": "https://edouard.paris/activity.jsonld#publicKey",
 		"owner": "https://edouard.paris/activity.jsonld",
