@@ -16,12 +16,21 @@ toc = true
                    /___/
 ```
 
-For this website:
-
 * [Hugo](https://gohugo.io): one of the most popular open-source static site generators.
 * [Caddy](https://caddyserver.com): a HTTP/2 web server with automatic HTTPS.
 
-Graph for explanation:
+Hugo and Caddy are two powerful tools written in [Go](https://golang.org).
+Easy for me to install and follow the current development.
+They are both pretty fast and they are very good for simple tasks like
+generating and hosting a static website with a [let's encrypt](https://letsencrypt.org)
+certificate.
+
+With a nice system of webhooks, Caddy and Hugo enable a smooth way to
+deploy a current version of my website after a simple commit.
+In this blog post, I will describe each of these tools and how to setup
+the server as I did.
+
+# Global architecture
 
 ```ascii
 https://github.com                   https://edouard.paris
@@ -41,6 +50,8 @@ https://github.com                   https://edouard.paris
 ```
 
 # Setup Hugo
+
+# Setup GitHub settings
 
 # Setup Caddy
 
