@@ -195,6 +195,11 @@ hr::before {
   content: "---------";
 }
 
+.article-header ul {
+  padding-left: 4ch;
+  max-width: 68ch;
+}
+
 .article-body ul {
   padding-left: 4ch;
   max-width: 68ch;
