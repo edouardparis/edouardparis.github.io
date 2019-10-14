@@ -2,7 +2,7 @@
 title = "Hugo + Caddy = ❤️"
 date = ""
 draft = true
-toc = true
+toc = false
 +++
 
 ```ascii
@@ -53,6 +53,19 @@ https://github.com                   https://edouard.paris
 
 # Setup GitHub settings
 
+In the related repository you own:
+
+"Settings" (in the repository tabs) > "Webhooks" (on the left panel) >
+"Add WebHook".
+
+Choose an url for example https://your-website.com/webhooks, and a
+secret. Select:
+
+- "application/json" as the content type.
+- "Enable SSL verification"
+- "Just the push event"
+- "Active" for the delivery of event details when the hook is triggered
+
 # Setup Caddy
 
 ```green
@@ -64,7 +77,7 @@ https://edouard.paris {
     root /var/www/edouard.paris/public
     git git@github.com:edouardparis/edouard.paris {
         path ../
-        hook /webhook-endpoint my-webhook-password
+        hook /webhook-endpoint my-webhook-secret
         then /usr/bin/hugo --destination /var/www/edouard.paris/public
     }
 }
