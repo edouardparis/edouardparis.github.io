@@ -67,3 +67,32 @@ specs: https://github.com/btcontract/lnurl-rfc
 {{< slide id="" background-iframe="https://ln-testnet-faucet.cleverapps.io/faucet">}}
 
 ---
+
+Written with Rust 🦀 v1.40.0-nightly 🎉
+
+Dependencies:
+```toml
+bech32 = "0.7.1"
+hyper = "0.13.0-alpha.4"
+dotenv = "0.9.0"
+env_logger = "0.7.0"
+futures-util = "0.3.1"
+image = "0.22.3"
+lazy_static = "1.4.0"
+lightning-invoice = "0.2.0"
+log = "0.4.8"
+lnurl = "0.1.0"
+opennode = "1.0.0"
+qrcode = "0.11.0"
+reqwest = { version= "0.10.0-alpha.1", features = ["json"]}
+regex = "1.3.1"
+serde = { version = "1.0.93", features = ["derive"]}
+serde_json = "1.0.41"
+tokio = "0.2.0-alpha.6"
+tokio-executor = "=0.2.0-alpha.6"
+tokio-io = "=0.2.0-alpha.6"
+tokio-sync = "=0.2.0-alpha.6"
+```
+
+---
+Code: https://github.com
