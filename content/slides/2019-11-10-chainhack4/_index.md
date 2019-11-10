@@ -54,7 +54,7 @@ Payment = **Amount** + **Payment Hash** + **Delay**
 
 ---
 
-![lnurl_logo](https://github.com/btcontract/lnurl-rfc/blob/master/media/logo/logo_600.png)
+![lnurl_logo](https://raw.githubusercontent.com/btcontract/lnurl-rfc/master/media/logo/logo_600.png)
 
 specs: https://github.com/btcontract/lnurl-rfc
 
