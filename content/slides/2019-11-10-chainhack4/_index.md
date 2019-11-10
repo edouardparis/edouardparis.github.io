@@ -60,6 +60,10 @@ specs: https://github.com/btcontract/lnurl-rfc
 
 ---
 
+![lnurl-withdraw](lnurl-withdraw.svg)
+
+---
+
 {{< slide id="" background-iframe="https://ln-testnet-faucet.cleverapps.io/faucet">}}
 
 ---
