@@ -3,6 +3,11 @@ title = "Talks"
 draft = false
 +++
 
+## A simple faucet using LNURL (EN)
+2019-11-10 for chainhack4
+[slides](/slides/2019-11-10-chainhack4) /
+[link](https://blockchain-hackathon.com/)
+
 ## Connect yourself to the Lightning Network with Go (FR)
 2019-06-18, for the meetup Go Paris -
 [slides](/slides/2019-06-18-meetup-go-paris) /
