@@ -68,7 +68,7 @@ specs: https://github.com/btcontract/lnurl-rfc
 
 ---
 
-Written with Rust 🦀 v1.40.0-nightly 🎉
+Written with Rust 🦀 v1.40.0-nightly with async/await futures 🎉
 
 ```toml
 bech32 = "0.7.1"
@@ -94,4 +94,19 @@ tokio-sync = "=0.2.0-alpha.6"
 ```
 
 ---
-Code: https://github.com
+
+# Code
+
+https://github.com/edouardparis/lnurl-examples /
+https://github.com/edouardparis/rust-lnurl
+
+
+New Crate 📦 on crates.io 🎉
+
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/edouardparis/rust-lnurl/blob/master/LICENSE)
+[![lnurl on crates.io](https://img.shields.io/crates/v/lnurl.svg)](https://crates.io/crates/lnurl)
+[![lnurl on docs.rs](https://docs.rs/lnurl/badge.svg)](https://docs.rs/lnurl)
+
+---
+
+## Thank you !
