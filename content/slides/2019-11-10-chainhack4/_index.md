@@ -70,7 +70,6 @@ specs: https://github.com/btcontract/lnurl-rfc
 
 Written with Rust 🦀 v1.40.0-nightly 🎉
 
-Dependencies:
 ```toml
 bech32 = "0.7.1"
 hyper = "0.13.0-alpha.4"
