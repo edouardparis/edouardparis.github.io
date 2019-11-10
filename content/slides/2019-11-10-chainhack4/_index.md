@@ -48,4 +48,6 @@ Payment = **Amount** + **Payment Hash** + **Delay**
 
 {{% /section %}}
 
+---
 
+{{< slide id="" background-iframe="https://ln-testnet-faucet.cleverapps.io/faucet">}}
