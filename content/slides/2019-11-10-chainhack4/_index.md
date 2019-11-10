@@ -97,6 +97,8 @@ tokio-sync = "=0.2.0-alpha.6"
 
 # Code
 
+FAUCET: https://ln-testnet-faucet.cleverapps.io/faucet
+
 https://github.com/edouardparis/lnurl-examples /
 https://github.com/edouardparis/rust-lnurl
 
