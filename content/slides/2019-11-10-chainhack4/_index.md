@@ -50,4 +50,10 @@ Payment = **Amount** + **Payment Hash** + **Delay**
 
 ---
 
+![bitcoin_stack](bitcoin_stack.svg)
+
+---
+
 {{< slide id="" background-iframe="https://ln-testnet-faucet.cleverapps.io/faucet">}}
+
+---
