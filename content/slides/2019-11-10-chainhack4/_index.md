@@ -54,6 +54,12 @@ Payment = **Amount** + **Payment Hash** + **Delay**
 
 ---
 
+![lnurl_logo](https://github.com/btcontract/lnurl-rfc/blob/master/media/logo/logo_600.png)
+
+specs: https://github.com/btcontract/lnurl-rfc
+
+---
+
 {{< slide id="" background-iframe="https://ln-testnet-faucet.cleverapps.io/faucet">}}
 
 ---
