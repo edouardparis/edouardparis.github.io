@@ -1,6 +1,6 @@
 +++
 title = "Hugo + Caddy = ❤️"
-date = ""
+date = "2019-11-15"
 draft = true
 toc = false
 +++
@@ -49,7 +49,29 @@ https://github.com                   https://edouard.paris
 +-----------------+
 ```
 
+The general idea is: I make a change with my laptop in the local git
+repository of my website, then I commit it and push on the master
+branch on github via ssh. GitHub server sends a webhook, a little HTTP
+POST request with the detail of the repository to my VPS instance where
+Caddy handle it. Caddy after checking if the password brought by the
+request is conform to the password inside its configuration file, will
+pull the last version of the repository from github. Then Caddy will
+build the static html pages from the markdown files imported with Hugo
+in a public directory. Any files from this directory will be served by
+Caddy to clients like browsers requesting it.
+
 # Setup Hugo
+
+A described on the [website](https://gohugo.io/getting-started/installing/#quick-install),
+a binary can be downloaded from [the github release page](https://github.com/gohugoio/hugo/releases)
+and put inside `/usr/local/bin`, Or if you have [go >=1.11](https://golang.org)
+installed simply doing:
+
+```bash
+git clone https://github.com/gohugoio/hugo.git
+cd hugo
+go install --tags extended
+```
 
 # Setup GitHub settings
 
