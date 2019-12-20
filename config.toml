@@ -5,6 +5,10 @@ DefaultContentLanguage = "en"
 pluralizeListTitles = false
 enableGitInfo = true
 
+[indexes]
+tag = "tags"
+topic = "topics"
+
 [frontmatter]
 date = ["date", "lastmod"]
 lastmod = [":git"]
