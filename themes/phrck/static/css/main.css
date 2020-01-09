@@ -232,8 +232,7 @@ hr::before {
 }
 
 .footer-redirect {
-  background-color: #1F2429;
-  color: #fff;
+  border: 1px solid #1F2429;
   padding: 10px;
 }
 
