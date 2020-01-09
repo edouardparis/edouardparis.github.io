@@ -10,7 +10,7 @@
   </time>
   </aside>
 {{end}}
-  <p>{{ .Site.Params.Redirect | markdownify }}<strong>{{ .RelPermalink }}</strong></p>
+  <div class="footer-redirect">{{ .Site.Params.Redirect | markdownify }}<strong>{{ .RelPermalink }}</strong></div>
   {{ partial "nav" . }}
 </footer>
 </body>

@@ -32,8 +32,6 @@ table {
   margin-left: 4ch;
 }
 
-
-
 blockquote {
   text-align: right;
   font-style: italic;
@@ -233,6 +231,12 @@ hr::before {
   margin-right: auto;
 }
 
+.footer-redirect {
+  background-color: #1F2429;
+  color: #fff;
+  padding: 10px;
+}
+
 .menu {
   display: flex;
 }
@@ -255,6 +259,18 @@ hr::before {
 
 .language-red {
   color: #ff5f56;
+}
+
+.language-ascii-art-black {
+  color: #067df7;
+}
+
+.language-ascii-art-blue {
+  color: #067df7;
+}
+
+.language-ascii-art-pink {
+  color: #ff0080;
 }
 
 @media (max-width: 640px) {
@@ -342,11 +358,27 @@ hr::before {
     line-height: 0.8;
   }
 
+  .language-ascii-art-black {
+    font-size: 8px;
+    display: block;
+  }
+
+  .language-ascii-art-blue {
+    font-size: 8px;
+    display: block;
+  }
+
+  .language-ascii-art-pink {
+    font-size: 8px;
+    display: block;
+  }
+
   .menu {
     display: block;
   }
 
   .menu-section {
-    width: 100%;
+    width: 30%;
+    float: left;
   }
 }
