@@ -36,6 +36,7 @@ isPlainText = true
 [languages.en]
 redirect = "Read this page in your terminal with the command: <br /> **$ curl -L edouard.paris**"
 copyright = "2018 EdouardParis."
+description = "Edouard Paris personal website"
 
 [[languages.en.menu.lang]]
 url = "/fr"
@@ -121,6 +122,7 @@ weight = 0
 [languages.fr]
 redirect = "Lisez cette page dans un terminal avec la commande: <br /> **$ curl -L edouard.paris**"
 copyright = "2018 EdouardParis."
+description = "Site web personnel de Edouard Paris"
 
 [[languages.fr.menu.lang]]
 url = "/fr"
