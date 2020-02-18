@@ -10,7 +10,7 @@ draft = false
    \/_/\/_/   \/_____/   \/_____/   \/_____/   \/_____/
 ```
 
-My name is Edouard Paris.
+My name is Édouard Paris.
 
 I am a French engineer in computer science and applied mathematics.
 Find me on:
