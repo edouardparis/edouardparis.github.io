@@ -5,9 +5,12 @@ DefaultContentLanguage = "en"
 pluralizeListTitles = false
 enableGitInfo = true
 
-[indexes]
+[taxonomies]
 tag = "tags"
 topic = "topics"
+
+[permalinks]
+topics = "/:slug"
 
 [frontmatter]
 date = ["date", "lastmod"]
