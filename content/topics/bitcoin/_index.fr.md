@@ -1,6 +1,5 @@
 +++
 title = "bitcoin"
-aliases = ["/fr/bitcoin"]
 +++
 
 ```

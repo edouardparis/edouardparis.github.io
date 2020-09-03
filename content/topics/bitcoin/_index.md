@@ -1,7 +1,5 @@
 +++
 title = "bitcoin"
-aliases = ["/bitcoin"]
-slug = "bitcoin"
 +++
 
 ```
