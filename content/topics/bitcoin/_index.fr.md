@@ -1,6 +1,6 @@
 +++
 title = "bitcoin"
-aliases = ["/bitcoin"]
+aliases = ["/fr/bitcoin"]
 slug = "bitcoin"
 +++
 
