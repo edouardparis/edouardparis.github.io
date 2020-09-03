@@ -38,7 +38,7 @@ isPlainText = true
 
 [languages.en]
 redirect = "Read this page in your terminal with the command: <br /> **$ curl -L edouard.paris**"
-copyright = "2018 EdouardParis."
+copyright = "2020 EdouardParis."
 description = "Edouard Paris personal website"
 
 [[languages.en.menu.lang]]
