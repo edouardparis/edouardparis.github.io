@@ -1,7 +1,7 @@
 +++
 title = "bitcoin"
 aliases = ["/fr/bitcoin"]
-slug = "bitcoin"
+slug = "/fr/bitcoin"
 +++
 
 ```
