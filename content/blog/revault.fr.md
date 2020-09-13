@@ -13,3 +13,4 @@ qui par curiosité allait à des meetups Go sur Paris et Ulule m'a fait
 découvrir et aimer le développement web.
 
 Je pars vivre une aventure entreprenariale encore plus intense.
+
