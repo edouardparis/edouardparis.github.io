@@ -52,4 +52,4 @@ une forme de sécurité.
 #1: Attention le terme difficulté ne signifie pas dans ce contexte complexité
 
 Ascii art from:
-https://ascii.co.uk/art/fish
+fish: https://ascii.co.uk/art/fish (I added the wizard hat)
