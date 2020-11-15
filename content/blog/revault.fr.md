@@ -48,6 +48,57 @@ celui des [généraux byzantins]() et l'émission de la monnaie.
 Une transaction une fois partagé dans le registre gagne à chaque bloc
 une forme de sécurité.
 
+
+# UNSPENT TRANSACTION OUTPUT
+                                            +----------------------+
+                                            |       tx #2          |
+                                            +----------+-----------+
+                                      +---> | input #2 | output #1 |
+                                      |     +----------------------+
+                                      |                | output #2 |
+         +----------------------+     |                +-----------+
+         |       tx #1          |     |
+         +----------+-----------+     |
+   +---> | input #1 | output #1 +-----+
+...      +----------------------+
+   +---> | input #2 | output #2 +-----+     +----------------------+
+         +----------------------+     |     |       tx #3          |
+                    | output #3 |     |     +----------+-----------+
+                    +-----------+     +---> | input #1 | output #1 |
+                                            +----------------------+
+         utxos:  tx#1/output#3        +---> | input #2 |
+                 tx#2/output#1        |     +----------+
+                 tx#2/output#2        |
+                 tx#3/output#1    ... +
+
+
+
++-->    tx           tx           tx       deposit
+|        +            +            +
+|        |            |            |
+|        |            |            |
+|        v            v            v
+|
+|   +--------+   +--------+   +--------+
+|   | utxo 1 |   | utxo 2 |   | utxo 3 |   vaults
+|   +--+-+---+   +----+---+   +----+---+
+|      | |            |            |
+|      | |            |            |       +------------+
+|      | +------------+------------+-----> | emergency  |
+|      |          emergency tx             | deep vault |
+|      |                                   +------------+
+|      | unvault tx                               ^
+|      |                                          |
+|      +---------------+                          |
+|                      |                          |
+|    cancel tx         v    unvault emergency tx  |
++-------------------------------------------------+
+                       |
+                       |  spend tx
+                       |
+                       v
+                      out
+
 #1: Attention le terme difficulté ne signifie pas dans ce contexte complexité
 
 Ascii art from:
