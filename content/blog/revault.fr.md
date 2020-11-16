@@ -16,7 +16,7 @@ Je pars vivre une aventure entrepreneuriale encore plus intense.
 Mon nouvel employeur est une petite compagnie portugaise fondé par deux
 Francais, qui possede le doux nom de: 
 
-```
+```ascii
      *                          O    .           ____
             *       /\            .   o        .'* *.'            *
        *           /*.\            o        __/_*_*(_
@@ -63,7 +63,7 @@ une forme de sécurité.
 
 ## UNSPENT TRANSACTION OUTPUT
 
-```
+```ascii
                                             +----------------------+
                                             |       tx #2          |
                                             +----------+-----------+
@@ -102,7 +102,7 @@ Le premier document technique de Revault se trouve ici,
 le protocole peut etre encore soumis a des changements, le problème 
 touche a plusieurs facettes difficile de Bitcoin.
 
-```
+```ascii
 +-->    tx           tx           tx       deposit
 |        +            +            +
 |        |            |            |
