@@ -1,6 +1,7 @@
 +++ 
 title = "Revault" 
 date = "2020-09-07" 
+topics = ["bitcoin"]
 draft = true 
 +++
 
@@ -61,6 +62,8 @@ Une transaction une fois partagé dans le registre gagne à chaque bloc
 une forme de sécurité.
 
 ## UNSPENT TRANSACTION OUTPUT
+
+```
                                             +----------------------+
                                             |       tx #2          |
                                             +----------+-----------+
@@ -82,6 +85,8 @@ une forme de sécurité.
                  tx#2/output#2        |
                  tx#3/output#1    ... +
 
+```
+
 ## ScriptSig et ScriptKey
 
 
@@ -97,6 +102,7 @@ Le premier document technique de Revault se trouve ici,
 le protocole peut etre encore soumis a des changements, le problème 
 touche a plusieurs facettes difficile de Bitcoin.
 
+```
 +-->    tx           tx           tx       deposit
 |        +            +            +
 |        |            |            |
@@ -122,6 +128,7 @@ touche a plusieurs facettes difficile de Bitcoin.
                        |
                        v
                       out
+```
 
 ## Les transactions presignés
 
