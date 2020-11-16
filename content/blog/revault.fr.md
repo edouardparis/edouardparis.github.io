@@ -12,6 +12,8 @@ qui par curiosité allait à des meetups Go sur Paris et Ulule m'a fait
 découvrir et aimer le développement web.
 
 Je pars vivre une aventure entrepreneuriale encore plus intense.
+Mon nouvel employeur est une petite compagnie portugaise fondé par deux
+Francais, qui possede le doux nom de: 
 
 ```
      *                          O    .           ____
@@ -26,12 +28,20 @@ Je pars vivre une aventure entrepreneuriale encore plus intense.
                               _//^---^\\_   
 ```
 
+Kévin Loaec et Antoine Poinsot sont deux Bitcoiners endurcis avec
+lesquels je partage la meme vision de l'open source et dont j'admire la
+connaissance technique et le scepticisme vis a vis des réseaux pairs 
+a pairs et de la sécurité en informatique en général.
 
-Bitcoin, un nom ridicule en Français, une monnaie de singe d'après les
-dire de certains membre de ma famille. Qu'on l'aime ou le déteste
-difficile de l'ignorer si on s'intéresse aux politiques monétaire et
-encore moins aux alternatives économique dans notre société de
-l'information.   
+Le principal produit de WizardSardine est Revault, un nouveau concept de
+protection de fonds pour des protocoles monétaires utilisant le format
+de transaction des UTXOs notamment Bitcoin. 
+
+# Bitcoin, petit rappel de fonctionnement
+
+Bitcoin, qu'on l'aime ou le déteste difficile de l'ignorer si on s'intéresse
+aux politiques monétaire et encore moins aux alternatives économique 
+dans notre société de l'information.   
 Je suis convaincue que ce protocole va prendre de l'importance pendant les
 prochaines années pour de multiple raisons qui méritent un article à part.
 
@@ -40,16 +50,17 @@ propriétés de Bitcoin.
 
 Bitcoin est une monnaie numérique reposant sur le partage par un réseau de pairs à
 pairs d'un registre de transaction. Les transactions sont groupées et
-ordonnées en blocs par un serveur d'horodatage décentralisé fonctionnant par la libre
-compétition de pairs à la résolution d'un problème mathématique donc la
-difficulté[¹](#1) évolue dans le temps. Ce serveur d'horodatage permet à la
-fois de résoudre le problème de la [double dépense](https://fr.wikipedia.org/wiki/Double_d%C3%A9pense), 
-celui des [généraux byzantins]() et l'émission de la monnaie. 
+ordonnées en blocs par un serveur d'horodatage décentralisé.
+Ce serveur fonctionne par la libre compétition de pairs à la résolution 
+d'un problème mathématique donc la difficulté[¹](#1) évolue dans le temps. 
+Ce serveur d'horodatage permet à la fois de résoudre le problème de 
+la [double dépense](https://fr.wikipedia.org/wiki/Double_d%C3%A9pense), 
+celui des [généraux byzantins]() 
+et l'émission de la monnaie. 
 Une transaction une fois partagé dans le registre gagne à chaque bloc
 une forme de sécurité.
 
-
-# UNSPENT TRANSACTION OUTPUT
+## UNSPENT TRANSACTION OUTPUT
                                             +----------------------+
                                             |       tx #2          |
                                             +----------+-----------+
@@ -71,7 +82,20 @@ une forme de sécurité.
                  tx#2/output#2        |
                  tx#3/output#1    ... +
 
+## ScriptSig et ScriptKey
 
+
+## Pour aller plus loin
+
+                 
+# La Protection des bitcoins.
+
+
+# REVAULT
+
+Le premier document technique de Revault se trouve ici,
+le protocole peut etre encore soumis a des changements, le problème 
+touche a plusieurs facettes difficile de Bitcoin.
 
 +-->    tx           tx           tx       deposit
 |        +            +            +
@@ -98,6 +122,12 @@ une forme de sécurité.
                        |
                        v
                       out
+
+## Les transactions presignés
+
+## La dépense d'un vault
+
+## L effrayante Mempool
 
 #1: Attention le terme difficulté ne signifie pas dans ce contexte complexité
 
