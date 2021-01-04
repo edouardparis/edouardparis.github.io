@@ -3,6 +3,7 @@ title = "Revault"
 date = "2020-09-07" 
 topics = ["bitcoin"]
 draft = true 
+toc = true
 +++
 
 Novembre 2020, je quitte mon travail actuel de développeur chez
