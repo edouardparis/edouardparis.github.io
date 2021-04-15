@@ -1,0 +1,29 @@
+{
+  "year": "2021",
+  "wine": [
+    {
+      "kind": "Bordeaux",
+      "date": "2021-05-11",
+      "appellation": "Margaux",
+      "producteur": "Chateau Tayac",
+      "city": "Soussans",
+      "region": "Médoc",
+      "country": "France",
+      "year": 1992,
+      "cepage": ["Petit Verdot", "Cabernet Sauvignon", "Merlot"],
+      "alcohol": 12.5
+    },
+    {
+      "kind": "Champagne",
+      "date": "2021-05-11",
+      "appellation": "Champagne",
+      "producteur": "Payelle",
+      "city": "Ambonnay",
+      "region": "Champagne",
+      "country": "France",
+      "year": 1992,
+      "cepage": ["Chardonnay"],
+      "alcohol": 12
+    }
+  ]
+}
