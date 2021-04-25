@@ -2,8 +2,51 @@
   "year": "2021",
   "wine": [
     {
+      "cuvee":  "Héritage Paul Forget, Brut",
+      "kind": "Champagne",
+      "date": "2021-04-25",
+      "appellation": "Champagne",
+      "producteur": "Forget-Chemin",
+      "city": "Ludes",
+      "region": "Champagne",
+      "country": "France",
+      "year": 0,
+      "cepage": ["Pinot Noir", "Pinot Meunier", "Chardonnay"],
+      "alcohol": 12,
+      "color": "blanc"
+    },
+     {
+      "cuvee":  "Saint Clément Blanc",
+      "kind": "Vin de Provence",
+      "date": "2021-04-25",
+      "appellation": "Coteaux Varois en Provence",
+      "producteur": "Chateau Trians",
+      "city": "Néoules",
+      "region": "Provence",
+      "country": "France",
+      "year": 2018,
+      "cepage": ["Rolle"],
+      "alcohol": 13.5,
+      "color": "blanc"
+    },
+    {
+      "cuvee": "",
       "kind": "Bordeaux",
-      "date": "2021-05-11",
+      "date": "2021-04-25",
+      "appellation": "Graves",
+      "producteur": "Chateau Crabitey",
+      "city": "Portets",
+      "region": "Graves",
+      "country": "France",
+      "year": 2015,
+      "cepage": ["Cabernet Sauvignon", "Merlot"],
+      "alcohol": 14,
+      "color": "rouge"
+    },
+    {
+      "cuvee": "",
+      "kind": "Bordeaux",
+      "date": "2021-04-11",
       "appellation": "Margaux",
       "producteur": "Chateau Tayac",
       "city": "Soussans",
@@ -11,19 +54,22 @@
       "country": "France",
       "year": 1992,
       "cepage": ["Petit Verdot", "Cabernet Sauvignon", "Merlot"],
-      "alcohol": 12.5
+      "alcohol": 12.5,
+      "color": "rouge"
     },
     {
+      "cuvee": "",
       "kind": "Champagne",
-      "date": "2021-05-11",
+      "date": "2021-04-11",
       "appellation": "Champagne",
       "producteur": "Payelle",
       "city": "Ambonnay",
       "region": "Champagne",
       "country": "France",
-      "year": 1992,
+      "year": 0,
       "cepage": ["Chardonnay"],
-      "alcohol": 12
+      "alcohol": 12,
+      "color": "blanc"
     }
   ]
 }
