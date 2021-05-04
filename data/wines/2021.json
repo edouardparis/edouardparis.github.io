@@ -2,6 +2,20 @@
   "year": "2021",
   "wine": [
     {
+      "cuvee":  "",
+      "kind": "Bordeaux",
+      "date": "2021-05-02",
+      "appellation": "Côtes de Bordeaux",
+      "producteur": "Chateau les Aubiers",
+      "city": "Saint Aubin de Blaye",
+      "region": "Bordeaux",
+      "country": "France",
+      "year": 2018,
+      "cepage": ["Merlot", "Cabernet Sauvignon", "Malbec"],
+      "alcohol": 13,
+      "color": "rouge"
+    },
+    {
       "cuvee":  "Héritage Paul Forget, Brut",
       "kind": "Champagne",
       "date": "2021-04-25",
@@ -10,7 +24,7 @@
       "city": "Ludes",
       "region": "Champagne",
       "country": "France",
-      "year": 0,
+      "year": null,
       "cepage": ["Pinot Noir", "Pinot Meunier", "Chardonnay"],
       "alcohol": 12,
       "color": "blanc"
@@ -66,7 +80,7 @@
       "city": "Ambonnay",
       "region": "Champagne",
       "country": "France",
-      "year": 0,
+      "year": null,
       "cepage": ["Chardonnay"],
       "alcohol": 12,
       "color": "blanc"
