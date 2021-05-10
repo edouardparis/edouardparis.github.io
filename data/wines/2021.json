@@ -2,7 +2,91 @@
   "year": "2021",
   "wine": [
     {
-      "cuvee":  "",
+      "cuvee":  null,
+      "kind": "Bordeaux",
+      "date": "2021-05-10",
+      "appellation": "Médoc",
+      "producteur": "Château Haut Plantey - E.A.R.L Salabaras",
+      "city": "Civrac",
+      "region": "Gironde",
+      "country": "France",
+      "year": 2016,
+      "cepage": ["Cabernet Sauvignon"],
+      "alcohol": 13,
+      "color": "rouge"
+    },
+    {
+      "cuvee": "Blanc de blancs",
+      "kind": "Champagne",
+      "date": "2021-05-09",
+      "appellation": "Champagne",
+      "producteur": "Waris Hubert",
+      "city": "Avize",
+      "region": "Champagne",
+      "country": "France",
+      "year": 2014,
+      "cepage": ["Chardonnay"],
+      "alcohol": 12,
+      "color": "blanc"
+    },
+    {
+      "cuvee": "Blanc de blancs",
+      "kind": "Champagne",
+      "date": "2021-05-09",
+      "appellation": "Champagne",
+      "producteur": "Payelle",
+      "city": "Ambonnay",
+      "region": "Champagne",
+      "country": "France",
+      "year": null,
+      "cepage": ["Chardonnay"],
+      "alcohol": 12,
+      "color": "blanc"
+    },
+    {
+      "cuvee":  "Le Petit",
+      "kind": null,
+      "date": "2021-05-09",
+      "appellation": "Vin de France",
+      "producteur": "Kevin Barbet",
+      "city": "Montpezat-de-Quercy",
+      "region": "Quercy",
+      "country": "France",
+      "year": 2019,
+      "cepage": ["Gamay", "Syrah"],
+      "alcohol": 13.5,
+      "color": "rouge"
+    },
+    {
+      "cuvee":  "Grand Clos Fortoul",
+      "kind": "Bourgogne",
+      "date": "2021-05-08",
+      "appellation": "Mercurey",
+      "producteur": "Louis Jadot",
+      "city": "Beaune",
+      "region": "Bourgogne",
+      "country": "France",
+      "year": 2018,
+      "cepage": ["Pinot Noir"],
+      "alcohol": 13.5,
+      "color": "rouge"
+    },
+    {
+      "cuvee":  null,
+      "kind": "Vin Jaune",
+      "date": "2021-05-08",
+      "appellation": "Côtes du Jura",
+      "producteur": "Le Clos des Grives",
+      "city": "Chille",
+      "region": "Jura",
+      "country": "France",
+      "year": 2011,
+      "cepage": ["Savagnin"],
+      "alcohol": 13.5,
+      "color": "jaune"
+    },
+    {
+      "cuvee":  null,
       "kind": "Bordeaux",
       "date": "2021-05-02",
       "appellation": "Côtes de Bordeaux",
@@ -44,7 +128,7 @@
       "color": "blanc"
     },
     {
-      "cuvee": "",
+      "cuvee": null,
       "kind": "Bordeaux",
       "date": "2021-04-25",
       "appellation": "Graves",
@@ -58,7 +142,7 @@
       "color": "rouge"
     },
     {
-      "cuvee": "",
+      "cuvee": null,
       "kind": "Bordeaux",
       "date": "2021-04-11",
       "appellation": "Margaux",
@@ -72,7 +156,7 @@
       "color": "rouge"
     },
     {
-      "cuvee": "",
+      "cuvee": "Blanc de blancs",
       "kind": "Champagne",
       "date": "2021-04-11",
       "appellation": "Champagne",
