@@ -4,6 +4,20 @@
     {
       "cuvee":  null,
       "kind": "Bordeaux",
+      "date": "2021-05-12",
+      "appellation": "Saint-Émilion",
+      "producteur": "Château Le Freyche",
+      "city": "Saint-Pey-d'Armens",
+      "region": "Gironde",
+      "country": "France",
+      "year": 2015,
+      "cepage": ["Merlot", "Cabernet franc"],
+      "alcohol": 13.5,
+      "color": "rouge"
+    },
+    {
+      "cuvee":  null,
+      "kind": "Bordeaux",
       "date": "2021-05-10",
       "appellation": "Médoc",
       "producteur": "Château Haut Plantey - E.A.R.L Salabaras",
