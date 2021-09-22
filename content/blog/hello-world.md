@@ -37,3 +37,4 @@ sites that give me inspiration are:
 - https://thegallery.io/
 - https://www.rfc-editor.org/search/rfc_search.php ;)
 - https://brandur.org/
+- https://マリウス.com/
