@@ -32,24 +32,24 @@ une forme de sécurité.
 ## UNSPENT TRANSACTION OUTPUT
 
 ```ascii
-                                            +----------------------+
+                                            +──────────────────────+
                                             |       tx #2          |
-                                            +----------+-----------+
-                                      +---> | input #2 | output #1 |
-                                      |     +----------------------+
+                                            +──────────+───────────+
+                                      +───▶ | input #2 | output #1 |
+                                      |     +──────────────────────+
                                       |                | output #2 |
-         +----------------------+     |                +-----------+
+         +──────────────────────+     |                +───────────+
          |       tx #1          |     |
-         +----------+-----------+     |
-   +---> | input #1 | output #1 +-----+
-...      +----------------------+
-   +---> | input #2 | output #2 +-----+     +----------------------+
-         +----------------------+     |     |       tx #3          |
-                    | output #3 |     |     +----------+-----------+
-                    +-----------+     +---> | input #1 | output #1 |
-                                            +----------------------+
-         utxos:  tx#1/output#3        +---> | input #2 |
-                 tx#2/output#1        |     +----------+
+         +──────────+───────────+     |
+   +───▶ | input #1 | output #1 +─────+
+...      +──────────────────────+
+   +───▶ | input #2 | output #2 +─────+     +──────────────────────+
+         +──────────────────────+     |     |       tx #3          |
+                    | output #3 |     |     +──────────+───────────+
+                    +───────────+     └───▶ | input #1 | output #1 |
+                                            +──────────────────────+
+         utxos:  tx#1/output#3        +───▶ | input #2 |
+                 tx#2/output#1        |     +──────────+
                  tx#2/output#2        |
                  tx#3/output#1    ... +
 
@@ -60,9 +60,13 @@ une forme de sécurité.
 
 ## Pour aller plus loin
 
-                 
 # La Protection des bitcoins.
 
+## Shamir secret
+
+## Hardware wallet
+
+## Multisig & Musig
 
 # REVAULT
 
@@ -71,40 +75,36 @@ le protocole peut etre encore soumis a des changements, le problème
 touche a plusieurs facettes difficile de Bitcoin.
 
 ```ascii
-+-->    tx           tx           tx       deposit
++──▶    tx           tx           tx       deposit
 |        +            +            +
 |        |            |            |
 |        |            |            |
-|        v            v            v
-|
-|   +--------+   +--------+   +--------+
+|        ▼            ▼            ▼
+|   +────────+   +────────+   +────────+
 |   | utxo 1 |   | utxo 2 |   | utxo 3 |   vaults
-|   +--+-+---+   +----+---+   +----+---+
+|   +──+─+───+   +────+───+   +────+───+
 |      | |            |            |
-|      | |            |            |       +------------+
-|      | +------------+------------+-----> | emergency  |
+|      | |            |            |       +────────────+
+|      | +────────────+────────────+─────▶ | emergency  |
 |      |          emergency tx             | deep vault |
-|      |                                   +------------+
+|      |                                   +────────────+
 |      | unvault tx                               ^
 |      |                                          |
-|      +---------------+                          |
+|      +───────────────+                          |
 |                      |                          |
-|    cancel tx         v    unvault emergency tx  |
-+-------------------------------------------------+
+|    cancel tx         ▼    unvault emergency tx  |
++──────────────────────+──────────────────────────+
                        |
                        |  spend tx
                        |
-                       v
+                       ▼
                       out
 ```
 
-## Les transactions presignés
+## Les transactions pre-signées
 
 ## La dépense d'un vault
 
 ## L effrayante Mempool
 
 #1: Attention le terme difficulté ne signifie pas dans ce contexte complexité
-
-Ascii art from:
-fish: https://ascii.co.uk/art/fish (I added the wizard hat)

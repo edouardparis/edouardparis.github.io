@@ -83,12 +83,11 @@ nav li {
 
 section {
   display: block;
-  margin-top: 10%;
+  margin-top: 100px;
   margin-bottom: 5%;
   position: relative;
-  width: 80ch;
-  margin-left: auto;
-  margin-right: auto;
+  width: 70ch;
+  margin-left: 100px;
 }
 
 section li {
@@ -226,14 +225,8 @@ hr::before {
 
 #footer {
   position: relative;
-  width: 80ch;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.footer-redirect {
-  border: 1px solid #1F2429;
-  padding: 10px;
+  width: 70ch;
+  margin-left: 100px;
 }
 
 .menu {
@@ -287,10 +280,15 @@ hr::before {
 
   section {
     width: auto;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   #footer {
     width: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 	/* fixer une largeur maximale de 100% aux éléments potentiellement problématiques */
