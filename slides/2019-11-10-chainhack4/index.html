@@ -1,0 +1,79 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Chainhack 2019-11-10</title>
+<meta name=description content="Edouard Paris personal website">
+<meta name=apple-mobile-web-app-capable content="yes">
+<meta name=apple-mobile-web-app-status-bar-style content="black-translucent">
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<link rel=stylesheet href=/reveal-js/css/reveal.css><link rel=stylesheet href=/css/slides.css id=theme><link rel=stylesheet href=/highlight-js/vs.min.css>
+</head>
+<body>
+<div class=reveal>
+<div class=slides>
+<h1 id=chainhack-project-a-simple-lightning-faucet-using-lnurl>Chainhack project: A simple lightning Faucet using LNURL</h1>
+<p>A little application using Opennode API written in Rust.</p>
+<p>Edouard Paris - <a href=https://edouard.paris/slides/2019-11-10-chainhack4>https://edouard.paris/slides/2019-11-10-chainhack4</a></p>
+<hr>
+<hr>
+<p><img src=bitcoin_stack.svg alt=bitcoin_stack></p>
+<hr>
+<p><img src=https://raw.githubusercontent.com/btcontract/lnurl-rfc/master/media/logo/logo_600.png alt=lnurl_logo></p>
+<p>specs: <a href=https://github.com/btcontract/lnurl-rfc>https://github.com/btcontract/lnurl-rfc</a></p>
+<hr>
+<p><img src=lnurl-withdraw.svg alt=lnurl-withdraw></p>
+<hr>
+<section data-noprocess data-shortcode-slide data-background-iframe=https://ln-testnet-faucet.cleverapps.io/faucet>
+<hr>
+<p>Written with Rust 🦀 v1.40.0-nightly with async/await futures 🎉</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#a6e22e>bech32</span> = <span style=color:#e6db74>&#34;0.7.1&#34;</span>
+<span style=color:#a6e22e>hyper</span> = <span style=color:#e6db74>&#34;0.13.0-alpha.4&#34;</span>
+<span style=color:#a6e22e>dotenv</span> = <span style=color:#e6db74>&#34;0.9.0&#34;</span>
+<span style=color:#a6e22e>env_logger</span> = <span style=color:#e6db74>&#34;0.7.0&#34;</span>
+<span style=color:#a6e22e>futures-util</span> = <span style=color:#e6db74>&#34;0.3.1&#34;</span>
+<span style=color:#a6e22e>image</span> = <span style=color:#e6db74>&#34;0.22.3&#34;</span>
+<span style=color:#a6e22e>lazy_static</span> = <span style=color:#e6db74>&#34;1.4.0&#34;</span>
+<span style=color:#a6e22e>lightning-invoice</span> = <span style=color:#e6db74>&#34;0.2.0&#34;</span>
+<span style=color:#a6e22e>log</span> = <span style=color:#e6db74>&#34;0.4.8&#34;</span>
+<span style=color:#a6e22e>lnurl</span> = <span style=color:#e6db74>&#34;0.1.0&#34;</span>
+<span style=color:#a6e22e>opennode</span> = <span style=color:#e6db74>&#34;1.0.0&#34;</span>
+<span style=color:#a6e22e>qrcode</span> = <span style=color:#e6db74>&#34;0.11.0&#34;</span>
+<span style=color:#a6e22e>reqwest</span> = { <span style=color:#a6e22e>version</span>= <span style=color:#e6db74>&#34;0.10.0-alpha.1&#34;</span>, <span style=color:#a6e22e>features</span> = [<span style=color:#e6db74>&#34;json&#34;</span>]}
+<span style=color:#a6e22e>regex</span> = <span style=color:#e6db74>&#34;1.3.1&#34;</span>
+<span style=color:#a6e22e>serde</span> = { <span style=color:#a6e22e>version</span> = <span style=color:#e6db74>&#34;1.0.93&#34;</span>, <span style=color:#a6e22e>features</span> = [<span style=color:#e6db74>&#34;derive&#34;</span>]}
+<span style=color:#a6e22e>serde_json</span> = <span style=color:#e6db74>&#34;1.0.41&#34;</span>
+<span style=color:#a6e22e>tokio</span> = <span style=color:#e6db74>&#34;0.2.0-alpha.6&#34;</span>
+<span style=color:#a6e22e>tokio-executor</span> = <span style=color:#e6db74>&#34;=0.2.0-alpha.6&#34;</span>
+<span style=color:#a6e22e>tokio-io</span> = <span style=color:#e6db74>&#34;=0.2.0-alpha.6&#34;</span>
+<span style=color:#a6e22e>tokio-sync</span> = <span style=color:#e6db74>&#34;=0.2.0-alpha.6&#34;</span>
+</code></pre></div><hr>
+<h1 id=code>Code</h1>
+<p>FAUCET: <a href=https://ln-testnet-faucet.cleverapps.io/faucet>https://ln-testnet-faucet.cleverapps.io/faucet</a></p>
+<p><a href=https://github.com/edouardparis/lnurl-examples>https://github.com/edouardparis/lnurl-examples</a> /
+<a href=https://github.com/edouardparis/rust-lnurl>https://github.com/edouardparis/rust-lnurl</a></p>
+<p>New Crate 📦 on crates.io 🎉</p>
+<p><a href=https://github.com/edouardparis/rust-lnurl/blob/master/LICENSE><img src=https://img.shields.io/badge/license-MIT-blue.svg alt="MIT licensed"></a>
+<a href=https://crates.io/crates/lnurl><img src=https://img.shields.io/crates/v/lnurl.svg alt="lnurl on crates.io"></a>
+<a href=https://docs.rs/lnurl><img src=https://docs.rs/lnurl/badge.svg alt="lnurl on docs.rs"></a></p>
+<hr>
+<h2 id=thank-you->Thank you !</h2>
+</section>
+</div>
+</div>
+<script type=text/javascript src=/reveal-hugo/object-assign.js></script>
+<a href=/reveal-js/css/print/ id=print-location style=display:none></a>
+<script type=text/javascript>var printLocationElement=document.getElementById('print-location'),link=document.createElement('link');link.rel='stylesheet',link.type='text/css',link.href=printLocationElement.href+(window.location.search.match(/print-pdf/gi)?'pdf.css':'paper.css'),document.getElementsByTagName('head')[0].appendChild(link)</script>
+<script type=application/json id=reveal-hugo-site-params>null</script>
+<script type=application/json id=reveal-hugo-page-params>{"custom_theme":"css/slides.css","highlight_theme":"vs"}</script>
+<script src=/reveal-js/lib/js/head.min.js></script>
+<script src=/reveal-js/js/reveal.js></script>
+<script type=text/javascript>var revealHugoDefaults,revealHugoSiteParams,revealHugoPageParams,options;function camelize(a){return a&&Object.keys(a).forEach(function(b){newK=b.replace(/(\_\w)/g,function(a){return a[1].toUpperCase()}),newK!=b&&(a[newK]=a[b],delete a[b])}),a}revealHugoDefaults={center:!0,controls:!0,history:!0,progress:!0,transition:"slide"},revealHugoSiteParams=JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML),revealHugoPageParams=JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML),options=Object.assign({},camelize(revealHugoDefaults),camelize(revealHugoSiteParams),camelize(revealHugoPageParams)),Reveal.initialize(options)</script>
+<script type=text/javascript src=/reveal-js/lib/js/classList.js></script>
+<script type=text/javascript src=/reveal-js/plugin/markdown/marked.js></script>
+<script type=text/javascript src=/reveal-js/plugin/markdown/markdown.js></script>
+<script type=text/javascript src=/reveal-js/plugin/highlight/highlight.js></script>
+<script type=text/javascript src=/reveal-js/plugin/zoom-js/zoom.js></script>
+<script type=text/javascript src=/reveal-js/plugin/notes/notes.js></script>
+<script type=text/javascript>hljs&&hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

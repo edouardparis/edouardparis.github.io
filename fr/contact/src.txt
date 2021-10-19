@@ -1,0 +1,20 @@
+------------------------------------------------
+commit: ba481212a1ca5512f8fcbe0d7c4d6c2af9710637
+Date:   2018-03-09 10:25:51 +0100 +0100
+------------------------------------------------
+
+
+contact
+
+Pour me contacter :
+
+* [Twitter](https://twitter.com/edouardparis)
+*  email : m[at]edouard[dot]paris
+*  irc : /query Ed0 chez freenode or /ted chez irc.iiens.net
+
+
+------------------------------------------------
+Copyright: 2020 EdouardParis.
+$ pwd :    ~/edouard.paris/fr/contact
+------------------------------------------------
+

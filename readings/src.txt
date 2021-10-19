@@ -1,0 +1,108 @@
+------------------------------------------------
+commit: b4e5995115f5060b357b78a25b09aae475257aef
+Date:   2021-09-22 10:41:40 +0200 +0200
+------------------------------------------------
+
+```ascii
+______             _
+| ___ \           | |
+| |_/ / ___   ___ | | _____
+| ___ \/ _ \ / _ \| |/ / __|
+| |_/ / (_) | (_) |   <\__ \
+\____/ \___/ \___/|_|\_\___/
+```
+
+Here, I keep updated a list of book in order to keep me motivated.
+This list, started in 2017 follows no topic or particular guideline per
+year. Books are chosen by my curiosity and the recommendations of my friends.
+
+Computer science and programming manuals are not included. I mostly
+cherry pick information from them.
+
+If the title is translated in French: I read the French translation.
+
+[ 2021 ]
+
+Le Messie de Dune - Frank Herbert
+Comment tout peut s'effrondrer - Pablo Servigne, Raphaël Stevens
+Or noir, la grande histoire du pétrole - Matthieu Auzanneau
+Tours et détours de la vilaine fille - Mario Vargas Llosa
+L'anomalie - Hervé Le Tellier
+Le Choix de Simon - John Ramster
+Outresable - Hugh Howey
+Rouge Brésil - Jean-Christophe Rufin
+
+[ 2020 ]
+
+La Mort du roi Tsongor - Laurent Gaudé
+Dune - Frank Herbert
+Aux Cinq Rues, Lima - Mario Vargas Llosa
+Le Soleil des Scorta - Laurent Gaudé
+Là où dansent les morts - Tony Hillerman
+Le K - Dino Buzzati
+Le jeu de l'ange - Carlos Ruiz Zafón
+L´Éternel Mari - Fiodor Dostoïevski
+La Dame de Pique & autres récits - Alexandre Pouchkine
+Gomorra - Roberto Saviano
+L'Identité - Milan Kundera
+Le chapiteau vert - Ludmila Oulitskaïa
+Dans la forêt - Jean Hegland
+Pour en finir avec Eddy Bellegueule - Édouard Louis
+Carrie - Stephen King
+Le Zahir - Paulo Coelho
+Les Particules élémentaires - Michel Houellebecq
+
+[ 2019 ]
+
+Le Meurtre du Commandeur - La Métaphore se déplace - Haruki Murakami
+Le Meurtre du Commandeur - Une Idée apparait - Haruki Murakami
+Jouer sa peau - Nassim Nicholas Taleb
+Mémoires vives - Edward Snowden
+Moi, Tituba sorcière - Maryse Condé
+Ma vie sur la route - Gloria Steinem
+Le Mur invisible - Marlen Haushofer
+Autour de ton cou - Chimamanda Ngozi Adichie
+Toute la lumière que nous ne pouvons voir - Anthony Doerr
+Beauté fatale - Mona Chollet
+Ce qu'il reste de nos rêves - Flore Vasseur
+Au pays des choses dernières (Le voyage d'Anna Blume) - Paul Auster
+La condition humaine - André Malraux
+L'Ombre du vent - Carlos Ruiz Zafón
+
+[ 2018 ]
+
+Sorcières - Mona Chollet
+La Vie Heureuse et Les Bienfaits - Sénèque
+Le Prince et autres textes - Nicolas Machiavel
+Antifragile : les bienfaits du désordre - Nassim Nicholas Taleb
+Le Cygne Noir - Nassim Nicholas Taleb
+Chanson douce - Leïla Slimani
+Tous les hommes désirent naturellement savoir - Nina Bouraoui
+La Pianiste - Elfriede Jelinek
+Cercueils sur mesure - Truman Capote
+Tendre est la nuit - Francis Scott Fitzgerald
+Jérusalem - Alan Moore
+La route de la servitude - Friedrich A. Hayek
+Les gens - Philippe Labro
+
+[ 2017 ]
+
+Freakonomics - Steven D. Levitt & Stephen J.Dubner
+Pensées pour moi-même - Marc Aurèle
+L'amant - Marguerite Duras
+Personne ne gagne - Jack Black
+La symphonie des nombres premiers - Markus du Sautoy
+Vernon Subutex - Virginie Despentes
+Lolita - Vladimir Nabokov
+Le Chœur des femmes - Martin Winckler
+Ne tirez pas sur l'oiseau moqueur - Harper Lee
+Bonjour tristesse - Françoise Sagan
+Charlotte - David Foenkinos
+L'hibiscus pourpre - Chimamanda Ngozi Adichie
+
+
+------------------------------------------------
+Copyright: 2020 EdouardParis.
+$ pwd :    ~/edouard.paris/reading
+------------------------------------------------
+

@@ -1,0 +1,23 @@
+------------------------------------------------
+commit: c5646e4f3284220efc07259264c64d2e25e912f2
+Date:   2019-11-01 12:39:39 +0100 +0100
+------------------------------------------------
+
+# The Lightning Conference 2019
+
+- 10:10 Enterprise Lightning FTW - Jameson Lopp
+- 10:30 Make me an offer: Next Level Invoicing - Rusty Russell
+- 11:00 How much Better Could Lightning Be? - Fabrice Drouin
+- 11:20 pAMP it - Conner Fromknecht
+- 11:40 Of Channels, Flows and Icebergs - Christian Decker
+- 12:00 LSAT: Your Ticket Aboard the Internet's Money Rails - Olaoluwa Osuntokun
+- 13:30 Building a More Friendly Lightning User Experience - Will O'Beirne
+- 13:50 Hedging the Chain - Jack Mallers
+- 16:00 Lightning x Liquidity, Or A Financier's Guide to Staking Bitcoin - Lisa Neigut
+- 17:00 Lightning integration in Electrum - Thomas Voegtlin
+
+------------------------------------------------
+Copyright: 2020 EdouardParis.
+$ pwd :    ~/edouard.paris/resources/tlc2019
+------------------------------------------------
+

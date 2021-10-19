@@ -1,0 +1,32 @@
+------------------------------------------------
+commit: 9ff2c7bfd74898fc474ced65e5bcca59933d61dc
+Date:   2019-11-20 09:03:30 +0100 +0100
+------------------------------------------------
+
+
+Talks
+
+# [ 2019 ] ---
+
+## A simple faucet using LNURL (EN)
+2019-11-10 for chainhack4
+[slides](/slides/2019-11-10-chainhack4) /
+[link](https://blockchain-hackathon.com/)
+
+## Connect yourself to the Lightning Network with Go (FR)
+2019-06-18, for the meetup Go Paris -
+[slides](/slides/2019-06-18-meetup-go-paris) /
+[link](https://www.meetup.com/fr-FR/Golang-Paris/events/262210434/)
+
+## Loukoum, an SQL Builder for Go (FR)
+2019-02-21, for the meetup Postgres Paris -
+[slides](https://github.com/novln/loukoum-pgmeetup) /
+[link](https://www.meetup.com/fr-FR/PostgreSQL-User-Group-Paris/events/258592000/)
+
+
+
+------------------------------------------------
+Copyright: 2020 EdouardParis.
+$ pwd :    ~/edouard.paris/talks
+------------------------------------------------
+

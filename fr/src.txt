@@ -1,0 +1,28 @@
+------------------------------------------------
+commit: 92ac2369ead55b6b065e7075ddfaf17f9d9a033a
+Date:   2020-02-18 09:27:52 +0100 +0100
+------------------------------------------------
+
+```ascii
+    ___       ___       ___       ___       ___       ___       ___
+   /\  \     /\  \     /\__\     /\  \     /\  \     /\__\     /\  \
+  /::\  \   /::\  \   /:| _|_   _\:\  \   /::\  \   /:/ _/_   /::\  \
+ /::\:\__\ /:/\:\__\ /::|/\__\ /\/::\__\ /:/\:\__\ /:/_/\__\ /::\:\__\
+ \:\::/  / \:\/:/  / \/|::/  / \::/\/__/ \:\/:/  / \:\/:/  / \;:::/  /
+  \::/  /   \::/  /    |:/  /   \/__/     \::/  /   \::/  /   |:\/__/
+   \/__/     \/__/     \/__/               \/__/     \/__/     \|__| ,
+```
+Je m'appelle Édouard Paris.
+
+Je suis ingénieur en informatique et mathématiques appliquées,
+vous pouvez me retrouver sur :
+
+  [Twitter](https://twitter.com/edouardparis)
+/ [GitHub](https://github.com/edouardparis)
+/ [LinkedIn](https://www.linkedin.com/in/parisedouard/)
+
+------------------------------------------------
+Copyright: 2020 EdouardParis.
+$ pwd :    ~/edouard.paris/fr
+------------------------------------------------
+

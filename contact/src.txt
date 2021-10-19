@@ -1,0 +1,20 @@
+------------------------------------------------
+commit: eb7ae9ee244bde57e5a1ad4288c0dd2aa6281e73
+Date:   2019-07-11 12:01:53 +0200 +0200
+------------------------------------------------
+
+
+Contact
+
+If you want to contact me please use :
+
+*  Twitter
+*  email : m[at]edouard[dot]paris
+*  irc : /query Ed0 on freenode or /ted on irc.iiens.net
+
+
+------------------------------------------------
+Copyright: 2020 EdouardParis.
+$ pwd :    ~/edouard.paris/contact
+------------------------------------------------
+

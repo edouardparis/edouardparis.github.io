@@ -1,0 +1,318 @@
+------------------------------------------------
+commit: e0cb564035737dea5f51c24ee6eca55610b29329
+Date:   2020-01-22 13:55:57 +0100 +0100
+------------------------------------------------
+
+```ascii-art-pink
+               ________
+       z$$$$P /_  __/ /_  ___                     Berlin 2019
+      d$$$$"   / / / __ \/ _ \
+    .$$$$$"   / / / / / /  __/
+   z$$$$$"   /_/ / / /_/\___/  __    __        _
+  z$$$$P        / /   (_)___ _/ /_  / /_____  (_)___  ____ _
+ d$$$$$$$$$$"  / /   / / __ `/ __ \/ __/ __ \/ / __ \/ __ `/
+*******$$$"   / /___/ / /_/ / / / / /_/ / / / / / / / /_/ /
+     .$$$" __/_____/_/\__, /_/_/_/\__/_/ /_/_/_/ /_/\__, /
+    4$P"  / ____/___  _/__/ / __/__  ________  ____  /__/____
+   z$"   / /   / __ \/ __ \/ /_/ _ \/ ___/ _ \/ __ \/ ___/ _ \
+  zP    / /___/ /_/ / / / / __/  __/ /  /  __/ / / / /__/  __/
+ z"     \____/\____/_/ /_/_/  \___/_/   \___/_/ /_/\___/\___/
+
+```
+
+tl;dr:\\
+Talks were outstanding. \\
+Awesome community centered about building stuff.\\
+Spent only sats during three days.\\
+Visited nice places and met original people.
+
+---
+
+I started writing this post in the Berlin Tegel airport.
+Totally exhausted but with a lot of thought in mind.
+The lightning conference was a success.
+It was the first Bitcoin only conference I attended and
+I feel like Alice waking up after her rabbit hole dream.
+
+During three days, I was completely in a different world, more
+technical, more futuristic with really original, passionated and
+passionating people. I cannot go further into the details, but I wanted to give
+my overall experience.
+
+The [Lightning Network](http://lightning.network/) is a layer on top
+of Bitcoin enabling fast transaction with more privacy features.
+Powered by bidirectional payment channels and smart contracts,
+this is one of the most exciting solutions for Bitcoin scalability.
+One year after the first mainnet channels opened, more than three implementations
+of the [BOLT specifications](https://github.com/lightningnetwork/lightning-rfc)
+exist, a community of developers and hackers is forming and the size of
+the network is still growing.
+[The Lightning Conference](https://www.thelightningconference.com/)
+is the first international event focused on this technology,
+and I wanted to be here, to feel the vibe :)
+
+# Day 0 - The Meetup dev
+
+Location: [AHOY](https://www.ahoyberlin.com/)
+
+My plane landed the morning, at 9:00, and I went directly to the meetup.
+The space was quite big but quickly crowded by nerds like me.
+Wearing Dark clothes for the most of them, a Club Mate in one hand,
+the other with a computer and asking the wifi code and a power plug.
+
+As described in the invitation email, it was an open meetup without
+any prior agenda, focused on technical questions about the
+Lightning Network. We had tables to sit down and work on,
+as well as a small area for impromptu talks, announcements or demos.
+All of it was completely self-organised.
+
+I attended the rust-lightning workshop organised by ariard.
+The exercise consisted of cloning a bootstrapping
+[repository](https://github.com/ariard/hacking-rust-lightning)
+familiarizing with the library interfaces and writing a minimal
+implementation of a lightning client.
+The lack of space in the main room droved us to work in front of
+the bar. It was difficult to discuss in this area because of the
+noise, but it remained very instructive.
+
+My check-in to the hotel was at 6:00pm. I left the space, took the
+subway and got out at the nearest station. I then could have taken the bus,
+but I wanted to explore Berlin's streets. Walking along a wall, thinking
+of the Lightning, the exciting future to come, I noticed after several
+hundred meters how long this wall actually was and the size of its paintings.
+
+On a little sign, near the ground, was written: **Berliner Mauer**. \\
+One month before its 30th anniversary, this wall did not catch my eyes. \\
+The contemporary concrete and its cold appearance felt actual. \\
+A rigid line separating families and friends felt actual.
+
+The rain did not spoil the after-party, which was organised in
+a nice pub [Hirsch & Hase](https://hirschundhase.de/), near Voltastraße
+station. Free Beer and free food ! But after hanging out with the
+French people group, we decided to try the famous Room77 pub.
+
+# Room 77 and the 600,000th block
+
+Location: [Room77](http://www.room77.de/) - Graefestraße 77, Berlin
+
+```ascii-art-pink
+ ──▄▄█▀▀▀▀▀█▄▄─  Room77 is one of the first place in the world which
+▄█▀──▄─▄────▀█▄  accepted cryptocurrency payments.
+█───▀█▀▀▀▀▄───█
+█────█▄▄▄▄▀───█  A big Bitcoin sign in neon welcomes you as you enter in
+█────█────█───█  a warm room with a cypherpunk ambiance. Price is decent
+▀█▄─▀▀█▀█▀──▄█▀  and service great.
+──▀▀█▄▄▄▄▄█▀▀──
+```
+
+We had a lot of fun in this pub, which is quite cosy and pleasant. It
+was certainly the first and the only time we enjoyed it not overcrowded
+by the thirsty lightning community. Paying with lightning was really
+easy, a small machine displaying the qr-code was passed around by the staff
+who seemed totally used to handle this kind of transaction.
+
+Coincidence or not it was the same night that the peer-to-peer
+distributed timestamp server of the Bitcoin protocol would generate its
+600 000th block, generating a computational proof of a chronological
+order of transaction for thousands of peers of its network and anchoring
+in time the issuance of 12.5 bitcoins inside the existing 18 millions.
+We waited for it, drinking beers and discussing about mostly informatics
+and community, refreshing some time a bright web page on our phone in
+the subdued light of the pub.
+
+We spent all our time in the bar until the 600 000th block happened,
+local time was around 2am. We celebrated it with a round of applause and
+a last drink, but tired by this long day I was happy to go to bed.
+
+# Day 1 --
+
+Location: KÖPENICKER STR. 16 - 17 10997 Berlin
+
+```ascii-art-black
+    ##     Cafe was served in front of the conference building
+   ####    by the people of the Paralelni Polis truck and sponsored
+  ##  ##   by Bitmex.
+ ##    ##  Inside the truck, was a art gallery about the concept of
+##  ###### Cryptoanarchy and the unregulated internet.
+
+```
+
+Talks, I attended:
+
+- 10:10 Enterprise Lightning FTW - Jameson Lopp
+- 10:30 Make me an offer: Next Level Invoicing - Rusty Russell
+- 11:00 How much Better Could Lightning Be? - Fabrice Drouin
+- 11:20 pAMP it - Conner Fromknecht
+- 11:40 Of Channels, Flows and Icebergs - Christian Decker
+- 12:00 LSAT: Your Ticket Aboard the Internet's Money Rails - Olaoluwa
+    Osuntokun
+- 13:30 Building a More Friendly Lightning User Experience - Will O'Beirne
+- 13:50 Hedging the Chain - Jack Mallers
+- 16:00 Lightning x Liquidity, Or A Financier's Guide to Staking Bitcoin - Lisa Neigut
+- 17:00 Lightning integration in Electrum - Thomas Voegtlin
+
+
+Jack Mallers was really impressive, the talk was not really technical
+but it remained a great explanation about financial tools.
+
+Olaoluwa Osuntokun talks fast, this fact is a meme in the community, but
+believe me or not even for a non-English speaker like me all is
+intelligible , and the quantity of relevant information, or deep in detail
+explanation of technical solution of complex problem is outstanding.
+
+This first day, the main stage was very focused on technical part. It
+was really refreshing to listen to passionate people with a clear
+vision and even if all the audience and speakers have certainly a big
+bias when it is about the Lightning Network, the general spirit was:
+Congrats, the thing works, now we still have a lot improvement to do.
+
+Sadly, I could not enter in the sponsored party, not enough place was
+reserved for the conference attended. The French group and I ended
+again in Room77.
+
+# Day 2 --
+
+I spent more time on the second floor, playing with the hardware that
+people brought to the conference. There were a lot of funny machines,
+like a cocktail dispenser, beer taps, a polaroid camera, a blowing
+bubble robot, all connected to the Lightning Network, accepting sats as
+a price for the entertainment. Several companies exposed their products
+like home hosting Bitcoin node hardware or cold storage solutions.
+Around a big table with a screen at the end it, people were organizing
+workshops about open source software.
+
+In a medium sized space, the second stage was taking place without a big
+scene only a projector and a microphone like a standard tech meetup.
+The talks were great, it was really pleasant to have this dimension of presentation.
+My favorite talk so far, was from Jonas Nick, cryptographer at
+Blockstream, who explained in a very clear way Schnorr signature
+properties.
+
+I attended (but forgot the schedule):
+
+- Lightning Network in Paralelna Polis - Martin Habovstiak
+- Lightning and Journalism - Janine Romer
+- Trampoline Routing - Bastien Teinturier
+- Deploying Rust-Lightning in the Wild - Antoine Riard
+- Payment Pathfinding for Reliability - Joost Jager
+- Hight Throughput Cryptocurrency Routing in Payment Channel Networks - Vibhaalakshmi Sivaraman
+- 10 Things You Probably Didn‘t Know About Lightning Channels - Oliver Gugger
+- Current Approaches for Pathfinding of Payments on the Lightning Network - Rene Pickhardt
+- The Impact of Schnorr, Taproot, and Tapscipt on Lightning - Michael Folkson
+- Shrunken Schnorr Shortcuts - Jonas Nick
+
+ZmnSCPxj made a talk presenting a huge amount of routing ideas for the
+Lightning Network, I forgot the title of the talk but it was hilarious
+to see her/him struggle to reach the end of her/him slides.
+This individual, who is maybe the most active and prolific writer
+of the lightning-dev mailing list care about privacy.
+I am happy that Square Crypto gifted ZmnSCPxj a
+[grant](https://twitter.com/sqcrypto/status/1204815615678177280).
+
+I managed to take a picture with Olaoluwa Osuntokun who was patient
+enough to accept it even if he did not know me. The fan boy in me was
+ecstatic.
+
+Someone in the French group had a contact with a member of the c-base
+hackerspace and we were invited to visit it.
+
+# c-base, a Raumstation unter Berlin
+
+```ascii-art-black
+
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⡿⠋⠉⣀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⢸⣿⣏⠉⠙⠻⣿⣿⣿⣿⠟⠉⢉⡉⠙⠻⣿⣿⣿⣿⠟⠉⢉⣹⣿⣿⣿⣿⣿⣿⠟⠋⢁⣀⠉⠛⢿⣿⣿
+⣿⣿⣿⠄⣰⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠿⠿⢿⣿⣿⠄⢸⣿⣿⣿⣷⠄⢹⣿⣿⠃⢠⣾⣿⣿⣷⡀⢹⣿⣿⡇⢀⣾⡿⠻⣿⣿⣿⣿⣿⡏⠄⣾⡿⠻⣿⡆⠈⣿⣿
+⣿⣿⣿⡀⠹⣿⣿⣿⠟⠄⣼⣿⣿⣶⣶⣶⣶⣾⣿⣿⡀⠸⣿⣿⣿⡿⠄⣼⣿⣿⡄⠘⢿⣿⣿⣿⡇⢸⣿⣿⣿⣿⣿⣷⣴⡿⠃⢠⣿⣿⣇⠄⢿⣷⣶⣿⣿⣿⣿⣿
+⣿⣿⣿⣷⣤⣀⡉⣁⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣤⣀⢉⣁⣠⣴⣿⣿⣿⣿⣦⣀⠉⣿⣿⣷⣾⣿⣿⣿⣿⣿⣿⢉⣀⣴⣿⣿⣿⣿⣦⣄⣈⣹⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+```
+
+[c-base](https://c-base.org) is the oldest crashed space station on earth.
+
+After entering through a corridor worthy of being the decors of a remake
+of 2001: a Space Odyssey, we were welcomed inside a big space with
+walls coated with electronic cards, colored neons and LED panels.
+We drank a beer near a pub counter with a futuristic vibe.
+
+Our host guided us in the downstairs floor, following the story telling
+of the space he signalled our intrusion to the other spaceship's members
+working inside by pressing a weird button. An Alarm rang and panels
+with Space Aliens form drawn on it switch on. The first floor seemed
+already impressive, but this ground was at another level. Even the ceiling
+was covered with wired, dells and buttons. We visited a Library,
+a room with a big mess of tools, soldering irons, space with computer
+screens and lava lamps.
+
+I gifted my best Bitcoin sticker to our guide who in return gave us
+stickers with the Raumstation logo.
+
+# Unstack sats
+
+I have unstacked a lot of sats playing with the funny
+hardware of the second floor, buying stickers, hot chocolate, coffee and
+beer. The speed of transaction was swift and fees were cheap,
+Although my Eclair Wallet had only two channels.
+
+Spending everyday with my wallet contributed to the overall futuristic
+atmosphere and it was a great reminder every day that the technology
+, people were actually talking is real, it exists and it grows.
+
+```ascii-art-black
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣤⣶⣶⣶⣶⣶⠶⣶⠶⣶⡶⠶⠶⠶⠶⠶⠶⢦⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄|---------------|-----|
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸⡿⠈⠂⠉⠄⠄⠄⠄⠈⠄⠉⠄⠄⠄⠄⠄⠄⠄⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄| amount        | fee |
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄|---------------|-----|
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸⡇⠄⠄⠄⠄⠶⠶⠄⠄⠄⠄⠂⠶⠶⠄⠄⠄⠄⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄| 38 394,47     | 61  |
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸⡇⠄⠄⠄⠄⠶⠶⠄⠄⠂⠄⠂⠶⠶⠄⠄⠄⠄⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄| 30 8469       | 0   |
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄| 101           | 1   |
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸⡇⠄⠄⠄⠄⠶⠄⠶⠄⠄⠄⠂⠉⠄⠄⠄⠄⠄⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄| 226001        | 0   |
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠈⡇⠄⠄⠄⠄⠶⠄⠶⠄⠄⠂⠂⠄⠂⠄⠄⠄⠄⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄| 139 580,972   | 222 |
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⠑⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄| 402,643       | 0   |
+⠄⠄⠄⠄⠄⠄⠄⢀⣔⣥⣄⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣷⣦⣤⣐⡀⠄⠄⠄⠄⠄| 34 891,799    | 175 |
+⠄⠄⠄⠄⠄⠄⣤⣴⣿⣿⡿⣇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⣿⡿⠟⠄⠄⠄⠄⠄⠄| 87 359,735    | 9   |
+⠄⠄⠄⠄⠄⣰⣿⣿⣿⡟⠁⣿⠄⠄⠄⠄⠄⠄⠄⠠⡶⠄⠄⠄⠄⢀⢀⢄⣤⡟⠉⠄⠄⠄⠄⠄⠄⠄⠄| 80 374,362    | 402 |
+⠄⠄⠄⠄⣼⣿⣿⣿⣿⠇⠄⣿⠄⠄⠄⠄⢀⣴⣮⣧⣡⣶⣾⢻⣼⣫⢮⣿⣿⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄| 56 574        | 0   |
+⠄⠄⠄⢰⣿⡿⢻⢽⣿⠄⣀⣿⠄⠄⠄⠄⢸⣿⣛⣿⣼⣻⡾⣿⢿⡻⣿⡟⣯⣿⣦⣤⡆⠄⠄⠄⠄⠄⠄| 45 258        | 0   |
+⠄⠄⠄⣾⣿⡇⠄⠄⠘⣿⣿⣿⠄⠄⠄⢴⣿⠿⣿⡿⠿⣷⣻⣿⠵⣿⠻⢽⢷⣿⡿⠟⠄⠄⠄⠄⠄⠄⠄| 113 145       | 0   |
+⠄⠄⠄⣿⣿⠛⠃⠄⠄⠈⣿⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⣇⠄⠄⠄⠄⠄⠄⠄⠄⠄|---------------|-----|
+⠄⠄⠄⣿⣿⡇⠄⠄⠄⠄⠸⣿⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⣴⠄⠄⠄⠄⠄⠄⠄⠄⠄| 1 130 551,981 | 870 |
+⠄⠄⠄⣿⣿⣿⡂⠄⠄⠄⠄⣿⣤⠐⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣟⡿⠛⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⣿⣿⣿⣿⣆⠄⠄⠄⣿⣯⣿⣿⣿⣿⣿⣿⣿⣛⣿⣿⣿⣿⣿⣿⣿⣿⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⢸⣿⣿⣿⣿⣿⣇⠄⠄⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⢠⣿⣿⣿⣿⣿⣿⣿⣦⡀⠄⠉⠻⣿⣿⣿⣿⣿⠟⠁⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠜⠉⠟⠍⠻⢿⣿⣿⣿⡷⣆⠄⠄⠄⠈⢹⣿⡿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄⠄⠄⠈⠛⢿⣿⣿⡒⠄⠄⠄⠸⠋⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+```
+
+At the current price: 83,37 euros
+
+# Conclusion
+
+After this conference, I had some weird feelings like a post conference
+blues, which I would describe as watching a Train passing in front of me or a ship
+leaving me alone on the quay. Full of smart and funny people, the
+vehicle was heading to great adventures and discoveries.
+Fortunately there are plenty ways to contribute to the Lightning
+Development without working on Bitcoin for a living.
+
+[Rusty Russell](https://en.wikipedia.org/wiki/Rusty_Russell) said
+["This event reminds me of the early Linux days."][1]
+It definitely makes me realize of my privilege to attend the conference.
+
+I am grateful for meeting this joyful and building community, witnessing
+its growth and inventiveness. I am amazed by the elegant solutions
+the developers comes up with to complex problems. I am overwhelmed by
+their new ideas and engineering concepts I would never be able to imagine.
+
+Thank you to the organizers, it was awesome.
+
+[1]: https://bitcoinmagazine.com/articles/scam-or-iteration-in-berlin-bitcoin-diehards-still-believe-in-lightning
+
+
+------------------------------------------------
+Copyright: 2020 EdouardParis.
+$ pwd :    ~/edouard.paris/blog/tlc2019
+------------------------------------------------
+
