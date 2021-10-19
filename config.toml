@@ -32,7 +32,7 @@ isHTML = true
 
 [outputFormats.Txt]
 name = "txt"
-baseName = "src"
+baseName = "index"
 mediaType = "text/plain"
 isPlainText = true
 
