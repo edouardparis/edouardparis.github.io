@@ -123,9 +123,9 @@ p.mu.Unlock()</p>
 &lt;span style=&quot;color:#66d9ef&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;conn&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;ClientConn&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;==&lt;/span&gt; &lt;span style=&quot;color:#66d9ef&quot;&gt;nil&lt;/span&gt; {
 	&lt;span style=&quot;color:#a6e22e&quot;&gt;conn&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;ClientConn&lt;/span&gt;, &lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt; = &lt;span style=&quot;color:#a6e22e&quot;&gt;p&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;factory&lt;/span&gt;()
 	&lt;span style=&quot;color:#66d9ef&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;!=&lt;/span&gt; &lt;span style=&quot;color:#66d9ef&quot;&gt;nil&lt;/span&gt; {
-        &lt;span style=&quot;color:#a6e22e&quot;&gt;conns&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;Conn&lt;/span&gt;{
-            &lt;span style=&quot;color:#a6e22e&quot;&gt;pool&lt;/span&gt;: &lt;span style=&quot;color:#a6e22e&quot;&gt;p&lt;/span&gt;,
-        }
+		&lt;span style=&quot;color:#a6e22e&quot;&gt;conns&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;Conn&lt;/span&gt;{
+			&lt;span style=&quot;color:#a6e22e&quot;&gt;pool&lt;/span&gt;: &lt;span style=&quot;color:#a6e22e&quot;&gt;p&lt;/span&gt;,
+		}
 	}
 }
 
@@ -145,7 +145,7 @@ close(&lt;span style=&quot;color:#a6e22e&quot;&gt;conns&lt;/span&gt;)
 &lt;span style=&quot;color:#66d9ef&quot;&gt;for&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;i&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;:=&lt;/span&gt; &lt;span style=&quot;color:#ae81ff&quot;&gt;0&lt;/span&gt;; &lt;span style=&quot;color:#a6e22e&quot;&gt;i&lt;/span&gt; &amp;lt; &lt;span style=&quot;color:#a6e22e&quot;&gt;p&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Capacity&lt;/span&gt;(); &lt;span style=&quot;color:#a6e22e&quot;&gt;i&lt;/span&gt;&lt;span style=&quot;color:#f92672&quot;&gt;++&lt;/span&gt; {
 	&lt;span style=&quot;color:#a6e22e&quot;&gt;client&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;:=&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span style=&quot;color:#a6e22e&quot;&gt;conns&lt;/span&gt;
 	&lt;span style=&quot;color:#66d9ef&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;client&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;ClientConn&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;==&lt;/span&gt; &lt;span style=&quot;color:#66d9ef&quot;&gt;nil&lt;/span&gt; {
-        &lt;span style=&quot;color:#66d9ef&quot;&gt;continue&lt;/span&gt;
+		&lt;span style=&quot;color:#66d9ef&quot;&gt;continue&lt;/span&gt;
 	}
 	&lt;span style=&quot;color:#a6e22e&quot;&gt;client&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;ClientConn&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Close&lt;/span&gt;()
 }
@@ -212,12 +212,12 @@ stop: make(chan bool),
 <p></p>
 <pre><code>&lt;span style=&quot;color:#66d9ef&quot;&gt;go&lt;/span&gt; &lt;span style=&quot;color:#66d9ef&quot;&gt;func&lt;/span&gt;() {
 	&lt;span style=&quot;color:#66d9ef&quot;&gt;for&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;invoice&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;:=&lt;/span&gt; &lt;span style=&quot;color:#66d9ef&quot;&gt;range&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;invoices&lt;/span&gt; {
-        &lt;span style=&quot;color:#a6e22e&quot;&gt;p&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;logger&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Debug&lt;/span&gt;(&lt;span style=&quot;color:#e6db74&quot;&gt;&amp;#34;received invoice&amp;#34;&lt;/span&gt;, &lt;span style=&quot;color:#a6e22e&quot;&gt;logging&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Object&lt;/span&gt;(&lt;span style=&quot;color:#e6db74&quot;&gt;&amp;#34;invoice&amp;#34;&lt;/span&gt;, &lt;span style=&quot;color:#a6e22e&quot;&gt;invoice&lt;/span&gt;))
-        &lt;span style=&quot;color:#66d9ef&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;invoice&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Settled&lt;/span&gt; {
-            &lt;span style=&quot;color:#a6e22e&quot;&gt;sub&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;events&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;New&lt;/span&gt;(&lt;span style=&quot;color:#a6e22e&quot;&gt;events&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;InvoiceSettled&lt;/span&gt;)
-        } &lt;span style=&quot;color:#66d9ef&quot;&gt;else&lt;/span&gt; {
-            &lt;span style=&quot;color:#a6e22e&quot;&gt;sub&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;events&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;New&lt;/span&gt;(&lt;span style=&quot;color:#a6e22e&quot;&gt;events&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;InvoiceCreated&lt;/span&gt;)
-        }
+		&lt;span style=&quot;color:#a6e22e&quot;&gt;p&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;logger&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Debug&lt;/span&gt;(&lt;span style=&quot;color:#e6db74&quot;&gt;&amp;#34;received invoice&amp;#34;&lt;/span&gt;, &lt;span style=&quot;color:#a6e22e&quot;&gt;logging&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Object&lt;/span&gt;(&lt;span style=&quot;color:#e6db74&quot;&gt;&amp;#34;invoice&amp;#34;&lt;/span&gt;, &lt;span style=&quot;color:#a6e22e&quot;&gt;invoice&lt;/span&gt;))
+		&lt;span style=&quot;color:#66d9ef&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;invoice&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Settled&lt;/span&gt; {
+			&lt;span style=&quot;color:#a6e22e&quot;&gt;sub&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;events&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;New&lt;/span&gt;(&lt;span style=&quot;color:#a6e22e&quot;&gt;events&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;InvoiceSettled&lt;/span&gt;)
+		} &lt;span style=&quot;color:#66d9ef&quot;&gt;else&lt;/span&gt; {
+			&lt;span style=&quot;color:#a6e22e&quot;&gt;sub&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;events&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;New&lt;/span&gt;(&lt;span style=&quot;color:#a6e22e&quot;&gt;events&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;InvoiceCreated&lt;/span&gt;)
+		}
 	}
 	&lt;span style=&quot;color:#a6e22e&quot;&gt;p&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;wg&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Done&lt;/span&gt;()
 }()
@@ -225,7 +225,7 @@ stop: make(chan bool),
 &lt;span style=&quot;color:#66d9ef&quot;&gt;go&lt;/span&gt; &lt;span style=&quot;color:#66d9ef&quot;&gt;func&lt;/span&gt;() {
 	&lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;:=&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;p&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;network&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;SubscribeInvoice&lt;/span&gt;(&lt;span style=&quot;color:#a6e22e&quot;&gt;ctx&lt;/span&gt;, &lt;span style=&quot;color:#a6e22e&quot;&gt;invoices&lt;/span&gt;)
 	&lt;span style=&quot;color:#66d9ef&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;!=&lt;/span&gt; &lt;span style=&quot;color:#66d9ef&quot;&gt;nil&lt;/span&gt; {
-        &lt;span style=&quot;color:#a6e22e&quot;&gt;p&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;logger&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Error&lt;/span&gt;(&lt;span style=&quot;color:#e6db74&quot;&gt;&amp;#34;SubscribeInvoice returned an error&amp;#34;&lt;/span&gt;, &lt;span style=&quot;color:#a6e22e&quot;&gt;logging&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Error&lt;/span&gt;(&lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt;))
+		&lt;span style=&quot;color:#a6e22e&quot;&gt;p&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;logger&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Error&lt;/span&gt;(&lt;span style=&quot;color:#e6db74&quot;&gt;&amp;#34;SubscribeInvoice returned an error&amp;#34;&lt;/span&gt;, &lt;span style=&quot;color:#a6e22e&quot;&gt;logging&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Error&lt;/span&gt;(&lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt;))
 	}
 	&lt;span style=&quot;color:#a6e22e&quot;&gt;p&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;wg&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Done&lt;/span&gt;()
 }()
@@ -247,19 +247,19 @@ stop: make(chan bool),
 &lt;span style=&quot;color:#66d9ef&quot;&gt;for&lt;/span&gt; {
 	&lt;span style=&quot;color:#66d9ef&quot;&gt;select&lt;/span&gt; {
 	&lt;span style=&quot;color:#66d9ef&quot;&gt;case&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span style=&quot;color:#a6e22e&quot;&gt;ctx&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Done&lt;/span&gt;():
-        &lt;span style=&quot;color:#66d9ef&quot;&gt;break&lt;/span&gt;
+		&lt;span style=&quot;color:#66d9ef&quot;&gt;break&lt;/span&gt;
 	&lt;span style=&quot;color:#66d9ef&quot;&gt;default&lt;/span&gt;:
-        &lt;span style=&quot;color:#a6e22e&quot;&gt;invoice&lt;/span&gt;, &lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;:=&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;cltInvoices&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Recv&lt;/span&gt;()
-        &lt;span style=&quot;color:#66d9ef&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;!=&lt;/span&gt; &lt;span style=&quot;color:#66d9ef&quot;&gt;nil&lt;/span&gt; {
-            &lt;span style=&quot;color:#a6e22e&quot;&gt;st&lt;/span&gt;, &lt;span style=&quot;color:#a6e22e&quot;&gt;ok&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;:=&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;status&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;FromError&lt;/span&gt;(&lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt;)
-            &lt;span style=&quot;color:#66d9ef&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;ok&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;st&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Code&lt;/span&gt;() &lt;span style=&quot;color:#f92672&quot;&gt;==&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;codes&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Canceled&lt;/span&gt; {
-                &lt;span style=&quot;color:#a6e22e&quot;&gt;l&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;logger&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Debug&lt;/span&gt;(&lt;span style=&quot;color:#e6db74&quot;&gt;&amp;#34;stopping subscribe invoice: context canceled&amp;#34;&lt;/span&gt;)
-                &lt;span style=&quot;color:#66d9ef&quot;&gt;return&lt;/span&gt; &lt;span style=&quot;color:#66d9ef&quot;&gt;nil&lt;/span&gt;
-            }
-            &lt;span style=&quot;color:#66d9ef&quot;&gt;return&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt;
-        }
+		&lt;span style=&quot;color:#a6e22e&quot;&gt;invoice&lt;/span&gt;, &lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;:=&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;cltInvoices&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Recv&lt;/span&gt;()
+		&lt;span style=&quot;color:#66d9ef&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;!=&lt;/span&gt; &lt;span style=&quot;color:#66d9ef&quot;&gt;nil&lt;/span&gt; {
+			&lt;span style=&quot;color:#a6e22e&quot;&gt;st&lt;/span&gt;, &lt;span style=&quot;color:#a6e22e&quot;&gt;ok&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;:=&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;status&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;FromError&lt;/span&gt;(&lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt;)
+			&lt;span style=&quot;color:#66d9ef&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;ok&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;st&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Code&lt;/span&gt;() &lt;span style=&quot;color:#f92672&quot;&gt;==&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;codes&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Canceled&lt;/span&gt; {
+				&lt;span style=&quot;color:#a6e22e&quot;&gt;l&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;logger&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Debug&lt;/span&gt;(&lt;span style=&quot;color:#e6db74&quot;&gt;&amp;#34;stopping subscribe invoice: context canceled&amp;#34;&lt;/span&gt;)
+				&lt;span style=&quot;color:#66d9ef&quot;&gt;return&lt;/span&gt; &lt;span style=&quot;color:#66d9ef&quot;&gt;nil&lt;/span&gt;
+			}
+			&lt;span style=&quot;color:#66d9ef&quot;&gt;return&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt;
+		}
 
-        &lt;span style=&quot;color:#a6e22e&quot;&gt;channelInvoice&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;lookupInvoiceProtoToInvoice&lt;/span&gt;(&lt;span style=&quot;color:#a6e22e&quot;&gt;invoice&lt;/span&gt;)
+		&lt;span style=&quot;color:#a6e22e&quot;&gt;channelInvoice&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;lookupInvoiceProtoToInvoice&lt;/span&gt;(&lt;span style=&quot;color:#a6e22e&quot;&gt;invoice&lt;/span&gt;)
 	}
 }
 </code></pre>
@@ -307,10 +307,10 @@ return gocui.ErrQuit
 <pre><code>&lt;span style=&quot;color:#a6e22e&quot;&gt;c&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;logger&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Debug&lt;/span&gt;(&lt;span style=&quot;color:#e6db74&quot;&gt;&amp;#34;Listening...&amp;#34;&lt;/span&gt;)
 &lt;span style=&quot;color:#a6e22e&quot;&gt;refresh&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;:=&lt;/span&gt; &lt;span style=&quot;color:#66d9ef&quot;&gt;func&lt;/span&gt;(&lt;span style=&quot;color:#a6e22e&quot;&gt;fn&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;...&lt;/span&gt;&lt;span style=&quot;color:#66d9ef&quot;&gt;func&lt;/span&gt;(&lt;span style=&quot;color:#a6e22e&quot;&gt;context&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Context&lt;/span&gt;) &lt;span style=&quot;color:#66d9ef&quot;&gt;error&lt;/span&gt;) {
 	&lt;span style=&quot;color:#66d9ef&quot;&gt;for&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;i&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;:=&lt;/span&gt; &lt;span style=&quot;color:#66d9ef&quot;&gt;range&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;fn&lt;/span&gt; {
-        &lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;:=&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;fn&lt;/span&gt;[&lt;span style=&quot;color:#a6e22e&quot;&gt;i&lt;/span&gt;](&lt;span style=&quot;color:#a6e22e&quot;&gt;ctx&lt;/span&gt;)
-        &lt;span style=&quot;color:#66d9ef&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;!=&lt;/span&gt; &lt;span style=&quot;color:#66d9ef&quot;&gt;nil&lt;/span&gt; {
-            &lt;span style=&quot;color:#a6e22e&quot;&gt;c&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;logger&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Error&lt;/span&gt;(&lt;span style=&quot;color:#e6db74&quot;&gt;&amp;#34;failed&amp;#34;&lt;/span&gt;, &lt;span style=&quot;color:#a6e22e&quot;&gt;logging&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Error&lt;/span&gt;(&lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt;))
-        }
+		&lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;:=&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;fn&lt;/span&gt;[&lt;span style=&quot;color:#a6e22e&quot;&gt;i&lt;/span&gt;](&lt;span style=&quot;color:#a6e22e&quot;&gt;ctx&lt;/span&gt;)
+		&lt;span style=&quot;color:#66d9ef&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;!=&lt;/span&gt; &lt;span style=&quot;color:#66d9ef&quot;&gt;nil&lt;/span&gt; {
+			&lt;span style=&quot;color:#a6e22e&quot;&gt;c&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;logger&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Error&lt;/span&gt;(&lt;span style=&quot;color:#e6db74&quot;&gt;&amp;#34;failed&amp;#34;&lt;/span&gt;, &lt;span style=&quot;color:#a6e22e&quot;&gt;logging&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Error&lt;/span&gt;(&lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt;))
+		}
 	}
 	&lt;span style=&quot;color:#a6e22e&quot;&gt;g&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Update&lt;/span&gt;(&lt;span style=&quot;color:#66d9ef&quot;&gt;func&lt;/span&gt;(&lt;span style=&quot;color:#f92672&quot;&gt;*&lt;/span&gt;&lt;span style=&quot;color:#a6e22e&quot;&gt;gocui&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Gui&lt;/span&gt;) &lt;span style=&quot;color:#66d9ef&quot;&gt;error&lt;/span&gt; { &lt;span style=&quot;color:#66d9ef&quot;&gt;return&lt;/span&gt; &lt;span style=&quot;color:#66d9ef&quot;&gt;nil&lt;/span&gt; })
 }
@@ -320,15 +320,15 @@ return gocui.ErrQuit
         &lt;span style=&quot;color:#a6e22e&quot;&gt;logging&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;String&lt;/span&gt;(&lt;span style=&quot;color:#e6db74&quot;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;, &lt;span style=&quot;color:#a6e22e&quot;&gt;event&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Type&lt;/span&gt;))
 	&lt;span style=&quot;color:#66d9ef&quot;&gt;switch&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;event&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Type&lt;/span&gt; {
 	&lt;span style=&quot;color:#66d9ef&quot;&gt;case&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;events&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;TransactionCreated&lt;/span&gt;:
-        &lt;span style=&quot;color:#a6e22e&quot;&gt;refresh&lt;/span&gt;(
-            &lt;span style=&quot;color:#a6e22e&quot;&gt;c&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;models&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;RefreshInfo&lt;/span&gt;,
-            &lt;span style=&quot;color:#a6e22e&quot;&gt;c&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;models&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;RefreshWalletBalance&lt;/span&gt;,
-            &lt;span style=&quot;color:#a6e22e&quot;&gt;c&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;models&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;RefreshTransactions&lt;/span&gt;,
-        )
+		&lt;span style=&quot;color:#a6e22e&quot;&gt;refresh&lt;/span&gt;(
+			&lt;span style=&quot;color:#a6e22e&quot;&gt;c&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;models&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;RefreshInfo&lt;/span&gt;,
+			&lt;span style=&quot;color:#a6e22e&quot;&gt;c&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;models&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;RefreshWalletBalance&lt;/span&gt;,
+			&lt;span style=&quot;color:#a6e22e&quot;&gt;c&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;models&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;RefreshTransactions&lt;/span&gt;,
+		)
 	&lt;span style=&quot;color:#66d9ef&quot;&gt;case&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;events&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;BlockReceived&lt;/span&gt;:
-        &lt;span style=&quot;color:#a6e22e&quot;&gt;refresh&lt;/span&gt;(
-            &lt;span style=&quot;color:#a6e22e&quot;&gt;c&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;models&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;RefreshInfo&lt;/span&gt;,
-            &lt;span style=&quot;color:#a6e22e&quot;&gt;c&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;models&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;RefreshTransactions&lt;/span&gt;,
+		&lt;span style=&quot;color:#a6e22e&quot;&gt;refresh&lt;/span&gt;(
+			&lt;span style=&quot;color:#a6e22e&quot;&gt;c&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;models&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;RefreshInfo&lt;/span&gt;,
+			&lt;span style=&quot;color:#a6e22e&quot;&gt;c&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;models&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;RefreshTransactions&lt;/span&gt;,
 
 &lt;span style=&quot;color:#f92672&quot;&gt;...&lt;/span&gt;
 </code></pre>
@@ -414,8 +414,8 @@ return
 
 &lt;span style=&quot;color:#66d9ef&quot;&gt;for&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;i&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;:=&lt;/span&gt; &lt;span style=&quot;color:#66d9ef&quot;&gt;range&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;t&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;list&lt;/span&gt; {
 	&lt;span style=&quot;color:#66d9ef&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;t&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;list&lt;/span&gt;[&lt;span style=&quot;color:#a6e22e&quot;&gt;i&lt;/span&gt;].&lt;span style=&quot;color:#a6e22e&quot;&gt;TxHash&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;==&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;tx&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;TxHash&lt;/span&gt; {
-        &lt;span style=&quot;color:#a6e22e&quot;&gt;t&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;list&lt;/span&gt;[&lt;span style=&quot;color:#a6e22e&quot;&gt;i&lt;/span&gt;].&lt;span style=&quot;color:#a6e22e&quot;&gt;NumConfirmations&lt;/span&gt; = &lt;span style=&quot;color:#a6e22e&quot;&gt;tx&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;NumConfirmations&lt;/span&gt;
-        &lt;span style=&quot;color:#a6e22e&quot;&gt;t&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;list&lt;/span&gt;[&lt;span style=&quot;color:#a6e22e&quot;&gt;i&lt;/span&gt;].&lt;span style=&quot;color:#a6e22e&quot;&gt;BlockHeight&lt;/span&gt; = &lt;span style=&quot;color:#a6e22e&quot;&gt;tx&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;BlockHeight&lt;/span&gt;
+		&lt;span style=&quot;color:#a6e22e&quot;&gt;t&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;list&lt;/span&gt;[&lt;span style=&quot;color:#a6e22e&quot;&gt;i&lt;/span&gt;].&lt;span style=&quot;color:#a6e22e&quot;&gt;NumConfirmations&lt;/span&gt; = &lt;span style=&quot;color:#a6e22e&quot;&gt;tx&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;NumConfirmations&lt;/span&gt;
+		&lt;span style=&quot;color:#a6e22e&quot;&gt;t&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;list&lt;/span&gt;[&lt;span style=&quot;color:#a6e22e&quot;&gt;i&lt;/span&gt;].&lt;span style=&quot;color:#a6e22e&quot;&gt;BlockHeight&lt;/span&gt; = &lt;span style=&quot;color:#a6e22e&quot;&gt;tx&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;BlockHeight&lt;/span&gt;
 	}
 }
 
@@ -496,7 +496,7 @@ fmt.Fprintln(header, "Transaction")</p>
 <pre><code>&lt;span style=&quot;color:#a6e22e&quot;&gt;v&lt;/span&gt;, &lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;:=&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;g&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;SetView&lt;/span&gt;(&lt;span style=&quot;color:#a6e22e&quot;&gt;TRANSACTION&lt;/span&gt;, &lt;span style=&quot;color:#a6e22e&quot;&gt;x0&lt;/span&gt;&lt;span style=&quot;color:#f92672&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;color:#ae81ff&quot;&gt;1&lt;/span&gt;, &lt;span style=&quot;color:#a6e22e&quot;&gt;y0&lt;/span&gt;&lt;span style=&quot;color:#f92672&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;color:#ae81ff&quot;&gt;1&lt;/span&gt;, &lt;span style=&quot;color:#a6e22e&quot;&gt;x1&lt;/span&gt;&lt;span style=&quot;color:#f92672&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;color:#ae81ff&quot;&gt;2&lt;/span&gt;, &lt;span style=&quot;color:#a6e22e&quot;&gt;y1&lt;/span&gt;&lt;span style=&quot;color:#f92672&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;color:#ae81ff&quot;&gt;1&lt;/span&gt;)
 &lt;span style=&quot;color:#66d9ef&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;!=&lt;/span&gt; &lt;span style=&quot;color:#66d9ef&quot;&gt;nil&lt;/span&gt; {
 	&lt;span style=&quot;color:#66d9ef&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;!=&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;gocui&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;ErrUnknownView&lt;/span&gt; {
-        &lt;span style=&quot;color:#66d9ef&quot;&gt;return&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt;
+		&lt;span style=&quot;color:#66d9ef&quot;&gt;return&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt;
 	}
 }
 &lt;span style=&quot;color:#a6e22e&quot;&gt;v&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Frame&lt;/span&gt; = &lt;span style=&quot;color:#66d9ef&quot;&gt;false&lt;/span&gt;
@@ -506,7 +506,7 @@ fmt.Fprintln(header, "Transaction")</p>
 &lt;span style=&quot;color:#a6e22e&quot;&gt;footer&lt;/span&gt;, &lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;:=&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;g&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;SetView&lt;/span&gt;(&lt;span style=&quot;color:#a6e22e&quot;&gt;TRANSACTION_FOOTER&lt;/span&gt;, &lt;span style=&quot;color:#a6e22e&quot;&gt;x0&lt;/span&gt;&lt;span style=&quot;color:#f92672&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;color:#ae81ff&quot;&gt;1&lt;/span&gt;, &lt;span style=&quot;color:#a6e22e&quot;&gt;y1&lt;/span&gt;&lt;span style=&quot;color:#f92672&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;color:#ae81ff&quot;&gt;2&lt;/span&gt;, &lt;span style=&quot;color:#a6e22e&quot;&gt;x1&lt;/span&gt;, &lt;span style=&quot;color:#a6e22e&quot;&gt;y1&lt;/span&gt;)
 &lt;span style=&quot;color:#66d9ef&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;!=&lt;/span&gt; &lt;span style=&quot;color:#66d9ef&quot;&gt;nil&lt;/span&gt; {
 	&lt;span style=&quot;color:#66d9ef&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;!=&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;gocui&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;ErrUnknownView&lt;/span&gt; {
-        &lt;span style=&quot;color:#66d9ef&quot;&gt;return&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt;
+		&lt;span style=&quot;color:#66d9ef&quot;&gt;return&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;err&lt;/span&gt;
 	}
 }
 &lt;span style=&quot;color:#a6e22e&quot;&gt;footer&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;Frame&lt;/span&gt; = &lt;span style=&quot;color:#66d9ef&quot;&gt;false&lt;/span&gt;
