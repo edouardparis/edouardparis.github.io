@@ -84,5 +84,10 @@ url = "/"
 name = "en"
 weight = 0
 
+[[languages.fr.menu.main]]
+url = "/fr/lecture"
+name = "lecture"
+weight = 0
+
 [[languages.fr.blackfriday]]
 angledQuotes = true
