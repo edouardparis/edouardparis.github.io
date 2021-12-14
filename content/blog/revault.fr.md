@@ -6,7 +6,7 @@ draft = true
 toc = true
 +++
 
-# Bitcoin, petit rappel de fonctionnement
+# 1. Bitcoin, petit rappel de fonctionnement
 
 Bitcoin, qu'on l'aime ou le déteste difficile de l'ignorer si on s'intéresse
 aux politiques monétaire et encore moins aux alternatives économique 
@@ -21,15 +21,18 @@ Bitcoin est une monnaie numérique reposant sur le partage par un réseau de pai
 pairs d'un registre de transaction. Les transactions sont groupées et
 ordonnées en blocs par un serveur d'horodatage décentralisé.
 Ce serveur fonctionne par la libre compétition de pairs à la résolution 
-d'un problème mathématique donc la difficulté[¹](#1) évolue dans le temps. 
+d'un problème mathématique donc la difficulté[^1] évolue dans le temps. 
 Ce serveur d'horodatage permet à la fois de résoudre le problème de 
 la [double dépense](https://fr.wikipedia.org/wiki/Double_d%C3%A9pense), 
 celui des [généraux byzantins]() 
 et l'émission de la monnaie. 
-Une transaction une fois partagé dans le registre gagne à chaque bloc
-une forme de sécurité.
+Une transaction une fois partagée dans le registre gagne à chaque bloc
+une forme de sécurité, un adversaire souhaitant réecrire le registre
+pour exclure la transaction devra fournir une preuve de travail
+supérieur à la preuve de travail de l'ensemble des blocs succédants au
+bloc de la transaction.
 
-## UNSPENT TRANSACTION OUTPUT
+## 1.1 UNSPENT TRANSACTION OUTPUT
 
 ```ascii
                                             +──────────────────────+
@@ -55,20 +58,26 @@ une forme de sécurité.
 
 ```
 
-## ScriptSig et ScriptKey
+## 1.2 ScriptSig et ScriptKey
 
 
-## Pour aller plus loin
+## 1.3 Pour aller plus loin
 
-# La Protection des bitcoins.
+# 2. La Protection des bitcoins.
 
-## Shamir secret
+Posséder des bitcoins, c'est posséder
 
-## Hardware wallet
+## 2.1 Portefeuille papier
 
-## Multisig & Musig
+## 2.2 Shamir secret
 
-# REVAULT
+## 2.3 Hardware wallet
+
+## 2.4 Multisig & Musig
+
+# 3. REVAULT
+
+## 3.1 Explication
 
 Le premier document technique de Revault se trouve ici,
 le protocole peut etre encore soumis a des changements, le problème 
@@ -101,10 +110,18 @@ touche a plusieurs facettes difficile de Bitcoin.
                       out
 ```
 
-## Les transactions pre-signées
 
-## La dépense d'un vault
+## 3.3 Tour de garde et politiques de dépenses
 
-## L effrayante Mempool
+## 3.4 Mempool et frais de minage
 
-#1: Attention le terme difficulté ne signifie pas dans ce contexte complexité
+## 3.2 Cosignataire et attaque par réplication
+
+# 4. Covenants
+
+## 4.1 BIP 119 - CHECKTEMPLATEVERIFY
+
+## 4.2 TAPLEAF_UPDATE_VERIFY
+
+
+[^1]: Attention le terme difficulté ne signifie pas dans ce contexte complexité
