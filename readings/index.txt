@@ -23,6 +23,7 @@ If the title is translated in French: I read the French translation.
 
 [ 2021 ]
 
+Le cauchemar d'Innsmouth & autres nouvelles - Howard P. Lovecraft
 Le triomphe et la chute des dinosaures - Steve Brusatte
 La ville de vapeur - Carlos Ruiz Zafón
 Le Messie de Dune - Frank Herbert
