@@ -11,12 +11,12 @@ binary built from it. Since I released a little software named
 [`lntop`](https://github.com/edouardparis/lntop) a few years ago, I
 receive sometimes notifications from people asking for help or
 new features and new release tags.
-Because of `lntop` is native to the terminal, it was added to the
+Because `lntop` is native to the terminal, it was added to the
 [RaspiBolt](https://github.com/raspibolt/raspibolt/) guide as a little 
 optional tool for the cli-lover node operator. RaspiBolt developers 
 [asked](https://github.com/edouardparis/lntop/issues/49) me
 about binaries release especially for ARM64 for their raspberry pi
-users and I felt happily obliged to answer to their request.
+users and I felt happily obliged to answer their request.
 
 But, releasing binary is introducing a sort of responsibility from me
 toward the people who will download it. Releasing code only is
@@ -66,7 +66,7 @@ I attached to the github release page of `lntop@v0.3.0` the files:
 `lntop-v0.3.0-Linux-arm64.tar.gz`, `checksums-lntop-v0.3.0.txt` 
 and `checksums-lntop-v0.3.0.txt.sig`.
 
-If someone want to download and verify that the archive is the one I
+If someone wants to download and verify that the archive is the one I
 created and signed, he/she can run:
 
 ```pink
