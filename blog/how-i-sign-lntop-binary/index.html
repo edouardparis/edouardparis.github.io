@@ -19,12 +19,12 @@ binary built from it. Since I released a little software named
 <a href=https://github.com/edouardparis/lntop><code>lntop</code></a> a few years ago, I
 receive sometimes notifications from people asking for help or
 new features and new release tags.
-Because of <code>lntop</code> is native to the terminal, it was added to the
+Because <code>lntop</code> is native to the terminal, it was added to the
 <a href=https://github.com/raspibolt/raspibolt/>RaspiBolt</a> guide as a little
 optional tool for the cli-lover node operator. RaspiBolt developers
 <a href=https://github.com/edouardparis/lntop/issues/49>asked</a> me
 about binaries release especially for ARM64 for their raspberry pi
-users and I felt happily obliged to answer to their request.</p>
+users and I felt happily obliged to answer their request.</p>
 <p>But, releasing binary is introducing a sort of responsibility from me
 toward the people who will download it. Releasing code only is
 convenient, people have to read it and then run it before making you
@@ -52,7 +52,7 @@ GOOS=linux GOARCH=arm64 go build ./cmd/lntop
 </code></pre><p>I attached to the github release page of <code>lntop@v0.3.0</code> the files:
 <code>lntop-v0.3.0-Linux-arm64.tar.gz</code>, <code>checksums-lntop-v0.3.0.txt</code>
 and <code>checksums-lntop-v0.3.0.txt.sig</code>.</p>
-<p>If someone want to download and verify that the archive is the one I
+<p>If someone wants to download and verify that the archive is the one I
 created and signed, he/she can run:</p>
 <pre tabindex=0><code class=language-pink data-lang=pink>sha256sum --check checksums-lntop-v0.3.0.txt
 gpg --verify checksums-lntop-v0.3.0.txt.sig checksums-lntop-v0.3.0.txt
@@ -66,7 +66,7 @@ Finally the binary and release files are extracted with:</p>
 <footer id=footer>
 <time>
 created: Jan 18 2022
-| updated: Jan 18 2022
+| updated: Jan 19 2022
 </time>
 </aside>
 <div class=footer-redirect>Read this page in your terminal with the command:<br><strong>$ curl -L edouard.paris/blog/how-i-sign-lntop-binary/index.txt</strong></div>
