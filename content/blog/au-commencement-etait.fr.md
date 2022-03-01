@@ -82,7 +82,6 @@ _La critique indigène et le mythe du progrès_
   (ou pourquoi toutes ces questions sont si cruciales pour notre projet)
 
 ## CHAPITRE 3. Dégeler l'âge de glace 
-
 _Enchaînés, libérés: les possibilités protéiformes de la politique humaine_
 
 * Le leurre du «paradoxe de la connaissance», ou pourquoi nous nous sommes 
@@ -104,7 +103,8 @@ _Enchaînés, libérés: les possibilités protéiformes de la politique humaine
 * Pourquoi la vraie question n'est pas: «Quelles sont les origines de l'inégalité?», 
   mais: «Comment se fait-il que nous nous soyons retrouvés bloqués?»
 * Ce que c'est vraiment qu'être sapiens
-* 
+
+
 ## CHAPITRE 4. Liberté individuelle, origine des cultures et naissance de la propriété privée
 _(pas forcément dans cet ordre)_ 
 
