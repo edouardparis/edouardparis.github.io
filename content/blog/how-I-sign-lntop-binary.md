@@ -47,7 +47,7 @@ release-v0.3.0
 
 gzip and tar it:
 
-```
+```pink
 tar -czf lntop-v0.3.0-Linux-arm64.tar.gz release-v0.3.0
 ```
 
