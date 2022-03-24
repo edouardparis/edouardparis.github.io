@@ -1,16 +1,4 @@
-<!doctype html><html>
-<head>
-<title>edouard.paris</title><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no">
-<meta name=description content="Edouard Paris personal website">
-<link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
-<link rel=stylesheet href=/css/main.css>
-</head><body>
-<section>
-<div class=article-header>
-<a href=https://edouard.paris>~/edouard.paris</a><a href=https://edouard.paris/blog>/blog</a><a>/how-I-sign-lntop-binary</a>
-</div><div class=article-body>
-<h1 id=how-i-sign-a-lntop-binary>How I sign a LNTOP binary</h1><p>I am always amazed that someone, somewhere, is running my code or a
+<!doctype html><html><head><title>edouard.paris</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no"><meta name=description content="Edouard Paris personal website"><link rel="shortcut icon" href=/favicon.ico type=image/x-icon><link rel=stylesheet href=/css/main.css></head><body><section><div class=article-header><a href=https://edouard.paris>~/edouard.paris</a><a href=https://edouard.paris/blog>/blog</a><a>/how-I-sign-lntop-binary</a></div><div class=article-body><h1 id=how-i-sign-a-lntop-binary>How I sign a LNTOP binary</h1><p>I am always amazed that someone, somewhere, is running my code or a
 binary built from it. Since I released a little software named
 <a href=https://github.com/edouardparis/lntop><code>lntop</code></a> a few years ago, I
 receive sometimes notifications from people asking for help or
@@ -35,7 +23,7 @@ GOOS=linux GOARCH=arm64 go build ./cmd/lntop
 ├── LICENSE
 ├── lntop
 └── RELEASE.md
-</code></pre><p>gzip and tar it:</p><pre tabindex=0><code>tar -czf lntop-v0.3.0-Linux-arm64.tar.gz release-v0.3.0
+</code></pre><p>gzip and tar it:</p><pre tabindex=0><code class=language-pink data-lang=pink>tar -czf lntop-v0.3.0-Linux-arm64.tar.gz release-v0.3.0
 </code></pre><p>got the sha256 checksum in a file:</p><pre tabindex=0><code class=language-pink data-lang=pink>sha256sum -b lntop-v0.3.0-Linux-arm64.tar.gz &gt; checksums-lntop-v0.3.0.txt
 </code></pre><p>gpg-key signed the checksum file:</p><pre tabindex=0><code class=language-pink data-lang=pink>gpg --detach-sig --sign --default-key a8ba... checksums-lntop-v0.3.0.txt
 </code></pre><p>I attached to the github release page of <code>lntop@v0.3.0</code> the files:
@@ -46,9 +34,5 @@ gpg --verify checksums-lntop-v0.3.0.txt.sig checksums-lntop-v0.3.0.txt
 </code></pre><p>My gpg key fingerprint is in my <a href=https://twitter.com/edouardparis>twitter
 bio</a>.
 Finally the binary and release files are extracted with:</p><pre tabindex=0><code class=language-pink data-lang=pink>tar -ztvf lntop-v0.3.0-Linux-arm64.tar.gz
-</code></pre></div></section><footer id=footer>
-<time>
-created: Jan 18 2022
-| updated: Jan 19 2022
-</time>
-</aside><div class=footer-redirect>Read this page in your terminal with the command:<br><strong>$ curl -L edouard.paris/blog/how-i-sign-lntop-binary/index.txt</strong></div><p>&copy; 2020 EdouardParis. Powered by <a href=http://gohugo.io target=_blank>Hugo</a></p></footer></body></html>
+</code></pre></div></section><footer id=footer><time>created: Jan 18 2022
+| updated: Mar 15 2022</time></aside><div class=footer-redirect>Read this page in your terminal with the command:<br><strong>$ curl -L edouard.paris/blog/how-i-sign-lntop-binary/index.txt</strong></div><p>&copy; 2020 EdouardParis. Powered by <a href=http://gohugo.io target=_blank>Hugo</a></p></footer></body></html>

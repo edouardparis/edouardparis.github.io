@@ -1,39 +1,12 @@
-<!doctype html><html lang=en>
-<head>
-<meta charset=utf-8>
-<title>Meetup Go 2019-06-18</title><meta name=description content="Edouard Paris personal website">
-<meta name=apple-mobile-web-app-capable content="yes">
-<meta name=apple-mobile-web-app-status-bar-style content="black-translucent">
-<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<link rel=stylesheet href=/reveal-js/css/reveal.css><link rel=stylesheet href=/css/slides.css id=theme><link rel=stylesheet href=/highlight-js/vs.min.css>
-</head><body>
-<div class=reveal>
-<div class=slides>
-<h1 id=connect-yourself-to-the-lightning-network-with-go>Connect yourself to the lightning network with Go</h1><p>An example with LND and lntop</p><p>Edouard Paris - <a href=https://edouard.paris/slides/2019-06-18-meetup-go-paris>https://edouard.paris/slides/2019-06-18-meetup-go-paris</a></p><hr>
-<hr>
-<hr>
-<hr>
-<h2 id=lntop>LNTOP</h2><p><a href=https://github.com/edouardparis/lntop>https://github.com/edouardparis/lntop</a>
-<img src=lntop-v0.1.0.png alt=lntop-v0.1.0></p><hr>
-<p><img src=archi.svg alt=architecture></p><hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<section data-noprocess data-shortcode-slide data-background-iframe=https://tippin.me/@edouardparis>
-</section></div></div><script type=text/javascript src=/reveal-hugo/object-assign.js></script>
+<!doctype html><html lang=en><head><meta charset=utf-8><title>Meetup Go 2019-06-18</title><meta name=description content="Edouard Paris personal website"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="black-translucent"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><link rel=stylesheet href=/reveal-js/css/reveal.css><link rel=stylesheet href=/css/slides.css id=theme><link rel=stylesheet href=/highlight-js/vs.min.css></head><body><div class=reveal><div class=slides><h1 id=connect-yourself-to-the-lightning-network-with-go>Connect yourself to the lightning network with Go</h1><p>An example with LND and lntop</p><p>Edouard Paris - <a href=https://edouard.paris/slides/2019-06-18-meetup-go-paris>https://edouard.paris/slides/2019-06-18-meetup-go-paris</a></p><hr><hr><hr><hr><h2 id=lntop>LNTOP</h2><p><a href=https://github.com/edouardparis/lntop>https://github.com/edouardparis/lntop</a>
+<img src=lntop-v0.1.0.png alt=lntop-v0.1.0></p><hr><p><img src=archi.svg alt=architecture></p><hr><hr><hr><hr><hr><section data-noprocess data-shortcode-slide data-background-iframe=https://tippin.me/@edouardparis></section></div></div><script type=text/javascript src=/reveal-hugo/object-assign.js></script>
 <a href=/reveal-js/css/print/ id=print-location style=display:none></a>
-<script type=text/javascript>var printLocationElement=document.getElementById("print-location"),link=document.createElement("link");link.rel="stylesheet",link.type="text/css",link.href=printLocationElement.href+(window.location.search.match(/print-pdf/gi)?"pdf.css":"paper.css"),document.getElementsByTagName("head")[0].appendChild(link)</script>
-<script type=application/json id=reveal-hugo-site-params>null</script>
-<script type=application/json id=reveal-hugo-page-params>{"custom_theme":"css/slides.css","highlight_theme":"vs"}</script>
-<script src=/reveal-js/lib/js/head.min.js></script>
+<script type=text/javascript>var printLocationElement=document.getElementById("print-location"),link=document.createElement("link");link.rel="stylesheet",link.type="text/css",link.href=printLocationElement.href+(window.location.search.match(/print-pdf/gi)?"pdf.css":"paper.css"),document.getElementsByTagName("head")[0].appendChild(link)</script><script type=application/json id=reveal-hugo-site-params>null</script><script type=application/json id=reveal-hugo-page-params>{"custom_theme":"css/slides.css","highlight_theme":"vs"}</script><script src=/reveal-js/lib/js/head.min.js></script>
 <script src=/reveal-js/js/reveal.js></script>
-<script type=text/javascript>function camelize(e){return e&&Object.keys(e).forEach(function(t){newK=t.replace(/(_\w)/g,function(e){return e[1].toUpperCase()}),newK!=t&&(e[newK]=e[t],delete e[t])}),e}var revealHugoDefaults={center:!0,controls:!0,history:!0,progress:!0,transition:"slide"},revealHugoSiteParams=JSON.parse(document.getElementById("reveal-hugo-site-params").innerHTML),revealHugoPageParams=JSON.parse(document.getElementById("reveal-hugo-page-params").innerHTML),options=Object.assign({},camelize(revealHugoDefaults),camelize(revealHugoSiteParams),camelize(revealHugoPageParams));Reveal.initialize(options)</script>
-<script type=text/javascript src=/reveal-js/lib/js/classList.js></script>
+<script type=text/javascript>function camelize(e){return e&&Object.keys(e).forEach(function(t){newK=t.replace(/(_\w)/g,function(e){return e[1].toUpperCase()}),newK!=t&&(e[newK]=e[t],delete e[t])}),e}var revealHugoDefaults={center:!0,controls:!0,history:!0,progress:!0,transition:"slide"},revealHugoSiteParams=JSON.parse(document.getElementById("reveal-hugo-site-params").innerHTML),revealHugoPageParams=JSON.parse(document.getElementById("reveal-hugo-page-params").innerHTML),options=Object.assign({},camelize(revealHugoDefaults),camelize(revealHugoSiteParams),camelize(revealHugoPageParams));Reveal.initialize(options)</script><script type=text/javascript src=/reveal-js/lib/js/classList.js></script>
 <script type=text/javascript src=/reveal-js/plugin/markdown/marked.js></script>
 <script type=text/javascript src=/reveal-js/plugin/markdown/markdown.js></script>
 <script type=text/javascript src=/reveal-js/plugin/highlight/highlight.js></script>
 <script type=text/javascript src=/reveal-js/plugin/zoom-js/zoom.js></script>
 <script type=text/javascript src=/reveal-js/plugin/notes/notes.js></script>
-<script type=text/javascript>hljs&&hljs.initHighlightingOnLoad()</script>
-</body></html>
+<script type=text/javascript>hljs&&hljs.initHighlightingOnLoad()</script></body></html>
