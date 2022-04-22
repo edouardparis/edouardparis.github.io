@@ -1,6 +1,6 @@
 ------------------------------------------------
-commit: 1974cc0642254ba7e2cca58f6038690fabb006f8
-Date:   2022-03-01 11:28:26 +0100 +0100
+commit: 3b50d53e8ee7950d5eb895a0f0877a45e05cf99f
+Date:   2022-04-22 10:12:35 +0200 +0200
 ------------------------------------------------
 
 
@@ -245,6 +245,6 @@ _Les fondements historiques de la critique indigène_
 
 ------------------------------------------------
 Copyright: 2020 EdouardParis.
-$ pwd :    ~/edouard.paris/fr/blog/au-commencement-etait
+$ pwd :    ~/edouard.paris/fr/blog/2022-03-01-au-commencement-etait
 ------------------------------------------------
 

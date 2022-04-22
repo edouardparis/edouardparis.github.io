@@ -1,6 +1,6 @@
 ------------------------------------------------
-commit: e0cb564035737dea5f51c24ee6eca55610b29329
-Date:   2020-01-22 13:55:57 +0100 +0100
+commit: 3b50d53e8ee7950d5eb895a0f0877a45e05cf99f
+Date:   2022-04-22 10:12:35 +0200 +0200
 ------------------------------------------------
 
 ```ascii-art-pink
@@ -20,10 +20,10 @@ Date:   2020-01-22 13:55:57 +0100 +0100
 
 ```
 
-tl;dr:\\
-Talks were outstanding. \\
-Awesome community centered about building stuff.\\
-Spent only sats during three days.\\
+tl;dr:\
+Talks were outstanding. \
+Awesome community centered about building stuff. \
+Spent only sats during three days. \
 Visited nice places and met original people.
 
 ---
@@ -81,9 +81,9 @@ but I wanted to explore Berlin's streets. Walking along a wall, thinking
 of the Lightning, the exciting future to come, I noticed after several
 hundred meters how long this wall actually was and the size of its paintings.
 
-On a little sign, near the ground, was written: **Berliner Mauer**. \\
-One month before its 30th anniversary, this wall did not catch my eyes. \\
-The contemporary concrete and its cold appearance felt actual. \\
+On a little sign, near the ground, was written: **Berliner Mauer**. \
+One month before its 30th anniversary, this wall did not catch my eyes. \
+The contemporary concrete and its cold appearance felt actual. \
 A rigid line separating families and friends felt actual.
 
 The rain did not spoil the after-party, which was organised in
@@ -313,6 +313,6 @@ Thank you to the organizers, it was awesome.
 
 ------------------------------------------------
 Copyright: 2020 EdouardParis.
-$ pwd :    ~/edouard.paris/blog/tlc2019
+$ pwd :    ~/edouard.paris/blog/2019-10-21-tlc2019
 ------------------------------------------------
 

@@ -1,6 +1,6 @@
 ------------------------------------------------
-commit: 4c01d8b1335aaf2e491fdb016bd4d2c519db9661
-Date:   2021-09-22 15:32:35 +0200 +0200
+commit: 3b50d53e8ee7950d5eb895a0f0877a45e05cf99f
+Date:   2022-04-22 10:12:35 +0200 +0200
 ------------------------------------------------
 
 
@@ -40,6 +40,6 @@ sites that give me inspiration are:
 
 ------------------------------------------------
 Copyright: 2020 EdouardParis.
-$ pwd :    ~/edouard.paris/blog/hello-world
+$ pwd :    ~/edouard.paris/blog/2019-07-15-hello-world
 ------------------------------------------------
 

@@ -1,6 +1,6 @@
 ------------------------------------------------
-commit: dcd1e4ba61d7821d3a6fc6c1478d35875f92258b
-Date:   2021-01-12 09:57:20 +0100 +0100
+commit: 3b50d53e8ee7950d5eb895a0f0877a45e05cf99f
+Date:   2022-04-22 10:12:35 +0200 +0200
 ------------------------------------------------
 
 
@@ -28,6 +28,6 @@ Bitcoin vault architecture.
 
 ------------------------------------------------
 Copyright: 2020 EdouardParis.
-$ pwd :    ~/edouard.paris/blog/wizardsardine
+$ pwd :    ~/edouard.paris/blog/2020-11-07-wizardsardine
 ------------------------------------------------
 

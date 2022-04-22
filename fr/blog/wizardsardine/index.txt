@@ -1,6 +1,6 @@
 ------------------------------------------------
-commit: 739bd933788a08bdd30ab1239137f2b5938af5a0
-Date:   2021-01-12 10:07:49 +0100 +0100
+commit: 3b50d53e8ee7950d5eb895a0f0877a45e05cf99f
+Date:   2022-04-22 10:12:35 +0200 +0200
 ------------------------------------------------
 
 
@@ -40,6 +40,6 @@ de transaction des UTXOs (unspent transaction outputs) notamment Bitcoin.
 
 ------------------------------------------------
 Copyright: 2020 EdouardParis.
-$ pwd :    ~/edouard.paris/fr/blog/wizardsardine
+$ pwd :    ~/edouard.paris/fr/blog/2020-11-07-wizardsardine
 ------------------------------------------------
 
