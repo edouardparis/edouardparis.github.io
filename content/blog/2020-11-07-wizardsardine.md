@@ -2,6 +2,7 @@
 title = "WizardSardine" 
 date = "2020-11-07" 
 draft = false 
+slug = "wizardsardine"
 +++
 
 New Job !

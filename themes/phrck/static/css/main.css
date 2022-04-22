@@ -28,10 +28,6 @@ p {
   line-height: 1.4;
 }
 
-table {
-  margin-left: 4ch;
-}
-
 blockquote {
   text-align: right;
   font-style: italic;
@@ -41,6 +37,7 @@ blockquote {
 code {
  font-size: 10pt;
  font-family: monospace;
+ color: #067df7;
 }
 
 nav {

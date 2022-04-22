@@ -4,6 +4,7 @@ date = "2022-03-01"
 topics = ["lecture"]
 draft = false
 toc = false
+slug = "au-commencement-etait"
 +++
 
 

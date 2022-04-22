@@ -1,6 +1,7 @@
 +++ 
 title = "WizardSardine" 
 date = "2020-11-07" 
+slug =  "wizardsardine"
 draft = false 
 +++
 
