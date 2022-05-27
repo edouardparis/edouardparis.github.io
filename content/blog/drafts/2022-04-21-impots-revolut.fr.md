@@ -14,28 +14,50 @@ par curiosité, boursicoté sur l'application Revolut.
 Revolut venait de ajouter une fonctionnnalité de revente et d'achats de
 cryptomonnaie pour se démarquer de ses concurrents.
 
-Selon le code des impôts, les plus values réalisées à l'occasion de la revente de crypto-monnaies sont imposables. 
+Revolut est gourmand en frais d'achat et 
+mais je souhaitais 
+
+En 2021, la valeur de bitcoin a explosée la barre des 50 000 dollars et
+Elon Musk le CEO de Tesla a annoncé que la companie avait dans ses fonds
+l'équivalent de 1 milliards de dollars en cryptomonnaie. L' opportunité
+parfaite pour moi de "dumper" mes actifs sur la tronche d'un
+milliardaire et de faire un profit.
+
+Selon le code des impôts, les plus values réalisées à l'occasion de la revente 
+de crypto-monnaies sont imposables et si la somme de la plus value est
+supérieure a 306 euros il me fallait remplir cette année le formulaire
+2086. 
 
 ---
 
 **notice du formulaire n°2086**
 
 **Fractions de capital initial**
-Il s’agit de la fraction de capital contenue dans la valeur ou le prix de chacune des différentes cessions d'actifs numériques à
-titre gratuit ou onéreux réalisées antérieurement, hors opérations d’échange ayant bénéficié du sursis d’imposition sans soulte.
-Ces fractions de capital initial réduisent le prix total d’acquisition.
+Il s’agit de la fraction de capital contenue dans la valeur ou le prix de 
+chacune des différentes cessions d'actifs numériques à titre gratuit ou onéreux 
+réalisées antérieurement, hors opérations d’échange ayant bénéficié du 
+sursis d’imposition sans soulte. Ces fractions de capital initial réduisent 
+le prix total d’acquisition.
 
 **Exemple :**
 
-En janvier N, un contribuable fiscalement domicilié en France acquiert pour 1 000 € d'actifs numériques (il ne détient jusqu’alors aucun actif numérique).
-En mars N, la valeur globale de son portefeuille est de 1 200 €. Il réalise alors une cession de 450 €.
-La plus-value afférente à cette cession est déterminée comme suit : 450 – (1000 x 450 / 1200) = 450 – 375 € = 75 €.
+En janvier N, un contribuable fiscalement domicilié en France acquiert pour 
+1 000 € d'actifs numériques (il ne détient jusqu’alors aucun actif numérique).
+En mars N, la valeur globale de son portefeuille est de 1 200 €. Il réalise 
+alors une cession de 450 €. La plus-value afférente à cette cession est déterminée 
+comme suit : 450 – (1000 x 450 / 1200) = 450 – 375 € = 75 €.
 
-En août N, la valeur globale de son portefeuille est de 1 300 €. Il décide alors de céder l'ensemble des actifs numériques qu'il détient.
-Pour déterminer la plus-value afférente à cette nouvelle cession, il convient de minorer le prix total d'acquisition de la fraction de capital initial (375 €) déduite lors de la précédente cession. 
+En août N, la valeur globale de son portefeuille est de 1 300 €. Il décide alors 
+de céder l'ensemble des actifs numériques qu'il détient. Pour déterminer la plus-value
+afférente à cette nouvelle cession, il convient de minorer le prix total d'acquisition 
+de la fraction de capital initial (375 €) déduite lors de la précédente cession. 
 Soit : 1300 – [(1000 – 375) x 1300 / 1300] = 1300 – 625 = 675 € de plus-value
  
 ---
+
+Revolut permet l'export au format
+
+
 
 Heureusement, Revolut a ajouté une
 
