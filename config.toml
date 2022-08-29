@@ -30,11 +30,6 @@ baseName = "index"
 mediaType = "text/plain"
 isPlainText = true
 
-[outputs]
- home = ["HTML", "txt"]
- page = ["HTML", "txt"]
- section = ["HTML", "txt"]
-
 [languages.en]
 redirect = "Read this page in your terminal with the command:"
 copyright = "2020 EdouardParis."

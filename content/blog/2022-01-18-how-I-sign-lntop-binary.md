@@ -3,6 +3,7 @@ title = "How I sign a LNTOP binary"
 date = "2022-01-18"
 draft = false
 slug = "how-i-sign-lntop-binary"
+outputs = ["HTML", "txt"]
 +++
 
 # How I sign a LNTOP binary
