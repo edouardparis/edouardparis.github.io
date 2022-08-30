@@ -1,6 +1,5 @@
 title = "edouard.paris"
 baseURL = "https://edouard.paris"
-theme = ["phrck"]
 DefaultContentLanguage = "en"
 pluralizeListTitles = false
 enableGitInfo = true
