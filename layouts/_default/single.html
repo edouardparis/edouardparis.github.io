@@ -1,5 +1,9 @@
 {{ partial "head" . }}
-<section>
+{{ if gt (where .OutputFormats "Name" "txt") 0 }}
+<section class="txt">
+{{ else }}
+<section class="default">
+{{end }}
 {{ partial "body" . }}
 </section>
 {{ partial "foot" . }}
