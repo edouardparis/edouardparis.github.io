@@ -23,6 +23,7 @@ If the title is translated in French: I read the French translation.
 
 [ 2022 ]
 
+Le grand roman de la physique quantique - Manjit Kumar
 Broadway - Fabrice Caro
 Boule de foudre - Liu Cixin
 L'Empereur-Dieu de Dune - Frank Herbert
