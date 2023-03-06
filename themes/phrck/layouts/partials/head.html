@@ -9,4 +9,10 @@
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
   </head>
   <body>
+  <main>
+  <aside style="padding-top: 100px;">
+    <div class="sidenote">
+      {{ .Site.Params.Redirect | markdownify }}<br/><strong>$ curl -L edouard.paris{{ .RelPermalink }}index.txt</strong>
+    </div>
+  </aside>
 
