@@ -1,8 +1,11 @@
-body {
+html, body {
   font-size: 10pt;
   font-family: monospace;
   color: #1F2429;
   background-color: #fff;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -78,13 +81,21 @@ nav li {
   float: right;
 }
 
+main {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  border-right: 1px solid #ddd8dd;
+  display: block;
+  width: 70ch;
+  min-height: 100%;
+}
+
 section {
   display: block;
-  margin-top: 100px;
-  margin-bottom: 5%;
+  padding-top: 100px;
+  padding-bottom: 50px;
   position: relative;
   width: 70ch;
-  margin-left: 100px;
 }
 
 section li {
@@ -93,6 +104,19 @@ section li {
 
 section a {
   text-decoration: none;
+}
+
+.sidenote {
+  font-size: 8pt;
+}
+
+@media not all and (max-width: 43.6rem) {
+  aside {
+    position: absolute;
+    margin-left: calc(70ch + 6.5rem);
+    margin-top: 0.2em;
+    width: inherit;
+  }
 }
 
 .article-body ul {
@@ -223,7 +247,6 @@ hr::before {
 #footer {
   position: relative;
   width: 70ch;
-  margin-left: 100px;
 }
 
 .menu {
