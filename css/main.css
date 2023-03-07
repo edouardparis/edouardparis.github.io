@@ -305,6 +305,14 @@ hr::before {
     margin-right: auto;
   }
 
+  main {
+    width: auto;
+    margin-top: 0px;
+    margin-left: auto;
+    padding: 1rem;
+    margin-right: auto;
+  }
+
   #footer {
     width: auto;
     margin-left: auto;
