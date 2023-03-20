@@ -21,10 +21,7 @@ a curious audience at least for a future myself.
 In case of typographical or grammar errors, tickets are welcomed on the
 [github repository](https://github.com/edouardparis/edouard.paris).
 
-[ 2022 ]
-
-Jan 01 | How I sign a LNTOP binary
-         ↪ /blog/how-i-sign-lntop-binary/[ 2020 ]
+[ 2020 ]
 
 Jan 01 | WizardSardine
          ↪ /blog/wizardsardine/[ 2019 ]

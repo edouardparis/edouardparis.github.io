@@ -1,0 +1,20 @@
+------------------------------------------------
+commit: 0f76bb11572f0cb642980d426edb24a4c9520423
+Date:   2023-03-20 08:12:03 +0100 +0100
+------------------------------------------------
+
+
+Small notes about how to do some stuff.
+
+In case of typographical or grammar errors, tickets are welcomed on the
+[github repository](https://github.com/edouardparis/edouard.paris).
+
+[ 2022 ]
+
+Jan 01 | How I sign a LNTOP binary
+         ↪ /notes/how-i-sign-lntop-binary/
+------------------------------------------------
+Copyright: 2020 EdouardParis.
+$ pwd :    ~/edouard.paris/notes
+------------------------------------------------
+
