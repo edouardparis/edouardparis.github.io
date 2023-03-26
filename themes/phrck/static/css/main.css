@@ -269,6 +269,13 @@ hr::before {
   color: #ff0080;
 }
 
+.language-code-pink {
+  color: #ff0080;
+  display: block;
+  overflow: scroll;
+  max-width: 80ch;
+}
+
 .language-red {
   color: #ff5f56;
 }
