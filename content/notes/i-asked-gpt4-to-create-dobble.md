@@ -1,10 +1,14 @@
 ---
-title: "I Asked Gpt4 to create a Dobble card set"
+title: "I Asked Gpt4 to help me create a Dobble card deck"
 date: 2023-03-26T21:38:14+02:00
 draft: true
 ---
 
+# I asked GPT4 to help me create a Dobble card deck
+
 My first try of GPT 4 from [OpenAi](https://openai.com).
+My prompts are quite messy but the interlocutor was
+very helpful.
 
 ---
 
