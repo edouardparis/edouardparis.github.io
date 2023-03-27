@@ -1,12 +1,12 @@
 ---
-title: "I Asked Gpt4 to help me create a Dobble card deck"
+title: "I Asked GPT-4 to help me create a Dobble card deck"
 date: 2023-03-26T21:38:14+02:00
-draft: true
+draft: false
 ---
 
-# I asked GPT4 to help me create a Dobble card deck
+# I asked GPT-4 to help me create a Dobble card deck
 
-My first try of GPT 4 from [OpenAi](https://openai.com).
+My first try of GPT-4 from [OpenAi](https://openai.com).
 My prompts are quite messy but the interlocutor was
 very helpful.
 
@@ -105,6 +105,12 @@ each card is a list of image filenames representing the symbols on the card.
 Can you modify the script so it creates me from the same folder only a
 set of 10 cards with a minimal number of symbols ?
 ```
+
+{{< sidenote >}}
+I am very impressed with the response. The AI understands at this point where it
+is going and returns me code that can handle my request but also is a more
+generic solution for future requests.
+{{< /sidenote >}}
 
 Sure! Here's a modified version of the script to generate a set of 10 cards with
 a minimal number of symbols:
