@@ -261,6 +261,10 @@ hr::before {
   color: #067df7;
 }
 
+.language-prompt {
+  color: #067df7;
+}
+
 .language-green {
   color: #27c93f;
 }
