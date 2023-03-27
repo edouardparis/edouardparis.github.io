@@ -11,8 +11,8 @@ My prompts are quite messy but the interlocutor was
 very helpful.
 
 The first result is not very good and the final script needs more work,
-but the core logic is done: 
-https://twitter.com/edouardparis/status/1640256597711544321
+but the core logic is done.
+([Here a generated card](https://twitter.com/edouardparis/status/1640256597711544321))
 
 ---
 
