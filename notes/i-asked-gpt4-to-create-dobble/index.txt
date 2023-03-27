@@ -1,6 +1,6 @@
 ------------------------------------------------
-commit: 518cfb12e1f312f06be65a2d12d4486b911c43d1
-Date:   2023-03-27 09:29:05 +0200 +0200
+commit: e0f01f645f469b93f39ea4bad6277a0bff265d1a
+Date:   2023-03-27 10:02:07 +0200 +0200
 ------------------------------------------------
 
 
@@ -9,6 +9,10 @@ Date:   2023-03-27 09:29:05 +0200 +0200
 My first try of GPT-4 from [OpenAi](https://openai.com).
 My prompts are quite messy but the interlocutor was
 very helpful.
+
+The first result is not very good and the final script needs more work,
+but the core logic is done: 
+https://twitter.com/edouardparis/status/1640256597711544321
 
 ---
 
