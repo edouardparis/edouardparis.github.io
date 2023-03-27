@@ -1,6 +1,6 @@
 ------------------------------------------------
-commit: 38ff98c80be3676ed4f5b12a049172d4e43215b1
-Date:   2023-03-27 10:05:35 +0200 +0200
+commit: ec7147c33f4168a3b155158e60215cb7b73bebd4
+Date:   2023-03-27 17:43:53 +0200 +0200
 ------------------------------------------------
 
 
@@ -11,8 +11,8 @@ My prompts are quite messy but the interlocutor was
 very helpful.
 
 The first result is not very good and the final script needs more work,
-but the core logic is done: 
-https://twitter.com/edouardparis/status/1640256597711544321
+but the core logic is done.
+([Here a generated card](https://twitter.com/edouardparis/status/1640256597711544321))
 
 ---
 
