@@ -115,7 +115,7 @@ section a {
     position: absolute;
     margin-left: calc(70ch + 6.5rem);
     margin-top: 0.2em;
-    width: inherit;
+    width: 100%;
   }
 }
 
@@ -261,12 +261,23 @@ hr::before {
   color: #067df7;
 }
 
+.language-prompt {
+  color: #067df7;
+}
+
 .language-green {
   color: #27c93f;
 }
 
 .language-pink {
   color: #ff0080;
+}
+
+.language-code-pink {
+  color: #ff0080;
+  display: block;
+  overflow: scroll;
+  max-width: 80ch;
 }
 
 .language-red {
