@@ -175,7 +175,7 @@ per card. Keep in mind that the folder should contain at least as many image
 files as the number of cards required.
 
 ```prompt
-Can you modify the script in order to a new directory called cards 
+Can you modify the script in order to create a new directory called cards 
 and for each card in the card_set, create a new image file in 
 the cards directory using its symbols and imagemagick.
 ```
