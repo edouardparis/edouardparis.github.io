@@ -203,14 +203,9 @@ img {
 }
 
 hr {
-  border: none;
-  width: 9ch;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-hr::before {
-  content: "---------";
+  width: 100%;
+  border-top: 1px solid #ddd8dd;
+  border-bottom: 1px solid #fff;
 }
 
 .article-header ul {

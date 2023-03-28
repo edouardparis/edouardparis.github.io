@@ -16,10 +16,10 @@ but the core logic is done.
 
 ---
 
-```prompt
+{{< prompt >}}
 Hello, I want to create a gobble card game.
 How much symbols do I need to create a set of 50 cards ?
-```
+{{</ prompt >}}
 
 In a Gobble card game (also known as Dobble or Spot It), each card has a unique 
 combination of symbols, and each pair of cards shares exactly one symbol in
@@ -50,11 +50,11 @@ So, if you want to create a Gobble card game with 50 cards, you can either:
    you will need to remove 7 cards to have exactly 50 cards, but the game 
    mechanics will still work correctly.
 
-```prompt
+{{< prompt >}}
 I have a folder with 43 image files in it, can you give me a python script
 that read this folder and prints an array (the card set) of array (each 
 row is a list of the file names that will be the symbols on the cards)  ?
-```
+{{</ prompt >}}
 
 Sure, here's a Python script that reads a folder containing 43 image files and
 generates a card set with 7 symbols per card, where each row represents a card: 
@@ -105,10 +105,10 @@ exactly 43 image files. The script will generate and print the card set, where
 each card is a list of image filenames representing the symbols on the card.
 
 
-```prompt
+{{< prompt >}}
 Can you modify the script so it creates me from the same folder only a
 set of 10 cards with a minimal number of symbols ?
-```
+{{</ prompt >}}
 
 {{< sidenote >}}
 I am very impressed with the response. The AI understands at this point where it
@@ -174,11 +174,11 @@ the specified number of cards (10 in this case) and a minimal number of symbols
 per card. Keep in mind that the folder should contain at least as many image 
 files as the number of cards required.
 
-```prompt
+{{< prompt >}}
 Can you modify the script in order to create a new directory called cards 
 and for each card in the card_set, create a new image file in 
 the cards directory using its symbols and imagemagick.
-```
+{{</ prompt >}}
 
 Certainly! To create a new directory called 'cards' and save each card as an 
 image file using ImageMagick, you'll first need to install the Python library 
@@ -265,13 +265,13 @@ handle different image sizes and backgrounds.
 Please replace 'path/to/your/folder' with the actual path to the folder 
 containing your image files.
 
-```prompt
+{{< prompt >}}
 Dobble game card are round, can you modify the script so in the 
 create_card_images function it creates a black circle of diameter 1000,
 resizes the symbols to fit inside and distributes them in trigonometric
 order around the center with their top oriented to the center 
 of the circle ?
-```
+{{</ prompt >}}
 
 Of course! To create circular Dobble game cards with symbols resized and 
 distributed evenly in trigonometric order, we can modify 
