@@ -1,11 +1,10 @@
 <!doctype html><html><head><title>edouard.paris</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no"><meta name=description content="Edouard Paris personal website"><link rel="shortcut icon" href=/favicon.ico type=image/x-icon><link rel=stylesheet type=text/css href=/css/main.css></head><body><main><aside style=padding-top:100px><div class=sidenote>Read this page in your terminal with the command:<br><strong>$ curl -L
-edouard.paris/notes/i-asked-gpt4-to-create-dobble/index.txt | less</strong></div></aside><section><div class=article-header><a href=https://edouard.paris>~/edouard.paris</a><a href=https://edouard.paris/notes>/notes</a><a>/</a></div><div class=article-body><h1 id=i-asked-gpt-4-to-help-me-create-a-dobble-card-deck>I asked GPT-4 to help me create a Dobble card deck</h1><p>My first try of GPT-4 from <a href=https://openai.com>OpenAi</a>.
+edouard.paris/notes/i-asked-gpt4-to-create-dobble/index.txt | less</strong></div></aside><section><div class=article-header><a href=https://edouard.paris>~/edouard.paris</a><a href=https://edouard.paris/notes>/notes</a><a>/</a></div></div><div class=article-body><h1 id=i-asked-gpt-4-to-help-me-create-a-dobble-card-deck>I asked GPT-4 to help me create a Dobble card deck</h1><p>My first try of GPT-4 from <a href=https://openai.com>OpenAi</a>.
 My prompts are quite messy but the interlocutor was
 very helpful.</p><p>The first result is not very good and the final script needs more work,
 but the core logic is done.
-(<a href=https://twitter.com/edouardparis/status/1640256597711544321>Here a generated card</a>)</p><hr><pre tabindex=0><code class=language-prompt data-lang=prompt>Hello, I want to create a gobble card game.
-How much symbols do I need to create a set of 50 cards ?
-</code></pre><p>In a Gobble card game (also known as Dobble or Spot It), each card has a unique
+(<a href=https://twitter.com/edouardparis/status/1640256597711544321>Here a generated card</a>)</p><hr><p class=language-blue>Hello, I want to create a gobble card game.
+How much symbols do I need to create a set of 50 cards ?</p><p>In a Gobble card game (also known as Dobble or Spot It), each card has a unique
 combination of symbols, and each pair of cards shares exactly one symbol in
 common. To create a Gobble card game with 50 cards, you&rsquo;ll need to determine the
 number of symbols per card and the total number of unique symbols required.</p><p>The game is based on projective geometry and can be represented by the formula:</p><p>n(n - 1) + 1 = total number of unique symbols</p><p>where n is the number of symbols per card.</p><p>For a Gobble card game with 50 cards, you will have:</p><p>50 = n(n - 1) + 1</p><p>Solving this equation for n, you&rsquo;ll find that there isn&rsquo;t a whole number
@@ -14,10 +13,9 @@ unique symbols, respectively.</p><p>So, if you want to create a Gobble card game
 you will have 7 extra cards that you can use as additional variants, bonus
 cards, or even for replacement cards in case some get damaged or lost.</p></li><li><p>Create a game with 8 symbols per card and 57 unique symbols. In this case,
 you will need to remove 7 cards to have exactly 50 cards, but the game
-mechanics will still work correctly.</p></li></ol><pre tabindex=0><code class=language-prompt data-lang=prompt>I have a folder with 43 image files in it, can you give me a python script
-that read this folder and prints an array (the card set) of array (each 
-row is a list of the file names that will be the symbols on the cards)  ?
-</code></pre><p>Sure, here&rsquo;s a Python script that reads a folder containing 43 image files and
+mechanics will still work correctly.</p></li></ol><p class=language-blue>I have a folder with 43 image files in it, can you give me a python script
+that read this folder and prints an array (the card set) of array (each
+row is a list of the file names that will be the symbols on the cards) ?</p><p>Sure, here&rsquo;s a Python script that reads a folder containing 43 image files and
 generates a card set with 7 symbols per card, where each row represents a card:</p><pre tabindex=0><code class=language-code-pink data-lang=code-pink>import os
 from itertools import combinations
 
@@ -58,9 +56,8 @@ for idx, card in enumerate(card_set):
 </code></pre><p>Make sure to replace &lsquo;path/to/your/folder&rsquo; with the actual path to the folder
 containing your 43 image files. This script assumes that the folder contains
 exactly 43 image files. The script will generate and print the card set, where
-each card is a list of image filenames representing the symbols on the card.</p><pre tabindex=0><code class=language-prompt data-lang=prompt>Can you modify the script so it creates me from the same folder only a
-set of 10 cards with a minimal number of symbols ?
-</code></pre><aside><div class=sidenote>I am very impressed with the response. The AI understands at this point where it
+each card is a list of image filenames representing the symbols on the card.</p><p class=language-blue>Can you modify the script so it creates me from the same folder only a
+set of 10 cards with a minimal number of symbols ?</p><aside><div class=sidenote>I am very impressed with the response. The AI understands at this point where it
 is going and returns me code that can handle my request but also is a more
 generic solution for future requests.</div></aside><p>Sure! Here&rsquo;s a modified version of the script to generate a set of 10 cards with
 a minimal number of symbols:</p><pre tabindex=0><code class=language-code-pink data-lang=code-pink>import os
@@ -113,10 +110,9 @@ for idx, card in enumerate(card_set):
 containing your image files. This script will generate and print a card set with
 the specified number of cards (10 in this case) and a minimal number of symbols
 per card. Keep in mind that the folder should contain at least as many image
-files as the number of cards required.</p><pre tabindex=0><code class=language-prompt data-lang=prompt>Can you modify the script in order to create a new directory called cards 
-and for each card in the card_set, create a new image file in 
-the cards directory using its symbols and imagemagick.
-</code></pre><p>Certainly! To create a new directory called &lsquo;cards&rsquo; and save each card as an
+files as the number of cards required.</p><p class=language-blue>Can you modify the script in order to create a new directory called cards
+and for each card in the card_set, create a new image file in
+the cards directory using its symbols and imagemagick.</p><p>Certainly! To create a new directory called &lsquo;cards&rsquo; and save each card as an
 image file using ImageMagick, you&rsquo;ll first need to install the Python library
 wand which is a ctypes-based simple ImageMagick binding for Python.
 You can install it using pip:</p><pre tabindex=0><code class=language-code-pink data-lang=code-pink>pip install Wand
@@ -186,12 +182,11 @@ and top parameters in the base_image.composite() method to change the positions
 of the symbols. Note that this simple script assumes all image symbols have the
 same size and transparent background. You may need to adjust the script to
 handle different image sizes and backgrounds.</p><p>Please replace &lsquo;path/to/your/folder&rsquo; with the actual path to the folder
-containing your image files.</p><pre tabindex=0><code class=language-prompt data-lang=prompt>Dobble game card are round, can you modify the script so in the 
+containing your image files.</p><p class=language-blue>Dobble game card are round, can you modify the script so in the
 create_card_images function it creates a black circle of diameter 1000,
 resizes the symbols to fit inside and distributes them in trigonometric
-order around the center with their top oriented to the center 
-of the circle ?
-</code></pre><p>Of course! To create circular Dobble game cards with symbols resized and
+order around the center with their top oriented to the center
+of the circle ?</p><p>Of course! To create circular Dobble game cards with symbols resized and
 distributed evenly in trigonometric order, we can modify
 the create_card_images function as follows:</p><pre tabindex=0><code class=language-code-pink data-lang=code-pink>import math
 from wand.color import Color
@@ -239,4 +234,4 @@ create_card_images(folder_path, card_set)
 </code></pre><p>Replace &lsquo;path/to/your/folder&rsquo; with the actual path to the folder containing your
 image files. The script will create and save the circular Dobble game cards with
 resized and distributed symbols in the &lsquo;cards&rsquo; directory as before.</p></div></section><footer id=footer><time>created: Mar 26 2023
-| updated: Mar 27 2023</time></aside><p>&copy; 2020 EdouardParis. Powered by <a href=http://gohugo.io target=_blank>Hugo</a></p></footer></main></body></html>
+| updated: Mar 28 2023</time></aside><p>&copy; 2020 EdouardParis. Powered by <a href=http://gohugo.io target=_blank>Hugo</a></p></footer></main></body></html>
