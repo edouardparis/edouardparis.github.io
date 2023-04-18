@@ -23,6 +23,7 @@ If the title is translated in French: I read the French translation.
 
 [ 2023 ]
 
+Slime, a natural history - Susanne Wedlich
 Le grand Coeur - Jean-Christophe Rufin
 Tau Zéro - Poul Anderson
 Mona Lisa disjoncte - William Gibson
