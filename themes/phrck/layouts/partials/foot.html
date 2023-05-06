@@ -1,3 +1,8 @@
+<aside>
+  <div class="sidenote">
+    <p>&copy; {{ .Site.Copyright }} <br />Powered by <a href="http://gohugo.io" target="_blank">Hugo</a></p>
+  </div>
+</aside>
 <footer id="footer">
 {{ if .IsPage }}
   <time>
@@ -8,13 +13,7 @@
     {{ end }}
     | updated: {{ .Lastmod.Format "Jan 02 2006" }}
   </time>
-  </aside>
 {{end}}
-<aside>
-  <div class="sidenote">
-    <p>&copy; {{ .Site.Copyright }} <br />Powered by <a href="http://gohugo.io" target="_blank">Hugo</a></p>
-  </div>
-</aside>
 </footer>
 </main>
 </body>

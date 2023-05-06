@@ -116,7 +116,7 @@ section a {
     position: absolute;
     margin-left: calc(70ch + 6.5rem);
     margin-top: 0.2em;
-    width: 100%;
+    width: 80ch;
   }
 }
 
