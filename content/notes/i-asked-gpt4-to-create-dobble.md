@@ -45,7 +45,6 @@ So, if you want to create a Gobble card game with 50 cards, you can either:
 1. Create a game with 7 symbols per card and 43 unique symbols. In this case,
    you will have 7 extra cards that you can use as additional variants, bonus 
    cards, or even for replacement cards in case some get damaged or lost.
-
 2. Create a game with 8 symbols per card and 57 unique symbols. In this case, 
    you will need to remove 7 cards to have exactly 50 cards, but the game 
    mechanics will still work correctly.
