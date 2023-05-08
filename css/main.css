@@ -78,6 +78,14 @@ nav li {
   list-style-type: none;
 }
 
+ol li{
+    margin-top: 10px;
+}
+
+ol li:first-child {
+    margin-top: 0;
+}
+
 .date {
   float: right;
 }
