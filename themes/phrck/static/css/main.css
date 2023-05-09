@@ -101,10 +101,14 @@ main {
 
 section {
   display: block;
-  padding-top: 100px;
-  padding-bottom: 50px;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   position: relative;
   width: 70ch;
+}
+
+.head-aside {
+  padding-top: 5rem;
 }
 
 section li {
