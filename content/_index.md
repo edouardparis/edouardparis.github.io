@@ -18,3 +18,8 @@ Find me on:
   [Twitter](https://twitter.com/edouardparis)
 / [GitHub](https://github.com/edouardparis)
 / [LinkedIn](https://www.linkedin.com/in/parisedouard/)
+
+Find here:
+- [/blog](/blog) -> my personal blog
+- [/articles](/articles) -> long format articles
+- [/notes](notes) -> short notes for myself and others
