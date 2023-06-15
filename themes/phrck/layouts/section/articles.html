@@ -1,0 +1,15 @@
+{{ partial "head.html" . }}
+<section>
+  {{ partial "body" . }}
+  {{ range .Pages.GroupByDate "2006" }}
+  <h1>{{ .Key }} --</h1>
+  <ul>
+    {{ range .Pages }}
+    <li>
+    {{ .Render "li" }}
+    </li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</section>
+{{ partial "foot.html" . }}
