@@ -1,6 +1,6 @@
 ------------------------------------------------
-commit: 92ac2369ead55b6b065e7075ddfaf17f9d9a033a
-Date:   2020-02-18 09:27:52 +0100 +0100
+commit: 8b0c2c9c5de5a8ec7afe20fb1d4dadb15cb6bd07
+Date:   2023-06-15 17:20:12 +0200 +0200
 ------------------------------------------------
 
 ```ascii
@@ -19,6 +19,11 @@ Find me on:
   [Twitter](https://twitter.com/edouardparis)
 / [GitHub](https://github.com/edouardparis)
 / [LinkedIn](https://www.linkedin.com/in/parisedouard/)
+
+Find here:
+- [/blog](/blog) -> my personal blog
+- [/articles](/articles) -> long format articles
+- [/notes](notes) -> short notes for myself and others
 
 ------------------------------------------------
 Copyright: 2020 EdouardParis.
