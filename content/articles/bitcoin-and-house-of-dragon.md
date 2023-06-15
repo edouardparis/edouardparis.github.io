@@ -44,7 +44,7 @@ grand son Viserys after choosing him as his Heir. They setted up a simple
 At this time, Viserys was a grown adult, married and aware of the
 responsibilities to come.
 
-```
+```ascii
                             │
                             │
                     ┌───────┴───────┐
@@ -76,7 +76,7 @@ During a secret ceremony in front of the old skull of Balerion *the Black
 Dread*, Viserys creates a new descriptor and shares it to his daughter,
 then moves the funds to outputs with scripts derived from it.
 
-```
+```ascii
               Viserys
 
                  │
@@ -138,7 +138,7 @@ Sick by a mysterious illness and advised by his ministers,
 Viserys wants to include the whole succession line in the bitcoin
 scripts locking the realm's treasure.
 
-```
+```ascii
                Viserys
 
                   │
@@ -188,7 +188,7 @@ She wants for Daemon, her uncle, a fierce warrior and loyal friend, to hold a ke
 Aegon key. Rhaenyra is confident that in case she get murdered, Daemon will lock the funds
 and will take no rest until her murderers are hanged on the King's Landing main place.
 
-```
+```ascii
                Viserys
 
                   │
@@ -245,7 +245,7 @@ maester may be a good idea. He then adds a third recovery path with
 the clerical power as a third party, that will be in charge of dispute resolution
 between Aegon and Daemon.
 
-```
+```ascii
            Viserys
 
               │
