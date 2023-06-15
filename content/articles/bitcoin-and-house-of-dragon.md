@@ -2,7 +2,7 @@
 title: "Bitcoin and inheritance, a House of the Dragon story"
 date: 2023-06-15
 description: "A short fiction about how the Targaryens secure their funds across generations"
-draft: true
+draft: false
 tags:  ["Bitcoin"]
 ---
 
