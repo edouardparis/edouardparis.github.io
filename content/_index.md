@@ -23,3 +23,5 @@ Find here:
 - [/blog](/blog) -> my personal blog
 - [/articles](/articles) -> long format articles
 - [/notes](notes) -> short notes for myself and others
+
+and all my writing content in [/archives](/archives).
