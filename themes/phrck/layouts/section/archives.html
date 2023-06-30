@@ -2,6 +2,7 @@
 <section>
   {{ partial "body" . }}
   {{ range .Site.RegularPages.GroupByDate "2006" }}
+  {{ if ne .Key "0001" }}
   <h1>{{ .Key }} --</h1>
   <ul>
     {{ range .Pages }}
@@ -11,5 +12,6 @@
     {{ end }}
   </ul>
   {{ end }}
+{{ end }}
 </section>
 {{ partial "foot.html" . }}

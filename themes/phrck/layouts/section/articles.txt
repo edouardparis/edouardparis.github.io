@@ -2,6 +2,6 @@
 {{ .RawContent }}
 {{ range .Pages.GroupByDate "2006" }}[ {{ .Key }} ]
 {{ range .Pages }}
-{{ with .Site.Params.DateForm }}{{ $.Date.Format . }}{{ else }}{{ $.Date.Format "Jan 02" }}{{ end }} | {{ .Title }}
+{{ with .Site.Params.DateForm }}{{ .Date.Format . }}{{ else }}{{ .Date.Format "Jan 02" }}{{ end }} | {{ .Title }}
          ↪ {{ .RelPermalink }}{{ end }}{{ end }}
 {{ partial "foot.txt" . }}

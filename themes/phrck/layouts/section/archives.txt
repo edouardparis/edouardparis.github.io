@@ -1,8 +1,9 @@
 {{ partial "head.txt" . }}
 {{ .RawContent }}
 {{ range .Site.RegularPages.GroupByDate "2006" }}
+{{ if ne .Key "0001"}}
 [ {{ .Key }} ]
 {{ range .Pages }}
-{{ with .Site.Params.DateForm }}{{ $.Date.Format . }}{{ else }}{{ $.Date.Format "Jan 02" }}{{ end }} | {{ .Title }}
-         ↪ {{ .RelPermalink }}{{ end }}{{ end }}
+{{ with .Site.Params.DateForm }}{{ .Date.Format . }}{{ else }}{{ .Date.Format "Jan 02" }}{{ end }} | {{ .Title }}
+         ↪ {{ .RelPermalink }}{{ end }}{{ end }}{{ end }}
 {{ partial "foot.txt" . }}
