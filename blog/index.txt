@@ -21,14 +21,16 @@ a curious audience at least for a future myself.
 In case of typographical or grammar errors, tickets are welcomed on the
 [github repository](https://github.com/edouardparis/edouard.paris).
 
+
 [ 2020 ]
 
-Jan 01 | WizardSardine
-         ↪ /blog/wizardsardine/[ 2019 ]
+Nov 07 | WizardSardine
+         ↪ /blog/wizardsardine/
+[ 2019 ]
 
-Jan 01 | The Lightning Conference 2019
+Oct 21 | The Lightning Conference 2019
          ↪ /blog/tlc2019/
-Jan 01 | Hello World
+Jul 15 | Hello World
          ↪ /blog/hello-world/
 ------------------------------------------------
 Copyright: 2020 EdouardParis.

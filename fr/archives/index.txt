@@ -9,13 +9,15 @@ draft = false
 +++
 
 
+
 [ 2022 ]
 
-Jan 01 | Lecture: Au commencement était… - D. Graeber, D. Wengrow
+Mar 01 | Lecture: Au commencement était… - D. Graeber, D. Wengrow
          ↪ /fr/blog/au-commencement-etait/
+
 [ 2020 ]
 
-Jan 01 | WizardSardine
+Nov 07 | WizardSardine
          ↪ /fr/blog/wizardsardine/
 ------------------------------------------------
 Copyright: 2020 EdouardParis.

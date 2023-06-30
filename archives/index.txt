@@ -9,30 +9,31 @@ draft = false
 +++
 
 
+
 [ 2023 ]
 
-Jan 01 | Bitcoin and inheritance, a House of the Dragon story
+Jun 15 | Bitcoin and inheritance, a House of the Dragon story
          ↪ /articles/bitcoin-and-house-of-dragon/
-Jan 01 | I Asked GPT-4 to help me create a Dobble card deck
+Mar 26 | I Asked GPT-4 to help me create a Dobble card deck
          ↪ /notes/i-asked-gpt4-to-create-dobble/
+
 [ 2022 ]
 
-Jan 01 | How I sign a LNTOP binary
+Jan 18 | How I sign a LNTOP binary
          ↪ /notes/how-i-sign-lntop-binary/
+
 [ 2020 ]
 
-Jan 01 | WizardSardine
+Nov 07 | WizardSardine
          ↪ /blog/wizardsardine/
+
 [ 2019 ]
 
-Jan 01 | The Lightning Conference 2019
+Oct 21 | The Lightning Conference 2019
          ↪ /blog/tlc2019/
-Jan 01 | Hello World
+Jul 15 | Hello World
          ↪ /blog/hello-world/
-[ 0001 ]
 
-Jan 01 | 
-         ↪ /resources/bitcoin/tlc2019/
 ------------------------------------------------
 Copyright: 2020 EdouardParis.
 $ pwd :    ~/edouard.paris/archives
