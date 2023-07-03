@@ -18,6 +18,5 @@ Je m'appelle Édouard Paris.
 Je suis ingénieur en informatique et mathématiques appliquées,
 vous pouvez me retrouver sur :
 
-  [Twitter](https://twitter.com/edouardparis)
 / [GitHub](https://github.com/edouardparis)
 / [LinkedIn](https://www.linkedin.com/in/parisedouard/)

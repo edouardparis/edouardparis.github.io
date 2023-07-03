@@ -15,7 +15,6 @@ My name is Édouard Paris.
 I am a French engineer in computer science and applied mathematics.
 Find me on:
 
-  [Twitter](https://twitter.com/edouardparis)
 / [GitHub](https://github.com/edouardparis)
 / [LinkedIn](https://www.linkedin.com/in/parisedouard/)
 
