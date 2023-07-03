@@ -1,6 +1,6 @@
 ------------------------------------------------
-commit: 92ac2369ead55b6b065e7075ddfaf17f9d9a033a
-Date:   2020-02-18 09:27:52 +0100 +0100
+commit: 9b4e7effb3194889b934c657e6f1490e567d76ba
+Date:   2023-07-03 13:49:45 +0200 +0200
 ------------------------------------------------
 
 ```ascii
@@ -17,7 +17,6 @@ Je m'appelle Édouard Paris.
 Je suis ingénieur en informatique et mathématiques appliquées,
 vous pouvez me retrouver sur :
 
-  [Twitter](https://twitter.com/edouardparis)
 / [GitHub](https://github.com/edouardparis)
 / [LinkedIn](https://www.linkedin.com/in/parisedouard/)
 
