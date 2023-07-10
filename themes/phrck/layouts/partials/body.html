@@ -2,13 +2,6 @@
   <a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}">~/{{.Site.Title }}{{.Site.LanguagePrefix }}</a>{{ if .IsHome }}{{ else if .IsNode }}<a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}/{{ lower .Title }}">/{{ lower .Title }}</a>
   {{ else if .IsPage }}<a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}/{{ .Section }}">/{{ .Section }}</a><a>/{{ .Slug }}</a>{{ end }}
 </div>
-  {{ if .Params.toc }}
-  <aside>
-  <div class="sidenote">
-  {{.TableOfContents}}
-  </aside>
-  {{ end }}
-  </div>
 <div class="article-body">
   {{ .Content }}
 </div>

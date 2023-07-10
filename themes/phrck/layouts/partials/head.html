@@ -1,19 +1,27 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
-    <title>{{ .Site.Title }}</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="{{ .Site.Params.Description }}"/>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="/css/main.css" />
-  </head>
-  <body>
-  <main>
-  <aside class="head-aside">
-    <div class="sidenote">
-      {{ .Site.Params.Redirect | markdownify }}<br/><strong>$ curl -L
-        edouard.paris{{ .RelPermalink }}index.txt | less</strong>
-    </div>
-  </aside>
-
+    <head>
+        <title>{{ .Site.Title }}</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="description" content="{{ .Site.Params.Description }}"/>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    </head>
+    <body>
+        <main>
+            <aside class="head-aside">
+                <div class="sidenote">
+                    {{ if .IsPage }}
+                        created: {{ $.Date.Format "Jan 02 2006" }}<br/>
+                        updated: {{ .Lastmod.Format "Jan 02 2006" }}<br/>
+                    {{end}}
+                    <br/>
+                    {{ .Site.Params.Redirect | markdownify }}<br/><strong>$ curl -L
+                        edouard.paris{{ .RelPermalink }}index.txt | less</strong>
+                    <br/>
+                    {{ if .Params.toc }}
+                        {{.TableOfContents}}
+                    {{ end }}
+                </div>
+            </aside>

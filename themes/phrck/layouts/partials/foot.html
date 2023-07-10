@@ -4,16 +4,6 @@
   </div>
 </aside>
 <footer id="footer">
-{{ if .IsPage }}
-  <time>
-    {{ with .Site.Params.DateForm }}
-    created: {{ $.Date.Format . }}
-    {{ else }}
-    created: {{ $.Date.Format "Jan 02 2006" }}
-    {{ end }}
-    | updated: {{ .Lastmod.Format "Jan 02 2006" }}
-  </time>
-{{end}}
 </footer>
 </main>
 </body>
