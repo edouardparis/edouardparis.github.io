@@ -12,6 +12,8 @@ draft = false
 
 [ 2023 ]
 
+Jul 27 | Leaving Twitter
+         ↪ /blog/leaving-twitter/
 Jun 15 | Bitcoin and inheritance, a House of the Dragon story
          ↪ /articles/bitcoin-and-house-of-dragon/
 Mar 26 | I Asked GPT-4 to help me create a Dobble card deck
