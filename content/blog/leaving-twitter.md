@@ -1,7 +1,7 @@
 ---
 title: "Leaving Twitter"
-date: 2023-07-03T13:08:23+02:00
-draft: true
+date: 2023-07-27T13:08:23+02:00
+draft: false
 ---
 
 I am leaving Twitter.
@@ -9,7 +9,7 @@ Please do not contact/tag me on this network.
 
 10 years ago, I signed up to twitter.com by curiosity.
 I immediatly loved the format, the RT and the hashtags.
-The requirements to be concise, the full public discussions
+The requirement to be concise and the full public discussions
 were appealing to me.
 
 My first usage was to keep a technological watch, to discover
@@ -29,7 +29,7 @@ multiple debunking a day made me want to not appear like an
 idiot when sharing my thoughts to the world. However the first 
 duty of a social network user is not to be ashamed of his own
 opinion and to share it; mistakes are human. It is to not 
-relay whatever stupidity confirming your bias that is clearly
+relay whatever stupidity confirming his bias that is clearly
 unsourced.
 
 Twitter became a tool for individual for self-promotion in a
@@ -42,6 +42,13 @@ my work, asking questions and tagging me when new related content
 were published.
 I enjoyed this a lot even if I did not want my work to be the
 main content of my account.
+
+Now, the place is crowded of bots and astrosurfing. 
+I do not have anymore a correct control of what
+is displayed to me in my feeds. Coupled with anxiety disorders
+I have, the whole angry experience is not good for my mental
+health. I am sad of what became a plateform, I enjoyed so much
+the past years.
 
 I will try to write more content on my website and 
 maybe join later mastodon, nostr or bluesky.
