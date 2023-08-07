@@ -95,7 +95,7 @@ main {
   padding-right: 5rem;
   border-right: 1px solid #ddd8dd;
   display: block;
-  width: 70ch;
+  width: 80ch;
   min-height: 100%;
 }
 
@@ -104,7 +104,7 @@ section {
   padding-top: 5rem;
   padding-bottom: 5rem;
   position: relative;
-  width: 70ch;
+  width: 80ch;
 }
 
 .head-aside {
@@ -126,7 +126,7 @@ section a {
 @media not all and (max-width: 43.6rem) {
   aside {
     position: absolute;
-    margin-left: calc(70ch + 6.5rem);
+    margin-left: calc(80ch + 6.5rem);
     margin-top: 0.2em;
     min-width: 50ch;
   }
@@ -254,7 +254,7 @@ hr {
 
 #footer {
   position: relative;
-  width: 70ch;
+  width: 80ch;
 }
 
 .menu {
