@@ -1,0 +1,10 @@
+{{ partial "head.html" . }}
+<section>
+    {{ partial "body" . }}
+    <ul>
+        {{ range .Data.Terms.Alphabetical }}
+        <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
+        {{ end }}
+    </ul>
+</section>
+{{ partial "foot.html" . }}
