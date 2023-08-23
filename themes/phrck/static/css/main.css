@@ -123,6 +123,15 @@ section a {
   font-size: 8pt;
 }
 
+.sidenote a {
+  color: #067df7;
+}
+.sidenote a:hover,
+.sidenote a:focus {
+  color: #fff;
+  background-color: #067df7;
+}
+
 @media not all and (max-width: 43.6rem) {
   aside {
     position: absolute;

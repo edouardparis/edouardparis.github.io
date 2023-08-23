@@ -16,6 +16,9 @@
                         created: {{ $.Date.Format "Jan 02 2006" }}<br/>
                         updated: {{ .Lastmod.Format "Jan 02 2006" }}<br/>
                     {{end}}
+                    {{ if or ( .IsSection) (eq .Kind "term")}}
+                    <a href="./index.xml">RSS feed</a> for /{{ .Title | lower }}<br/>
+                    {{ end }}
                     <br/>
                     {{ .Site.Params.Redirect | markdownify }}<br/><strong>$ curl -L
                         edouard.paris{{ .RelPermalink }}index.txt | less</strong>
