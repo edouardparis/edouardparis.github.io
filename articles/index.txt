@@ -7,7 +7,7 @@
 Jun 15 | Bitcoin and inheritance, a House of the Dragon story
          ↪ /articles/bitcoin-and-house-of-dragon/
 ------------------------------------------------
-Copyright: 2020 EdouardParis.
+Copyright: 2023 EdouardParis.
 $ pwd :    ~/edouard.paris/articles
 ------------------------------------------------
 

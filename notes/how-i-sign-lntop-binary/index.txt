@@ -82,7 +82,7 @@ tar -ztvf lntop-v0.3.0-Linux-arm64.tar.gz
 ```
 
 ------------------------------------------------
-Copyright: 2020 EdouardParis.
+Copyright: 2023 EdouardParis.
 $ pwd :    ~/edouard.paris/notes/2022-01-18-how-I-sign-lntop-binary
 ------------------------------------------------
 

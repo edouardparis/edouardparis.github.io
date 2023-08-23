@@ -17,7 +17,7 @@ Date:   2019-11-01 12:39:39 +0100 +0100
 - 17:00 Lightning integration in Electrum - Thomas Voegtlin
 
 ------------------------------------------------
-Copyright: 2020 EdouardParis.
+Copyright: 2023 EdouardParis.
 $ pwd :    ~/edouard.paris/resources/tlc2019
 ------------------------------------------------
 

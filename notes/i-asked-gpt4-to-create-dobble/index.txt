@@ -334,7 +334,7 @@ image files. The script will create and save the circular Dobble game cards with
 resized and distributed symbols in the 'cards' directory as before.
 
 ------------------------------------------------
-Copyright: 2020 EdouardParis.
+Copyright: 2023 EdouardParis.
 $ pwd :    ~/edouard.paris/notes/i-asked-gpt4-to-create-dobble
 ------------------------------------------------
 

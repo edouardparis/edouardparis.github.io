@@ -27,7 +27,7 @@ Find here:
 and all my writing content in [/archives](/archives).
 
 ------------------------------------------------
-Copyright: 2020 EdouardParis.
+Copyright: 2023 EdouardParis.
 $ pwd :    ~/edouard.paris
 ------------------------------------------------
 

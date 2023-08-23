@@ -25,7 +25,7 @@ Mar 01 | Lecture: Au commencement était… - D. Graeber, D. Wengrow
 Nov 07 | WizardSardine
          ↪ /fr/blog/wizardsardine/
 ------------------------------------------------
-Copyright: 2020 EdouardParis.
+Copyright: 2023 EdouardParis.
 $ pwd :    ~/edouard.paris/fr/blog
 ------------------------------------------------
 

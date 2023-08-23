@@ -341,7 +341,7 @@ entreprise or for your individual usage, Please go checkout WizarSardine
 product [Liana](https://github.com/wizardsardine/liana).
 
 ------------------------------------------------
-Copyright: 2020 EdouardParis.
+Copyright: 2023 EdouardParis.
 $ pwd :    ~/edouard.paris/articles/bitcoin-and-house-of-dragon
 ------------------------------------------------
 
