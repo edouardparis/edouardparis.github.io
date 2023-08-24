@@ -1,4 +1,4 @@
-<!doctype html><html><head><title>edouard.paris</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no"><meta name=description content="Edouard Paris personal website"><link rel="shortcut icon" href=/favicon.ico type=image/x-icon><link rel=stylesheet type=text/css href=/css/main.css></head><body><main><aside class=head-aside><div class=sidenote>created: Mar 26 2023<br>updated: May 08 2023<br><br>Read this page in your terminal with the command:<br><strong>$ curl -L
+<!doctype html><html><head><title>edouard.paris</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no"><meta name=description content><link rel="shortcut icon" href=/favicon.ico type=image/x-icon><link rel=stylesheet type=text/css href=/css/main.css></head><body><main><aside class=head-aside><div class=sidenote>created: Mar 26 2023<br>updated: Aug 24 2023<br><br><br><strong>$ curl -L
 edouard.paris/notes/i-asked-gpt4-to-create-dobble/index.txt | less</strong><br></div></aside><section><div class=article-header><a href=https://edouard.paris>~/edouard.paris</a><a href=https://edouard.paris/notes>/notes</a><a>/</a></div><div class=article-body><h1 id=i-asked-gpt-4-to-help-me-create-a-dobble-card-deck>I asked GPT-4 to help me create a Dobble card deck</h1><p>My first try of GPT-4 from <a href=https://openai.com>OpenAi</a>.
 My prompts are quite messy but the interlocutor was
 very helpful.</p><p>The first result is not very good and the final script needs more work,
@@ -16,97 +16,95 @@ you will need to remove 7 cards to have exactly 50 cards, but the game
 mechanics will still work correctly.</li></ol><p class=language-blue>I have a folder with 43 image files in it, can you give me a python script
 that read this folder and prints an array (the card set) of array (each
 row is a list of the file names that will be the symbols on the cards) ?</p><p>Sure, here&rsquo;s a Python script that reads a folder containing 43 image files and
-generates a card set with 7 symbols per card, where each row represents a card:</p><pre tabindex=0><code class=language-code-pink data-lang=code-pink>import os
-from itertools import combinations
-
-def generate_gobble_cards(folder_path):
-    # Read the folder and get the image filenames
-    image_filenames = [filename for filename in os.listdir(folder_path) if filename.endswith((&#39;.png&#39;, &#39;.jpg&#39;, &#39;.jpeg&#39;, &#39;.gif&#39;, &#39;.bmp&#39;))]
-    
-    if len(image_filenames) != 43:
-        raise ValueError(&#39;The folder should contain exactly 43 image files.&#39;)
-
-    # Generate cards
-    cards = []
-    n = 7
-
-    # Add the first card
-    cards.append(image_filenames[:n])
-
-    # Generate combinations of the remaining symbols
-    remaining_symbols = image_filenames[n:]
-    combos = list(combinations(remaining_symbols, n - 1))
-
-    # Iterate through the symbols of the first card
-    for i, symbol in enumerate(cards[0]):
-        for combo in combos:
-            if symbol not in combo:
-                new_card = [symbol] + list(combo)
-                cards.append(new_card)
-                combos.remove(combo)
-
-    return cards
-
-folder_path = &#39;path/to/your/folder&#39;  # Replace with the path to your folder containing 43 image files
-card_set = generate_gobble_cards(folder_path)
-
-# Print the card set
-for idx, card in enumerate(card_set):
-    print(f&#39;Card {idx + 1}:&#39;, card)
-</code></pre><p>Make sure to replace &lsquo;path/to/your/folder&rsquo; with the actual path to the folder
+generates a card set with 7 symbols per card, where each row represents a card:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#2838b0>import</span> <span style=color:#289870>os</span>
+</span></span><span style=display:flex><span><span style=color:#2838b0>from</span> <span style=color:#289870>itertools</span> <span style=color:#2838b0>import</span> combinations
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#2838b0>def</span> <span style=color:#785840>generate_gobble_cards</span><span style=color:#888>(</span>folder_path<span style=color:#888>):</span>
+</span></span><span style=display:flex><span>    <span style=color:#888;font-style:italic># Read the folder and get the image filenames</span>
+</span></span><span style=display:flex><span>    image_filenames <span style=color:#666>=</span> <span style=color:#888>[</span>filename <span style=color:#2838b0>for</span> filename <span style=color:#a848a8>in</span> os<span style=color:#666>.</span>listdir<span style=color:#888>(</span>folder_path<span style=color:#888>)</span> <span style=color:#2838b0>if</span> filename<span style=color:#666>.</span>endswith<span style=color:#888>((</span><span style=color:#b83838>&#39;.png&#39;</span><span style=color:#888>,</span> <span style=color:#b83838>&#39;.jpg&#39;</span><span style=color:#888>,</span> <span style=color:#b83838>&#39;.jpeg&#39;</span><span style=color:#888>,</span> <span style=color:#b83838>&#39;.gif&#39;</span><span style=color:#888>,</span> <span style=color:#b83838>&#39;.bmp&#39;</span><span style=color:#888>))]</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#2838b0>if</span> <span style=color:#388038>len</span><span style=color:#888>(</span>image_filenames<span style=color:#888>)</span> <span style=color:#666>!=</span> <span style=color:#444>43</span><span style=color:#888>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#2838b0>raise</span> <span style=color:#908828>ValueError</span><span style=color:#888>(</span><span style=color:#b83838>&#39;The folder should contain exactly 43 image files.&#39;</span><span style=color:#888>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#888;font-style:italic># Generate cards</span>
+</span></span><span style=display:flex><span>    cards <span style=color:#666>=</span> <span style=color:#888>[]</span>
+</span></span><span style=display:flex><span>    n <span style=color:#666>=</span> <span style=color:#444>7</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#888;font-style:italic># Add the first card</span>
+</span></span><span style=display:flex><span>    cards<span style=color:#666>.</span>append<span style=color:#888>(</span>image_filenames<span style=color:#888>[:</span>n<span style=color:#888>])</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#888;font-style:italic># Generate combinations of the remaining symbols</span>
+</span></span><span style=display:flex><span>    remaining_symbols <span style=color:#666>=</span> image_filenames<span style=color:#888>[</span>n<span style=color:#888>:]</span>
+</span></span><span style=display:flex><span>    combos <span style=color:#666>=</span> <span style=color:#388038>list</span><span style=color:#888>(</span>combinations<span style=color:#888>(</span>remaining_symbols<span style=color:#888>,</span> n <span style=color:#666>-</span> <span style=color:#444>1</span><span style=color:#888>))</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#888;font-style:italic># Iterate through the symbols of the first card</span>
+</span></span><span style=display:flex><span>    <span style=color:#2838b0>for</span> i<span style=color:#888>,</span> symbol <span style=color:#a848a8>in</span> <span style=color:#388038>enumerate</span><span style=color:#888>(</span>cards<span style=color:#888>[</span><span style=color:#444>0</span><span style=color:#888>]):</span>
+</span></span><span style=display:flex><span>        <span style=color:#2838b0>for</span> combo <span style=color:#a848a8>in</span> combos<span style=color:#888>:</span>
+</span></span><span style=display:flex><span>            <span style=color:#2838b0>if</span> symbol <span style=color:#a848a8>not</span> <span style=color:#a848a8>in</span> combo<span style=color:#888>:</span>
+</span></span><span style=display:flex><span>                new_card <span style=color:#666>=</span> <span style=color:#888>[</span>symbol<span style=color:#888>]</span> <span style=color:#666>+</span> <span style=color:#388038>list</span><span style=color:#888>(</span>combo<span style=color:#888>)</span>
+</span></span><span style=display:flex><span>                cards<span style=color:#666>.</span>append<span style=color:#888>(</span>new_card<span style=color:#888>)</span>
+</span></span><span style=display:flex><span>                combos<span style=color:#666>.</span>remove<span style=color:#888>(</span>combo<span style=color:#888>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#2838b0>return</span> cards
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>folder_path <span style=color:#666>=</span> <span style=color:#b83838>&#39;path/to/your/folder&#39;</span>  <span style=color:#888;font-style:italic># Replace with the path to your folder containing 43 image files</span>
+</span></span><span style=display:flex><span>card_set <span style=color:#666>=</span> generate_gobble_cards<span style=color:#888>(</span>folder_path<span style=color:#888>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#888;font-style:italic># Print the card set</span>
+</span></span><span style=display:flex><span><span style=color:#2838b0>for</span> idx<span style=color:#888>,</span> card <span style=color:#a848a8>in</span> <span style=color:#388038>enumerate</span><span style=color:#888>(</span>card_set<span style=color:#888>):</span>
+</span></span><span style=display:flex><span>    <span style=color:#388038>print</span><span style=color:#888>(</span><span style=color:#444>f</span><span style=color:#b83838>&#39;Card </span><span style=color:#b83838;text-decoration:underline>{</span>idx <span style=color:#666>+</span> <span style=color:#444>1</span><span style=color:#b83838;text-decoration:underline>}</span><span style=color:#b83838>:&#39;</span><span style=color:#888>,</span> card<span style=color:#888>)</span></span></span></code></pre></div><p>Make sure to replace &lsquo;path/to/your/folder&rsquo; with the actual path to the folder
 containing your 43 image files. This script assumes that the folder contains
 exactly 43 image files. The script will generate and print the card set, where
 each card is a list of image filenames representing the symbols on the card.</p><p class=language-blue>Can you modify the script so it creates me from the same folder only a
 set of 10 cards with a minimal number of symbols ?</p><aside><div class=sidenote>I am very impressed with the response. The AI understands at this point where it
 is going and returns me code that can handle my request but also is a more
 generic solution for future requests.</div></aside><p>Sure! Here&rsquo;s a modified version of the script to generate a set of 10 cards with
-a minimal number of symbols:</p><pre tabindex=0><code class=language-code-pink data-lang=code-pink>import os
-from itertools import combinations
-
-def generate_gobble_cards(folder_path, num_cards):
-    # Read the folder and get the image filenames
-    image_filenames = [filename for filename in os.listdir(folder_path) if filename.endswith((&#39;.png&#39;, &#39;.jpg&#39;, &#39;.jpeg&#39;, &#39;.gif&#39;, &#39;.bmp&#39;))]
-    
-    if len(image_filenames) &lt; num_cards:
-        raise ValueError(&#39;The folder should contain at least as many image files as the number of cards required.&#39;)
-
-    # Determine the number of symbols per card
-    n = 2
-    while (n * (n - 1) + 1) &lt; num_cards:
-        n += 1
-
-    # Generate cards
-    cards = []
-
-    # Add the first card
-    cards.append(image_filenames[:n])
-
-    # Generate combinations of the remaining symbols
-    remaining_symbols = image_filenames[n:]
-    combos = list(combinations(remaining_symbols, n - 1))
-
-    # Iterate through the symbols of the first card
-    for i, symbol in enumerate(cards[0]):
-        for combo in combos:
-            if symbol not in combo:
-                new_card = [symbol] + list(combo)
-                cards.append(new_card)
-                combos.remove(combo)
-                break
-
-        if len(cards) &gt;= num_cards:
-            break
-
-    return cards
-
-folder_path = &#39;path/to/your/folder&#39;  # Replace with the path to your folder containing image files
-num_cards = 10
-card_set = generate_gobble_cards(folder_path, num_cards)
-
-# Print the card set
-for idx, card in enumerate(card_set):
-    print(f&#39;Card {idx + 1}:&#39;, card)
-</code></pre><p>Make sure to replace &lsquo;path/to/your/folder&rsquo; with the actual path to the folder
+a minimal number of symbols:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#2838b0>import</span> <span style=color:#289870>os</span>
+</span></span><span style=display:flex><span><span style=color:#2838b0>from</span> <span style=color:#289870>itertools</span> <span style=color:#2838b0>import</span> combinations
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#2838b0>def</span> <span style=color:#785840>generate_gobble_cards</span><span style=color:#888>(</span>folder_path<span style=color:#888>,</span> num_cards<span style=color:#888>):</span>
+</span></span><span style=display:flex><span>    <span style=color:#888;font-style:italic># Read the folder and get the image filenames</span>
+</span></span><span style=display:flex><span>    image_filenames <span style=color:#666>=</span> <span style=color:#888>[</span>filename <span style=color:#2838b0>for</span> filename <span style=color:#a848a8>in</span> os<span style=color:#666>.</span>listdir<span style=color:#888>(</span>folder_path<span style=color:#888>)</span> <span style=color:#2838b0>if</span> filename<span style=color:#666>.</span>endswith<span style=color:#888>((</span><span style=color:#b83838>&#39;.png&#39;</span><span style=color:#888>,</span> <span style=color:#b83838>&#39;.jpg&#39;</span><span style=color:#888>,</span> <span style=color:#b83838>&#39;.jpeg&#39;</span><span style=color:#888>,</span> <span style=color:#b83838>&#39;.gif&#39;</span><span style=color:#888>,</span> <span style=color:#b83838>&#39;.bmp&#39;</span><span style=color:#888>))]</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#2838b0>if</span> <span style=color:#388038>len</span><span style=color:#888>(</span>image_filenames<span style=color:#888>)</span> <span style=color:#666>&lt;</span> num_cards<span style=color:#888>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#2838b0>raise</span> <span style=color:#908828>ValueError</span><span style=color:#888>(</span><span style=color:#b83838>&#39;The folder should contain at least as many image files as the number of cards required.&#39;</span><span style=color:#888>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#888;font-style:italic># Determine the number of symbols per card</span>
+</span></span><span style=display:flex><span>    n <span style=color:#666>=</span> <span style=color:#444>2</span>
+</span></span><span style=display:flex><span>    <span style=color:#2838b0>while</span> <span style=color:#888>(</span>n <span style=color:#666>*</span> <span style=color:#888>(</span>n <span style=color:#666>-</span> <span style=color:#444>1</span><span style=color:#888>)</span> <span style=color:#666>+</span> <span style=color:#444>1</span><span style=color:#888>)</span> <span style=color:#666>&lt;</span> num_cards<span style=color:#888>:</span>
+</span></span><span style=display:flex><span>        n <span style=color:#666>+=</span> <span style=color:#444>1</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#888;font-style:italic># Generate cards</span>
+</span></span><span style=display:flex><span>    cards <span style=color:#666>=</span> <span style=color:#888>[]</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#888;font-style:italic># Add the first card</span>
+</span></span><span style=display:flex><span>    cards<span style=color:#666>.</span>append<span style=color:#888>(</span>image_filenames<span style=color:#888>[:</span>n<span style=color:#888>])</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#888;font-style:italic># Generate combinations of the remaining symbols</span>
+</span></span><span style=display:flex><span>    remaining_symbols <span style=color:#666>=</span> image_filenames<span style=color:#888>[</span>n<span style=color:#888>:]</span>
+</span></span><span style=display:flex><span>    combos <span style=color:#666>=</span> <span style=color:#388038>list</span><span style=color:#888>(</span>combinations<span style=color:#888>(</span>remaining_symbols<span style=color:#888>,</span> n <span style=color:#666>-</span> <span style=color:#444>1</span><span style=color:#888>))</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#888;font-style:italic># Iterate through the symbols of the first card</span>
+</span></span><span style=display:flex><span>    <span style=color:#2838b0>for</span> i<span style=color:#888>,</span> symbol <span style=color:#a848a8>in</span> <span style=color:#388038>enumerate</span><span style=color:#888>(</span>cards<span style=color:#888>[</span><span style=color:#444>0</span><span style=color:#888>]):</span>
+</span></span><span style=display:flex><span>        <span style=color:#2838b0>for</span> combo <span style=color:#a848a8>in</span> combos<span style=color:#888>:</span>
+</span></span><span style=display:flex><span>            <span style=color:#2838b0>if</span> symbol <span style=color:#a848a8>not</span> <span style=color:#a848a8>in</span> combo<span style=color:#888>:</span>
+</span></span><span style=display:flex><span>                new_card <span style=color:#666>=</span> <span style=color:#888>[</span>symbol<span style=color:#888>]</span> <span style=color:#666>+</span> <span style=color:#388038>list</span><span style=color:#888>(</span>combo<span style=color:#888>)</span>
+</span></span><span style=display:flex><span>                cards<span style=color:#666>.</span>append<span style=color:#888>(</span>new_card<span style=color:#888>)</span>
+</span></span><span style=display:flex><span>                combos<span style=color:#666>.</span>remove<span style=color:#888>(</span>combo<span style=color:#888>)</span>
+</span></span><span style=display:flex><span>                <span style=color:#2838b0>break</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#2838b0>if</span> <span style=color:#388038>len</span><span style=color:#888>(</span>cards<span style=color:#888>)</span> <span style=color:#666>&gt;=</span> num_cards<span style=color:#888>:</span>
+</span></span><span style=display:flex><span>            <span style=color:#2838b0>break</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#2838b0>return</span> cards
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>folder_path <span style=color:#666>=</span> <span style=color:#b83838>&#39;path/to/your/folder&#39;</span>  <span style=color:#888;font-style:italic># Replace with the path to your folder containing image files</span>
+</span></span><span style=display:flex><span>num_cards <span style=color:#666>=</span> <span style=color:#444>10</span>
+</span></span><span style=display:flex><span>card_set <span style=color:#666>=</span> generate_gobble_cards<span style=color:#888>(</span>folder_path<span style=color:#888>,</span> num_cards<span style=color:#888>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#888;font-style:italic># Print the card set</span>
+</span></span><span style=display:flex><span><span style=color:#2838b0>for</span> idx<span style=color:#888>,</span> card <span style=color:#a848a8>in</span> <span style=color:#388038>enumerate</span><span style=color:#888>(</span>card_set<span style=color:#888>):</span>
+</span></span><span style=display:flex><span>    <span style=color:#388038>print</span><span style=color:#888>(</span><span style=color:#444>f</span><span style=color:#b83838>&#39;Card </span><span style=color:#b83838;text-decoration:underline>{</span>idx <span style=color:#666>+</span> <span style=color:#444>1</span><span style=color:#b83838;text-decoration:underline>}</span><span style=color:#b83838>:&#39;</span><span style=color:#888>,</span> card<span style=color:#888>)</span></span></span></code></pre></div><p>Make sure to replace &lsquo;path/to/your/folder&rsquo; with the actual path to the folder
 containing your image files. This script will generate and print a card set with
 the specified number of cards (10 in this case) and a minimal number of symbols
 per card. Keep in mind that the folder should contain at least as many image
@@ -116,66 +114,65 @@ the cards directory using its symbols and imagemagick.</p><p>Certainly! To creat
 image file using ImageMagick, you&rsquo;ll first need to install the Python library
 wand which is a ctypes-based simple ImageMagick binding for Python.
 You can install it using pip:</p><pre tabindex=0><code class=language-code-pink data-lang=code-pink>pip install Wand
-</code></pre><p>After installing the wand library, you can modify the script as follows:</p><pre tabindex=0><code class=language-code-pink data-lang=code-pink>import os
-from itertools import combinations
-from wand.image import Image
-from wand.display import display
-
-def generate_gobble_cards(folder_path, num_cards):
-    # Read the folder and get the image filenames
-    image_filenames = [filename for filename in os.listdir(folder_path) if filename.endswith((&#39;.png&#39;, &#39;.jpg&#39;, &#39;.jpeg&#39;, &#39;.gif&#39;, &#39;.bmp&#39;))]
-    
-    if len(image_filenames) &lt; num_cards:
-        raise ValueError(&#39;The folder should contain at least as many image files as the number of cards required.&#39;)
-
-    # Determine the number of symbols per card
-    n = 2
-    while (n * (n - 1) + 1) &lt; num_cards:
-        n += 1
-
-    # Generate cards
-    cards = []
-
-    # Add the first card
-    cards.append(image_filenames[:n])
-
-    # Generate combinations of the remaining symbols
-    remaining_symbols = image_filenames[n:]
-    combos = list(combinations(remaining_symbols, n - 1))
-
-    # Iterate through the symbols of the first card
-    for i, symbol in enumerate(cards[0]):
-        for combo in combos:
-            if symbol not in combo:
-                new_card = [symbol] + list(combo)
-                cards.append(new_card)
-                combos.remove(combo)
-                break
-
-        if len(cards) &gt;= num_cards:
-            break
-
-    return cards
-
-def create_card_images(folder_path, card_set):
-    cards_dir = &#39;cards&#39;
-    os.makedirs(cards_dir, exist_ok=True)
-
-    for idx, card in enumerate(card_set):
-        with Image(filename=os.path.join(folder_path, card[0])) as base_image:
-            for symbol in card[1:]:
-                with Image(filename=os.path.join(folder_path, symbol)) as symbol_image:
-                    base_image.composite(symbol_image, left=0, top=0)
-
-            base_image.save(filename=os.path.join(cards_dir, f&#39;card_{idx + 1}.png&#39;))
-            # Uncomment the following line if you want to display the created card image
-            # display(base_image)
-
-folder_path = &#39;path/to/your/folder&#39;  # Replace with the path to your folder containing image files
-num_cards = 10
-card_set = generate_gobble_cards(folder_path, num_cards)
-create_card_images(folder_path, card_set)
-</code></pre><p>This script will create a new directory called &lsquo;cards&rsquo; and save each card as an
+</code></pre><p>After installing the wand library, you can modify the script as follows:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#2838b0>import</span> <span style=color:#289870>os</span>
+</span></span><span style=display:flex><span><span style=color:#2838b0>from</span> <span style=color:#289870>itertools</span> <span style=color:#2838b0>import</span> combinations
+</span></span><span style=display:flex><span><span style=color:#2838b0>from</span> <span style=color:#289870>wand.image</span> <span style=color:#2838b0>import</span> Image
+</span></span><span style=display:flex><span><span style=color:#2838b0>from</span> <span style=color:#289870>wand.display</span> <span style=color:#2838b0>import</span> display
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#2838b0>def</span> <span style=color:#785840>generate_gobble_cards</span><span style=color:#888>(</span>folder_path<span style=color:#888>,</span> num_cards<span style=color:#888>):</span>
+</span></span><span style=display:flex><span>    <span style=color:#888;font-style:italic># Read the folder and get the image filenames</span>
+</span></span><span style=display:flex><span>    image_filenames <span style=color:#666>=</span> <span style=color:#888>[</span>filename <span style=color:#2838b0>for</span> filename <span style=color:#a848a8>in</span> os<span style=color:#666>.</span>listdir<span style=color:#888>(</span>folder_path<span style=color:#888>)</span> <span style=color:#2838b0>if</span> filename<span style=color:#666>.</span>endswith<span style=color:#888>((</span><span style=color:#b83838>&#39;.png&#39;</span><span style=color:#888>,</span> <span style=color:#b83838>&#39;.jpg&#39;</span><span style=color:#888>,</span> <span style=color:#b83838>&#39;.jpeg&#39;</span><span style=color:#888>,</span> <span style=color:#b83838>&#39;.gif&#39;</span><span style=color:#888>,</span> <span style=color:#b83838>&#39;.bmp&#39;</span><span style=color:#888>))]</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#2838b0>if</span> <span style=color:#388038>len</span><span style=color:#888>(</span>image_filenames<span style=color:#888>)</span> <span style=color:#666>&lt;</span> num_cards<span style=color:#888>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#2838b0>raise</span> <span style=color:#908828>ValueError</span><span style=color:#888>(</span><span style=color:#b83838>&#39;The folder should contain at least as many image files as the number of cards required.&#39;</span><span style=color:#888>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#888;font-style:italic># Determine the number of symbols per card</span>
+</span></span><span style=display:flex><span>    n <span style=color:#666>=</span> <span style=color:#444>2</span>
+</span></span><span style=display:flex><span>    <span style=color:#2838b0>while</span> <span style=color:#888>(</span>n <span style=color:#666>*</span> <span style=color:#888>(</span>n <span style=color:#666>-</span> <span style=color:#444>1</span><span style=color:#888>)</span> <span style=color:#666>+</span> <span style=color:#444>1</span><span style=color:#888>)</span> <span style=color:#666>&lt;</span> num_cards<span style=color:#888>:</span>
+</span></span><span style=display:flex><span>        n <span style=color:#666>+=</span> <span style=color:#444>1</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#888;font-style:italic># Generate cards</span>
+</span></span><span style=display:flex><span>    cards <span style=color:#666>=</span> <span style=color:#888>[]</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#888;font-style:italic># Add the first card</span>
+</span></span><span style=display:flex><span>    cards<span style=color:#666>.</span>append<span style=color:#888>(</span>image_filenames<span style=color:#888>[:</span>n<span style=color:#888>])</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#888;font-style:italic># Generate combinations of the remaining symbols</span>
+</span></span><span style=display:flex><span>    remaining_symbols <span style=color:#666>=</span> image_filenames<span style=color:#888>[</span>n<span style=color:#888>:]</span>
+</span></span><span style=display:flex><span>    combos <span style=color:#666>=</span> <span style=color:#388038>list</span><span style=color:#888>(</span>combinations<span style=color:#888>(</span>remaining_symbols<span style=color:#888>,</span> n <span style=color:#666>-</span> <span style=color:#444>1</span><span style=color:#888>))</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#888;font-style:italic># Iterate through the symbols of the first card</span>
+</span></span><span style=display:flex><span>    <span style=color:#2838b0>for</span> i<span style=color:#888>,</span> symbol <span style=color:#a848a8>in</span> <span style=color:#388038>enumerate</span><span style=color:#888>(</span>cards<span style=color:#888>[</span><span style=color:#444>0</span><span style=color:#888>]):</span>
+</span></span><span style=display:flex><span>        <span style=color:#2838b0>for</span> combo <span style=color:#a848a8>in</span> combos<span style=color:#888>:</span>
+</span></span><span style=display:flex><span>            <span style=color:#2838b0>if</span> symbol <span style=color:#a848a8>not</span> <span style=color:#a848a8>in</span> combo<span style=color:#888>:</span>
+</span></span><span style=display:flex><span>                new_card <span style=color:#666>=</span> <span style=color:#888>[</span>symbol<span style=color:#888>]</span> <span style=color:#666>+</span> <span style=color:#388038>list</span><span style=color:#888>(</span>combo<span style=color:#888>)</span>
+</span></span><span style=display:flex><span>                cards<span style=color:#666>.</span>append<span style=color:#888>(</span>new_card<span style=color:#888>)</span>
+</span></span><span style=display:flex><span>                combos<span style=color:#666>.</span>remove<span style=color:#888>(</span>combo<span style=color:#888>)</span>
+</span></span><span style=display:flex><span>                <span style=color:#2838b0>break</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#2838b0>if</span> <span style=color:#388038>len</span><span style=color:#888>(</span>cards<span style=color:#888>)</span> <span style=color:#666>&gt;=</span> num_cards<span style=color:#888>:</span>
+</span></span><span style=display:flex><span>            <span style=color:#2838b0>break</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#2838b0>return</span> cards
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#2838b0>def</span> <span style=color:#785840>create_card_images</span><span style=color:#888>(</span>folder_path<span style=color:#888>,</span> card_set<span style=color:#888>):</span>
+</span></span><span style=display:flex><span>    cards_dir <span style=color:#666>=</span> <span style=color:#b83838>&#39;cards&#39;</span>
+</span></span><span style=display:flex><span>    os<span style=color:#666>.</span>makedirs<span style=color:#888>(</span>cards_dir<span style=color:#888>,</span> exist_ok<span style=color:#666>=</span><span style=color:#444;font-style:italic>True</span><span style=color:#888>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#2838b0>for</span> idx<span style=color:#888>,</span> card <span style=color:#a848a8>in</span> <span style=color:#388038>enumerate</span><span style=color:#888>(</span>card_set<span style=color:#888>):</span>
+</span></span><span style=display:flex><span>        <span style=color:#2838b0>with</span> Image<span style=color:#888>(</span>filename<span style=color:#666>=</span>os<span style=color:#666>.</span>path<span style=color:#666>.</span>join<span style=color:#888>(</span>folder_path<span style=color:#888>,</span> card<span style=color:#888>[</span><span style=color:#444>0</span><span style=color:#888>]))</span> <span style=color:#2838b0>as</span> base_image<span style=color:#888>:</span>
+</span></span><span style=display:flex><span>            <span style=color:#2838b0>for</span> symbol <span style=color:#a848a8>in</span> card<span style=color:#888>[</span><span style=color:#444>1</span><span style=color:#888>:]:</span>
+</span></span><span style=display:flex><span>                <span style=color:#2838b0>with</span> Image<span style=color:#888>(</span>filename<span style=color:#666>=</span>os<span style=color:#666>.</span>path<span style=color:#666>.</span>join<span style=color:#888>(</span>folder_path<span style=color:#888>,</span> symbol<span style=color:#888>))</span> <span style=color:#2838b0>as</span> symbol_image<span style=color:#888>:</span>
+</span></span><span style=display:flex><span>                    base_image<span style=color:#666>.</span>composite<span style=color:#888>(</span>symbol_image<span style=color:#888>,</span> left<span style=color:#666>=</span><span style=color:#444>0</span><span style=color:#888>,</span> top<span style=color:#666>=</span><span style=color:#444>0</span><span style=color:#888>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            base_image<span style=color:#666>.</span>save<span style=color:#888>(</span>filename<span style=color:#666>=</span>os<span style=color:#666>.</span>path<span style=color:#666>.</span>join<span style=color:#888>(</span>cards_dir<span style=color:#888>,</span> <span style=color:#444>f</span><span style=color:#b83838>&#39;card_</span><span style=color:#b83838;text-decoration:underline>{</span>idx <span style=color:#666>+</span> <span style=color:#444>1</span><span style=color:#b83838;text-decoration:underline>}</span><span style=color:#b83838>.png&#39;</span><span style=color:#888>))</span>
+</span></span><span style=display:flex><span>            <span style=color:#888;font-style:italic># Uncomment the following line if you want to display the created card image</span>
+</span></span><span style=display:flex><span>            <span style=color:#888;font-style:italic># display(base_image)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>folder_path <span style=color:#666>=</span> <span style=color:#b83838>&#39;path/to/your/folder&#39;</span>  <span style=color:#888;font-style:italic># Replace with the path to your folder containing image files</span>
+</span></span><span style=display:flex><span>num_cards <span style=color:#666>=</span> <span style=color:#444>10</span>
+</span></span><span style=display:flex><span>card_set <span style=color:#666>=</span> generate_gobble_cards<span style=color:#888>(</span>folder_path<span style=color:#888>,</span> num_cards<span style=color:#888>)</span>
+</span></span><span style=display:flex><span>create_card_images<span style=color:#888>(</span>folder_path<span style=color:#888>,</span> card_set<span style=color:#888>)</span></span></span></code></pre></div><p>This script will create a new directory called &lsquo;cards&rsquo; and save each card as an
 image file (PNG) in that directory. The symbols are composited on top of each
 other using ImageMagick through the wand library. You can adjust the left
 and top parameters in the base_image.composite() method to change the positions
@@ -188,49 +185,47 @@ resizes the symbols to fit inside and distributes them in trigonometric
 order around the center with their top oriented to the center
 of the circle ?</p><p>Of course! To create circular Dobble game cards with symbols resized and
 distributed evenly in trigonometric order, we can modify
-the create_card_images function as follows:</p><pre tabindex=0><code class=language-code-pink data-lang=code-pink>import math
-from wand.color import Color
-
-def create_card_images(folder_path, card_set):
-    cards_dir = &#39;cards&#39;
-    os.makedirs(cards_dir, exist_ok=True)
-    
-    card_diameter = 1000
-    symbol_size = card_diameter // 4
-
-    for idx, card in enumerate(card_set):
-        with Image(width=card_diameter, height=card_diameter, background=Color(&#39;black&#39;)) as base_image:
-            angle_step = 360 / len(card)
-
-            for i, symbol in enumerate(card):
-                angle = math.radians(i * angle_step)
-                x_offset = (card_diameter - symbol_size) // 2 * math.cos(angle)
-                y_offset = (card_diameter - symbol_size) // 2 * math.sin(angle)
-
-                with Image(filename=os.path.join(folder_path, symbol)) as symbol_image:
-                    symbol_image.transform(resize=f&#34;{symbol_size}x{symbol_size}&#34;)
-                    symbol_image.rotate(-i * angle_step)
-                    x = (card_diameter - symbol_image.width) // 2 + int(x_offset)
-                    y = (card_diameter - symbol_image.height) // 2 - int(y_offset)
-                    base_image.composite(symbol_image, left=x, top=y)
-
-            base_image.save(filename=os.path.join(cards_dir, f&#39;card_{idx + 1}.png&#39;))
-            # Uncomment the following line if you want to display the created card image
-            # display(base_image)
-</code></pre><p>This modified create_card_images function creates a black circle with a diameter
+the create_card_images function as follows:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#2838b0>import</span> <span style=color:#289870>math</span>
+</span></span><span style=display:flex><span><span style=color:#2838b0>from</span> <span style=color:#289870>wand.color</span> <span style=color:#2838b0>import</span> Color
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#2838b0>def</span> <span style=color:#785840>create_card_images</span><span style=color:#888>(</span>folder_path<span style=color:#888>,</span> card_set<span style=color:#888>):</span>
+</span></span><span style=display:flex><span>    cards_dir <span style=color:#666>=</span> <span style=color:#b83838>&#39;cards&#39;</span>
+</span></span><span style=display:flex><span>    os<span style=color:#666>.</span>makedirs<span style=color:#888>(</span>cards_dir<span style=color:#888>,</span> exist_ok<span style=color:#666>=</span><span style=color:#444;font-style:italic>True</span><span style=color:#888>)</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    card_diameter <span style=color:#666>=</span> <span style=color:#444>1000</span>
+</span></span><span style=display:flex><span>    symbol_size <span style=color:#666>=</span> card_diameter <span style=color:#666>//</span> <span style=color:#444>4</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#2838b0>for</span> idx<span style=color:#888>,</span> card <span style=color:#a848a8>in</span> <span style=color:#388038>enumerate</span><span style=color:#888>(</span>card_set<span style=color:#888>):</span>
+</span></span><span style=display:flex><span>        <span style=color:#2838b0>with</span> Image<span style=color:#888>(</span>width<span style=color:#666>=</span>card_diameter<span style=color:#888>,</span> height<span style=color:#666>=</span>card_diameter<span style=color:#888>,</span> background<span style=color:#666>=</span>Color<span style=color:#888>(</span><span style=color:#b83838>&#39;black&#39;</span><span style=color:#888>))</span> <span style=color:#2838b0>as</span> base_image<span style=color:#888>:</span>
+</span></span><span style=display:flex><span>            angle_step <span style=color:#666>=</span> <span style=color:#444>360</span> <span style=color:#666>/</span> <span style=color:#388038>len</span><span style=color:#888>(</span>card<span style=color:#888>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            <span style=color:#2838b0>for</span> i<span style=color:#888>,</span> symbol <span style=color:#a848a8>in</span> <span style=color:#388038>enumerate</span><span style=color:#888>(</span>card<span style=color:#888>):</span>
+</span></span><span style=display:flex><span>                angle <span style=color:#666>=</span> math<span style=color:#666>.</span>radians<span style=color:#888>(</span>i <span style=color:#666>*</span> angle_step<span style=color:#888>)</span>
+</span></span><span style=display:flex><span>                x_offset <span style=color:#666>=</span> <span style=color:#888>(</span>card_diameter <span style=color:#666>-</span> symbol_size<span style=color:#888>)</span> <span style=color:#666>//</span> <span style=color:#444>2</span> <span style=color:#666>*</span> math<span style=color:#666>.</span>cos<span style=color:#888>(</span>angle<span style=color:#888>)</span>
+</span></span><span style=display:flex><span>                y_offset <span style=color:#666>=</span> <span style=color:#888>(</span>card_diameter <span style=color:#666>-</span> symbol_size<span style=color:#888>)</span> <span style=color:#666>//</span> <span style=color:#444>2</span> <span style=color:#666>*</span> math<span style=color:#666>.</span>sin<span style=color:#888>(</span>angle<span style=color:#888>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>                <span style=color:#2838b0>with</span> Image<span style=color:#888>(</span>filename<span style=color:#666>=</span>os<span style=color:#666>.</span>path<span style=color:#666>.</span>join<span style=color:#888>(</span>folder_path<span style=color:#888>,</span> symbol<span style=color:#888>))</span> <span style=color:#2838b0>as</span> symbol_image<span style=color:#888>:</span>
+</span></span><span style=display:flex><span>                    symbol_image<span style=color:#666>.</span>transform<span style=color:#888>(</span>resize<span style=color:#666>=</span><span style=color:#444>f</span><span style=color:#b83838>&#34;</span><span style=color:#b83838;text-decoration:underline>{</span>symbol_size<span style=color:#b83838;text-decoration:underline>}</span><span style=color:#b83838>x</span><span style=color:#b83838;text-decoration:underline>{</span>symbol_size<span style=color:#b83838;text-decoration:underline>}</span><span style=color:#b83838>&#34;</span><span style=color:#888>)</span>
+</span></span><span style=display:flex><span>                    symbol_image<span style=color:#666>.</span>rotate<span style=color:#888>(</span><span style=color:#666>-</span>i <span style=color:#666>*</span> angle_step<span style=color:#888>)</span>
+</span></span><span style=display:flex><span>                    x <span style=color:#666>=</span> <span style=color:#888>(</span>card_diameter <span style=color:#666>-</span> symbol_image<span style=color:#666>.</span>width<span style=color:#888>)</span> <span style=color:#666>//</span> <span style=color:#444>2</span> <span style=color:#666>+</span> <span style=color:#388038>int</span><span style=color:#888>(</span>x_offset<span style=color:#888>)</span>
+</span></span><span style=display:flex><span>                    y <span style=color:#666>=</span> <span style=color:#888>(</span>card_diameter <span style=color:#666>-</span> symbol_image<span style=color:#666>.</span>height<span style=color:#888>)</span> <span style=color:#666>//</span> <span style=color:#444>2</span> <span style=color:#666>-</span> <span style=color:#388038>int</span><span style=color:#888>(</span>y_offset<span style=color:#888>)</span>
+</span></span><span style=display:flex><span>                    base_image<span style=color:#666>.</span>composite<span style=color:#888>(</span>symbol_image<span style=color:#888>,</span> left<span style=color:#666>=</span>x<span style=color:#888>,</span> top<span style=color:#666>=</span>y<span style=color:#888>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            base_image<span style=color:#666>.</span>save<span style=color:#888>(</span>filename<span style=color:#666>=</span>os<span style=color:#666>.</span>path<span style=color:#666>.</span>join<span style=color:#888>(</span>cards_dir<span style=color:#888>,</span> <span style=color:#444>f</span><span style=color:#b83838>&#39;card_</span><span style=color:#b83838;text-decoration:underline>{</span>idx <span style=color:#666>+</span> <span style=color:#444>1</span><span style=color:#b83838;text-decoration:underline>}</span><span style=color:#b83838>.png&#39;</span><span style=color:#888>))</span>
+</span></span><span style=display:flex><span>            <span style=color:#888;font-style:italic># Uncomment the following line if you want to display the created card image</span>
+</span></span><span style=display:flex><span>            <span style=color:#888;font-style:italic># display(base_image)</span></span></span></code></pre></div><p>This modified create_card_images function creates a black circle with a diameter
 of 1000, resizes the symbols to fit inside, and distributes them evenly in
 trigonometric order around the center with their top oriented to the center of
-the circle.</p><p>The rest of the script remains unchanged:</p><pre tabindex=0><code class=language-code-pink data-lang=code-pink>import os
-from itertools import combinations
-from wand.image import Image
-from wand.display import display
-
-# ... (generate_gobble_cards function)
-
-folder_path = &#39;path/to/your/folder&#39;
-num_cards = 10
-card_set = generate_gobble_cards(folder_path, num_cards)
-create_card_images(folder_path, card_set)
-</code></pre><p>Replace &lsquo;path/to/your/folder&rsquo; with the actual path to the folder containing your
+the circle.</p><p>The rest of the script remains unchanged:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#2838b0>import</span> <span style=color:#289870>os</span>
+</span></span><span style=display:flex><span><span style=color:#2838b0>from</span> <span style=color:#289870>itertools</span> <span style=color:#2838b0>import</span> combinations
+</span></span><span style=display:flex><span><span style=color:#2838b0>from</span> <span style=color:#289870>wand.image</span> <span style=color:#2838b0>import</span> Image
+</span></span><span style=display:flex><span><span style=color:#2838b0>from</span> <span style=color:#289870>wand.display</span> <span style=color:#2838b0>import</span> display
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#888;font-style:italic># ... (generate_gobble_cards function)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>folder_path <span style=color:#666>=</span> <span style=color:#b83838>&#39;path/to/your/folder&#39;</span>
+</span></span><span style=display:flex><span>num_cards <span style=color:#666>=</span> <span style=color:#444>10</span>
+</span></span><span style=display:flex><span>card_set <span style=color:#666>=</span> generate_gobble_cards<span style=color:#888>(</span>folder_path<span style=color:#888>,</span> num_cards<span style=color:#888>)</span>
+</span></span><span style=display:flex><span>create_card_images<span style=color:#888>(</span>folder_path<span style=color:#888>,</span> card_set<span style=color:#888>)</span></span></span></code></pre></div><p>Replace &lsquo;path/to/your/folder&rsquo; with the actual path to the folder containing your
 image files. The script will create and save the circular Dobble game cards with
 resized and distributed symbols in the &lsquo;cards&rsquo; directory as before.</p></div></section><aside><div class=sidenote><p>&copy; 2023 EdouardParis.<br>Powered by <a href=http://gohugo.io target=_blank>Hugo</a></p></div></aside><footer id=footer></footer></main></body></html>
