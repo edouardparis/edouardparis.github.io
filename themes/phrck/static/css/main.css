@@ -40,7 +40,14 @@ blockquote {
 code {
  font-size: 10pt;
  font-family: monospace;
- color: #067df7;
+}
+
+.highlight {
+  display: block;
+  overflow: scroll;
+  padding: 5px;
+  border-top: 1px solid #ddd8dd;
+  border-bottom: 1px solid #ddd8dd;
 }
 
 nav {
@@ -90,21 +97,24 @@ ol li:first-child {
   float: right;
 }
 
+p, ul, li, h1, h2, h3, h4, h5, h6 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 main {
-  padding-left: 5rem;
-  padding-right: 5rem;
   border-right: 1px solid #ddd8dd;
+  border-left: 1px solid #ddd8dd;
   display: block;
-  width: 80ch;
+  width: calc(80ch + 5rem);
   min-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 section {
   display: block;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
   position: relative;
-  width: 80ch;
 }
 
 .head-aside {
@@ -201,6 +211,13 @@ article {
   text-align: right;
 }
 
+.article-header {
+ padding-left: 2.5rem;
+ padding-top: 2rem;
+ padding-bottom: 2rem;
+ border-bottom: 1px solid #ddd8dd;
+}
+
 .article-header a {
   color: #067df7;
 }
@@ -208,6 +225,11 @@ article {
 .article-header a:focus {
   color: #fff;
   background-color: #067df7;
+}
+
+.article-header ul {
+  padding-left: 4ch;
+  max-width: 68ch;
 }
 
 .article-body a {
@@ -228,11 +250,6 @@ hr {
   width: 100%;
   border-top: 1px solid #ddd8dd;
   border-bottom: 1px solid #fff;
-}
-
-.article-header ul {
-  padding-left: 4ch;
-  max-width: 68ch;
 }
 
 .article-body ul {
@@ -272,6 +289,9 @@ hr {
 
 .language-ascii {
   color: #067df7;
+  display: block;
+  margin-right: 2.5rem;
+  margin-left: 2.5rem;
 }
 
 .language-blue {
@@ -284,10 +304,15 @@ hr {
 
 .language-green {
   color: #27c93f;
+  margin-right: 2.5rem;
+  margin-left: 2.5rem;
 }
 
 .language-pink {
+  display: block;
   color: #ff0080;
+  margin-right: 2.5rem;
+  margin-left: 2.5rem;
 }
 
 .language-code-pink {
@@ -303,14 +328,23 @@ hr {
 
 .language-ascii-art-black {
   color: #067df7;
+  display: block;
+  margin-right: 2.5rem;
+  margin-left: 2.5rem;
 }
 
 .language-ascii-art-blue {
   color: #067df7;
+  display: block;
+  margin-right: 2.5rem;
+  margin-left: 2.5rem;
 }
 
 .language-ascii-art-pink {
   color: #ff0080;
+  display: block;
+  margin-right: 2.5rem;
+  margin-left: 2.5rem;
 }
 
 @media (max-width: 640px) {
@@ -328,7 +362,6 @@ hr {
 
   section {
     width: auto;
-    margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
   }

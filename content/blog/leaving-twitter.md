@@ -2,6 +2,7 @@
 title: "Leaving Twitter"
 date: 2023-07-27T13:08:23+02:00
 draft: false
+slug: "leaving-twitter"
 ---
 
 I am leaving Twitter.
