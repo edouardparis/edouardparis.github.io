@@ -45,9 +45,9 @@ mediaType = "text/plain"
 isPlainText = true
 
 [outputs]
- home = ["HTML", "txt"]
- page = ["HTML", "txt"]
- section = ["HTML", "txt", "RSS"]
+home = ["HTML", "txt"]
+page = ["HTML", "txt"]
+section = ["HTML", "txt", "RSS"]
 
 [languages.en]
 redirect = "Read this page in your terminal with the command:"
