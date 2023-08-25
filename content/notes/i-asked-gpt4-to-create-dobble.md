@@ -2,6 +2,7 @@
 title: "I Asked GPT-4 to help me create a Dobble card deck"
 date: 2023-03-26T21:38:14+02:00
 draft: false
+slug: "i-asked-gpt4-to-create-dobble"
 ---
 
 # I asked GPT-4 to help me create a Dobble card deck

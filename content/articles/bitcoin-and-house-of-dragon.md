@@ -1,5 +1,6 @@
 ---
 title: "Bitcoin and inheritance, a House of the Dragon story"
+slug: "bitcoin-and-house-of-dragon"
 date: 2023-06-15
 description: "A short fiction about how the Targaryens secure their funds across generations"
 draft: false
@@ -61,7 +62,7 @@ composition, generic signing and more.
 
 The resulting [miniscript](https://bitcoin.sipa.be/miniscript/) descriptor:
 
-```
+```pink
 wsh(multi(1,<Jaehaerys xpub>,<Viserys xpub>))
 ```
 
@@ -108,7 +109,7 @@ and any other sets of keys paired with a time lock are called recovery paths.
 
 The new miniscript descriptor:
 
-```
+```pink
 wsh(
   or_d(
     pk(<Viserys xpub>),
@@ -160,7 +161,7 @@ becoming valid at different locking times.
 As the script grows, miniscript helps the targaryens to handle
 the new complexity:
 
-```
+```pink
 wsh(
   or_i(
     and_v(
@@ -212,7 +213,7 @@ readibility and development like <a href="https://min.sc/">min.sc</a>
 or visualize it: <a href="https://miniscript.fun">miniscript.fun</a>
 {{< /sidenote >}}
 
-```
+```pink
 wsh(
   or_i(
     and_v(
@@ -278,7 +279,7 @@ will always stay related to the general scope according to the "weakest" path.
 
 Behold the final descriptor of the royal family:
 
-```
+```pink
 wsh(
   or_i(
     and_v(
