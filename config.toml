@@ -49,53 +49,44 @@ home = ["HTML", "txt"]
 page = ["HTML", "txt"]
 section = ["HTML", "txt", "RSS"]
 
+[languages]
 [languages.en]
 redirect = "Read this page in your terminal with the command:"
 copyright = "2023 EdouardParis."
 description = "Edouard Paris personal website"
-
 [[languages.en.menu.lang]]
 url = "/fr"
 name = "fr"
 weight = 0
 pre= "/"
-
 [[languages.en.menu.lang]]
 url = "/"
 name = "en"
 weight = 0
-
-
 [[languages.en.menu.main]]
 url = "/readings"
 name = "readings"
 weight = 0
-
 [[languages.en.menu.main]]
 name = "writing"
 identifier = "writing"
 weight = 2
-
 [languages.fr]
 redirect = "Lisez cette page dans un terminal avec la commande:"
 copyright = "2023 EdouardParis."
 description = "Site web personnel de Edouard Paris"
-
 [[languages.fr.menu.lang]]
 url = "/fr"
 name = "fr"
 weight = 0
 pre = "/"
-
 [[languages.fr.menu.lang]]
 url = "/"
 name = "en"
 weight = 0
-
 [[languages.fr.menu.main]]
 url = "/fr/lecture"
 name = "lecture"
 weight = 0
-
 [[languages.fr.blackfriday]]
 angledQuotes = true
