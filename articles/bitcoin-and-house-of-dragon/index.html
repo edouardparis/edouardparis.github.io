@@ -1,4 +1,4 @@
-<!doctype html><html><head><title>edouard.paris</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no"><meta name=description content><link rel="shortcut icon" href=/favicon.ico type=image/x-icon><link rel=stylesheet type=text/css href=/css/main.css></head><body><main><aside class=head-aside><div class=sidenote>created: Jun 15 2023<br>updated: Aug 25 2023<br><br><br><strong>$ curl -L
+<!doctype html><html><head><title>edouard.paris</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no"><meta name=description content="Edouard Paris personal website"><link rel="shortcut icon" href=/favicon.ico type=image/x-icon><link rel=stylesheet type=text/css href=/css/main.css></head><body><main><aside class=head-aside><div class=sidenote>created: Jun 15 2023<br>updated: Aug 25 2023<br><br>Read this page in your terminal with the command:<br><strong>$ curl -L
 edouard.paris/articles/bitcoin-and-house-of-dragon/index.txt | less</strong><br></div></aside><section><div class=article-header><a href=https://edouard.paris>~/edouard.paris</a><a href=https://edouard.paris/articles>/articles</a><a>/bitcoin-and-house-of-dragon</a></div><div class=article-body><h1 id=bitcoin-and-inheritance-a-house-of-the-dragon-story>Bitcoin and inheritance, a House of the Dragon story</h1><p><em>House of the Dragon is an American fantasy drama television series.
 A prequel to Game of Thrones (2011–2019), it is the second show in the franchise,
 created by George R. R. Martin and Ryan Condal for HBO. Beware, this
@@ -22,7 +22,7 @@ keys.</p><p>The Old King, Jaehaerys I Targaryen, did a secret ceremony with his
 grand son Viserys after choosing him as his Heir. They setted up a simple
 1 of 2 multisig and locked the family legacy in new Bitcoin outputs.
 At this time, Viserys was a grown adult, married and aware of the
-responsibilities to come.</p><pre tabindex=0><code class=language-ascii data-lang=ascii>                            │
+responsibilities to come.</p><pre><code class=language-ascii data-lang=ascii>                            │
                             │
                     ┌───────┴───────┐
                     │     1 of 2    │
@@ -30,13 +30,13 @@ responsibilities to come.</p><pre tabindex=0><code class=language-ascii data-lan
                Jaehaerys         Viserys
 </code></pre><aside><div class=sidenote><a href=ttps://bitcoin.sipa.be/miniscript>Miniscript</a> is a language for
 writing (a subset of) Bitcoin Scripts in a structured way, enabling analysis,
-composition, generic signing and more.</div></aside><p>The resulting <a href=https://bitcoin.sipa.be/miniscript/>miniscript</a> descriptor:</p><pre tabindex=0><code class=language-pink data-lang=pink>wsh(multi(1,&lt;Jaehaerys xpub&gt;,&lt;Viserys xpub&gt;))
+composition, generic signing and more.</div></aside><p>The resulting <a href=https://bitcoin.sipa.be/miniscript/>miniscript</a> descriptor:</p><pre><code class=language-pink data-lang=pink>wsh(multi(1,&lt;Jaehaerys xpub&gt;,&lt;Viserys xpub&gt;))
 </code></pre><h2 id=a-simple-inheritance-plan>A simple Inheritance Plan</h2><p>Rhaenyra is still young and Viserys is afraid of her adventurous nature,
 She is the Heir but as long as Viserys is alive, He prefers to keep the
 key of the treasure himself. But what if something happens to him ? Rhaenyra must
 be able to somehow get control of the funds.</p><p>During a secret ceremony in front of the old skull of Balerion <em>the Black
 Dread</em>, Viserys creates a new descriptor and shares it to his daughter,
-then moves the funds to outputs with scripts derived from it.</p><pre tabindex=0><code class=language-ascii data-lang=ascii>              Viserys
+then moves the funds to outputs with scripts derived from it.</p><pre><code class=language-ascii data-lang=ascii>              Viserys
 
                  │
                  │
@@ -49,12 +49,13 @@ then moves the funds to outputs with scripts derived from it.</p><pre tabindex=0
                  │
 
              Rhaenyra
+
 </code></pre><aside><div class=sidenote>Bitcoin supports absolute and relative time locks at the script level with
 OP_CHECKLOCKTIMEVERIFY (OP_CLTV), and OP_CHECKSEQUENCEVERIFY (OP_CSV).
 <a href=https://medium.com/summa-technology/bitcoins-time-locks-27e0c362d7a1>Here</a>, an excellent article explaining them.</div></aside><p>The descriptor rules that only Viserys key can move funds immediatly,
 but after a fixed number of block passed the key of Rhaenyra also becomes valid.
 Viserys number of block choice was enough to represent 1 years of wait.</p><p>A set of keys that can move the funds at any time is called the primary path,
-and any other sets of keys paired with a time lock are called recovery paths.</p><p>The new miniscript descriptor:</p><pre tabindex=0><code class=language-pink data-lang=pink>wsh(
+and any other sets of keys paired with a time lock are called recovery paths.</p><p>The new miniscript descriptor:</p><pre><code class=language-pink data-lang=pink>wsh(
   or_d(
     pk(&lt;Viserys xpub&gt;),
     and_v(
@@ -75,7 +76,7 @@ Rumors spread to the country that Aegon should be the new Heir, but
 Viserys does not change the succession order.
 Sick by a mysterious illness and advised by his ministers,
 Viserys wants to include the whole succession line in the bitcoin
-scripts locking the realm&rsquo;s treasure.</p><pre tabindex=0><code class=language-ascii data-lang=ascii>               Viserys
+scripts locking the realm&rsquo;s treasure.</p><pre><code class=language-ascii data-lang=ascii>               Viserys
 
                   │
                   ├──────────────────┐
@@ -88,10 +89,11 @@ scripts locking the realm&rsquo;s treasure.</p><pre tabindex=0><code class=langu
                                      │
 
                                    Aegon
+
 </code></pre><p>An inheritance plan can include multiple recovery paths, each of them
 becoming valid at different locking times.
 As the script grows, miniscript helps the targaryens to handle
-the new complexity:</p><pre tabindex=0><code class=language-pink data-lang=pink>wsh(
+the new complexity:</p><pre><code class=language-pink data-lang=pink>wsh(
   or_i(
     and_v(
       v:pkh(&lt;Aegon xpub&gt;),
@@ -111,7 +113,7 @@ aware that she will be at risk of being assassinated between the time Viserys di
 of his sickness and the expiration of the sequence of block disallowing her to move the funds.
 She wants for Daemon, her uncle, a fierce warrior and loyal friend, to hold a key along with
 Aegon key. Rhaenyra is confident that in case she get murdered, Daemon will lock the funds
-and will take no rest until her murderers are hanged on the King&rsquo;s Landing main place.</p><pre tabindex=0><code class=language-ascii data-lang=ascii>               Viserys
+and will take no rest until her murderers are hanged on the King&rsquo;s Landing main place.</p><pre><code class=language-ascii data-lang=ascii>               Viserys
 
                   │
                   ├──────────────────┐
@@ -128,7 +130,7 @@ and will take no rest until her murderers are hanged on the King&rsquo;s Landing
                           Aegon             Daemon
 </code></pre><aside><div class=sidenote>Miniscript can become tedious to read. Initiatives exist to facilitate
 readibility and development like <a href=https://min.sc/>min.sc</a>
-or visualize it: <a href=https://miniscript.fun>miniscript.fun</a></div></aside><pre tabindex=0><code class=language-pink data-lang=pink>wsh(
+or visualize it: <a href=https://miniscript.fun>miniscript.fun</a></div></aside><pre><code class=language-pink data-lang=pink>wsh(
   or_i(
     and_v(
       v:thresh(2,pkh(&lt;Aegon xpub&gt;),a:pkh(&lt;Daemon xpub&gt;)),
@@ -151,7 +153,7 @@ by not collaborating and gain enormous power over the royal court.</p><p>As Vise
 and his religious faith makes him believe that including the grand
 maester may be a good idea. He then adds a third recovery path with
 the clerical power as a third party, that will be in charge of dispute resolution
-between Aegon and Daemon.</p><pre tabindex=0><code class=language-ascii data-lang=ascii>           Viserys
+between Aegon and Daemon.</p><pre><code class=language-ascii data-lang=ascii>           Viserys
 
               │
               ├──────────────────┬────────────────────┐
@@ -177,7 +179,7 @@ a decaying multisig with a threshold decreasing over time, new third parties
 like insurance company or notary agencies are added to the policy.
 The threshold can be increased to prevent malicious collaboration at the path scope
 but the minimal number of key required for an attacker to retrieve the funds
-will always stay related to the general scope according to the &ldquo;weakest&rdquo; path.</p><p>Behold the final descriptor of the royal family:</p><pre tabindex=0><code class=language-pink data-lang=pink>wsh(
+will always stay related to the general scope according to the &ldquo;weakest&rdquo; path.</p><p>Behold the final descriptor of the royal family:</p><pre><code class=language-pink data-lang=pink>wsh(
   or_i(
     and_v(
       v:thresh(3,pkh(&lt;Aegon xpub&gt;),a:pkh(&lt;Daemon xpub&gt;),a:pkh(&lt;Maester xpub&gt;)),
@@ -209,14 +211,14 @@ another war from the powerfuls as a new peril from North is marching
 upon them. For thousands of year, they live under a feudal system where
 basics rights differs according to bloodline and nobility. May they
 discover the secret power of the Targaryens and free themselves from any
-crown by using an allodial money.</p><hr><pre tabindex=0><code class=language-ascii data-lang=ascii>     *                          O    .           ____
-            *       /\            .   o        .&#39;* *.&#39;            *
+crown by using an allodial money.</p><hr><pre><code class=language-ascii data-lang=ascii>     *                          O    .           ____
+            *       /\            .   o        .'* *.'            *
        *           /*.\            o        __/_*_*(_
-                  /----\     Advertisement   /o )   \ ,&#39;;     *
-             ;`, /   ( o\        O .         \ ,&#39;    ;  /
-       *     \  ;    `, /       .    o        &#34;-.__.&#39;&#34;\_;       *
-             ;_/&#34;`.__.-&#34;       _________                   *        *
-                             c(`       &#39;)o
+                  /----\     Advertisement   /o )   \ ,';     *
+             ;`, /   ( o\        O .         \ ,'    ;  /
+       *     \  ;    `, /       .    o        &quot;-.__.'&quot;\_;       *
+             ;_/&quot;`.__.-&quot;       _________                   *        *
+                             c(`       ')o
     *             *            \.     ,/             *         *
                               _//^---^\\_   
 </code></pre><p>If you are interested for integrating this kind of solution for your
