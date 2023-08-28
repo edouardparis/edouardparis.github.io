@@ -352,11 +352,25 @@ hr {
 		box-sizing: border-box;
 	}
 
+    p, ul, li, h1, h2, h3, h4, h5, h6 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .article-header {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .head-aside {
+        padding-top: 0;
+    }
+
 	/* passer body (et tous les éléments de largeur fixe) en largeur automatique */
 
 	body {
 		width: auto;
-		margin: 5px;
+		margin: 0;
 		padding: 0;
 	}
 
