@@ -23,6 +23,7 @@ If the title is translated in French: I read the French translation.
 
 [ 2023 ]
 
+Quand la machine apprend - Yann Le Cun
 La Maison - Emma Becker
 L'île de silicium - Chen Qiufan
 Slime, a natural history - Susanne Wedlich
