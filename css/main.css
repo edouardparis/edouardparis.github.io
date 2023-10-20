@@ -106,7 +106,7 @@ main {
   border-right: 1px solid #ddd8dd;
   border-left: 1px solid #ddd8dd;
   display: block;
-  width: calc(80ch + 5rem);
+  max-width: 1440px;
   min-height: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -114,11 +114,10 @@ main {
 
 section {
   display: block;
-  position: relative;
-}
-
-.head-aside {
-  padding-top: 5rem;
+  width: calc(80ch + 5rem);
+  border-right: 1px solid #ddd8dd;
+  min-height: 100vh;
+  padding-top: 1rem;
 }
 
 section li {
@@ -129,8 +128,13 @@ section a {
   text-decoration: none;
 }
 
+.head-aside {
+    margin-top: 1rem;
+}
+
 .sidenote {
   font-size: 8pt;
+  max-width: calc(1440px/4);
 }
 
 .sidenote a {
@@ -146,7 +150,6 @@ section a {
   aside {
     position: absolute;
     margin-left: calc(80ch + 6.5rem);
-    margin-top: 0.2em;
     min-width: 50ch;
   }
 }
@@ -378,6 +381,7 @@ hr {
     width: auto;
     margin-left: auto;
     margin-right: auto;
+    border-right: none; 
   }
 
   main {
