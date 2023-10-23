@@ -23,6 +23,7 @@ If the title is translated in French: I read the French translation.
 
 [ 2023 ]
 
+Le voyage des plantes - José E. Mendes Ferrão
 Messieurs les enfants - Daniel Pennac
 Quand la machine apprend - Yann Le Cun
 La Maison - Emma Becker
