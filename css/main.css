@@ -1,3 +1,8 @@
+@font-face {
+  font-family: dejaVuSansMono;
+  src: url(/dejavu-fonts-ttf-2.37/ttf/DejaVuSansMono.ttf);
+}
+
 html, body {
   font-size: 10pt;
   font-family: monospace;
@@ -39,7 +44,7 @@ blockquote {
 
 code {
  font-size: 10pt;
- font-family: 'DejaVu Sans Mono', monospace;
+ font-family: dejaVuSansMono, monospace;
 }
 
 .highlight {
