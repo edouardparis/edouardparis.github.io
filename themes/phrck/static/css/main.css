@@ -461,32 +461,64 @@ hr {
 		display: none !important;
 	}
 
-  .language-ascii {
-    font-size: 8px;
-    display: block;
-  }
+    .language-green {
+        color: #27c93f;
+        margin: 0px;
+    }
 
-  .language-ascii-art-black {
-    font-size: 8px;
-    display: block;
-  }
+    .language-pink {
+        display: block;
+        color: #ff0080;
+        margin: 0px;
+    }
 
-  .language-ascii-art-blue {
-    font-size: 8px;
-    display: block;
-  }
+    .language-code-pink {
+        margin: 0px;
+    }
 
-  .language-ascii-art-pink {
-    font-size: 8px;
-    display: block;
-  }
 
-  .menu {
-    display: block;
-  }
+    .language-ascii-art-black {
+        margin: 0px;
+    }
 
-  .menu-section {
-    width: 30%;
-    float: left;
-  }
+    .language-ascii-art-blue {
+        margin: 0px;
+    }
+
+    .language-ascii-art-pink {
+        margin: 0px;
+    }
+
+    .language-ascii {
+        font-size: 8px;
+        display: block;
+        margin: 0px;
+    }
+
+    .language-ascii-art-black {
+        font-size: 8px;
+        display: block;
+        margin: 0px;
+    }
+
+    .language-ascii-art-blue {
+        font-size: 8px;
+        display: block;
+        margin: 0px;
+    }
+
+    .language-ascii-art-pink {
+        font-size: 8px;
+        display: block;
+        margin: 0px;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .menu-section {
+        width: 30%;
+        float: left;
+    }
 }
