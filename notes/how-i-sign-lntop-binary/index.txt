@@ -1,6 +1,6 @@
 ------------------------------------------------
-commit: 0f76bb11572f0cb642980d426edb24a4c9520423
-Date:   2023-03-20 08:12:03 +0100 +0100
+commit: afc67dd406eaef780dc6871827d4a58803679b8a
+Date:   2023-11-06 09:44:23 +0100 +0100
 ------------------------------------------------
 
 
@@ -83,6 +83,6 @@ tar -ztvf lntop-v0.3.0-Linux-arm64.tar.gz
 
 ------------------------------------------------
 Copyright: 2023 EdouardParis.
-$ pwd :    ~/edouard.paris/notes/2022-01-18-how-I-sign-lntop-binary
+$ pwd :    ~/edouard.paris/notes/2022-01-18_how-I-sign-lntop-binary
 ------------------------------------------------
 

@@ -1,6 +1,6 @@
 ------------------------------------------------
-commit: 43e79f761f2c07f36370c6bf236272477f28d065
-Date:   2023-08-25 11:42:53 +0200 +0200
+commit: afc67dd406eaef780dc6871827d4a58803679b8a
+Date:   2023-11-06 09:44:23 +0100 +0100
 ------------------------------------------------
 
 
@@ -334,6 +334,6 @@ resized and distributed symbols in the 'cards' directory as before.
 
 ------------------------------------------------
 Copyright: 2023 EdouardParis.
-$ pwd :    ~/edouard.paris/notes/i-asked-gpt4-to-create-dobble
+$ pwd :    ~/edouard.paris/notes/2023-03-26_i-askted-gpt4-to-create-dobble
 ------------------------------------------------
 
