@@ -12,6 +12,8 @@ In case of typographical or grammar errors, tickets are welcomed on the
 
 [ 2023 ]
 
+Nov 05 | Paneception
+         ↪ /notes/paneception/
 Mar 26 | I Asked GPT-4 to help me create a Dobble card deck
          ↪ /notes/i-asked-gpt4-to-create-dobble/
 [ 2022 ]
