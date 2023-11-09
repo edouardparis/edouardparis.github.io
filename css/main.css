@@ -201,7 +201,10 @@ article {
 .article-body table>tbody>tr>td,
 .article-body table>tfoot>tr>td {
   padding: 4px;
-  margin: 0;
+}
+
+.article-body td:first-child {
+  padding-left: 2.5rem;
 }
 
 .list-item {
