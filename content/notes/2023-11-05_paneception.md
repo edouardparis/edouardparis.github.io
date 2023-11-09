@@ -5,6 +5,23 @@ slug = "paneception"
 draft = true
 +++
 
+```ascii
+┌────────────────────────┐
+│                    sway│
+│ ┌───────────────┐      │
+│ │           tmux│      │
+│ │  ┌──────┐     │      │
+│ │  │   vim│     │      │
+│ │  │      │     │      │
+│ │  │      │     │      │
+│ │  └──────┘     │      │
+│ │               │      │
+│ └───────────────┘      │
+│                        │
+└────────────────────────┘
+
+```
+
 I reinstalled Tmux.
 
 I was using i3 then sway since 2017 navigate through windows panel and open
@@ -19,17 +36,24 @@ file is present.  But I dont really like to rely on an extra configuration of my
 window manager to manage my programming process.
 
 {{< sidenote >}}
-> I switched my primary dev environment to a graphical NixOS VM on a macOS host. It has been wonderful. I can keep the great GUI ecosystem of macOS, but all dev tools are in a full screen VM. One person said “it basically replaced your terminal app” which is exactly how it feels. - [@mitchellh](https://twitter.com/mitchellh/status/1346136404682625024)
+> ¹ I switched my primary dev environment to a graphical NixOS VM on a macOS host. 
+> It has been wonderful. I can keep the great GUI ecosystem of macOS, but all 
+> dev tools are in a full screen VM. One person said “it basically replaced 
+> your terminal app” which is exactly how it feels.
+[@mitchellh](https://twitter.com/mitchellh/status/1346136404682625024)
+
+² [Mitchell Hashimoto nixos-config](https://github.com/mitchellh/nixos-config)
 {{</ sidenote >}}
 
-In fact, I was really inspired by [Mitchell Hashimoto experience with nix](https://github.com/mitchellh/nixos-config).
-Quicly explained, a nix configured virtual machine delivers portability and
-reproducibility that guarantee a perfectly controlled experience on very good
-hardware, in his case Apple macbook Pro. What if one day I wanted to develop
-with my full neovim configuration, with all my shell aliases and scripts in a
-virtual machine runned on a lightweight Ipad? The time I will do the step to buy
-one, the performance will surpass that of my three years old laptop. What if I
-tried to code from a distant vps ?
+In fact, I was really inspired by [Mitchell Hashimoto](https://mitchellh.com/)
+experience with nix¹². Quicly explained, a nix configured virtual machine
+delivers portability and reproducibility that guarantee a perfectly
+controlled experience on very good hardware, in his case Apple macbook Pro.
+What if one day I wanted to develop with my full neovim configuration,
+with all my shell aliases and scripts in a virtual machine runned
+on a lightweight Ipad? The time I will do the step to buy one, the performance
+will surpass that of my three years old laptop.
+What if I tried to code from a distant vps ?
 
 In order to keep the environment simple, I dont want to have window manager
 dependency in it.  I want to try to develop and manage a project from one
@@ -39,9 +63,14 @@ nested pane with the `nix-shell` inherited sandboxing.
 I can also work again on my ossificated vim skills to manage everything from the
 editor in multiple buffer, but for now courage is missing.
 
-# [ [ [ vim ] tmux ] sway ]
+Current commands:
 
-|                     | vim       | tmux       | sway              |
-|---------------------|-----------|------------|-------------------| 
-| New vertical pane   | `:vsplit` | `Ctrl+a %` | `Mod+Enter`       | 
-| New horizontal pane | `:split`  | `Ctrl+a "` | `Mod+v Mod+Enter` |
+|                     | vim         | tmux       | sway              |
+|---------------------|-------------|------------|-------------------| 
+| New vertical pane   | `:vsplit`   | `Ctrl+a %` | `Mod+Enter`       | 
+| New horizontal pane | `:split`    | `Ctrl+a "` | `Mod+v Mod+Enter` |
+| Close current pane  | `:q`        | `Ctrl+x y` | `Mod+Shift+q`     |
+| Move cursor top     | `Ctrl+w k`  | `Ctrl+a k` | `Mod+k`           |
+| Move cursor bottom  | `Ctrl+w j`  | `Ctrl+a j` | `Mod+j`           |
+| Move cursor left    | `Ctrl+w h`  | `Ctrl+a h` | `Mod+h`           |
+| Move cursor right   | `Ctrl+w l`  | `Ctrl+a l` | `Mod+l`           |
