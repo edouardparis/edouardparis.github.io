@@ -7,8 +7,8 @@ draft = true
 
 ```ascii
 ┌────────────────────────┐
-│                    sway│
-│ ┌───────────────┐      │
+│                    sway│  Paneception
+│ ┌───────────────┐      │  “Downward is the only way forward.”
 │ │           tmux│      │
 │ │ ┌──────┐      │      │
 │ │ │   vim│      │      │
