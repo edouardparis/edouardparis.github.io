@@ -28,7 +28,7 @@ responsibilities to come.</p><pre><code class=language-ascii data-lang=ascii>   
                     │     1 of 2    │
 
                Jaehaerys         Viserys
-</code></pre><aside><div class=sidenote><a href=ttps://bitcoin.sipa.be/miniscript>Miniscript</a> is a language for
+</code></pre><aside><div class=sidenote>Miniscript is a language for
 writing (a subset of) Bitcoin Scripts in a structured way, enabling analysis,
 composition, generic signing and more.</div></aside><p>The resulting <a href=https://bitcoin.sipa.be/miniscript/>miniscript</a> descriptor:</p><pre><code class=language-pink data-lang=pink>wsh(multi(1,&lt;Jaehaerys xpub&gt;,&lt;Viserys xpub&gt;))
 </code></pre><h2 id=a-simple-inheritance-plan>A simple Inheritance Plan</h2><p>Rhaenyra is still young and Viserys is afraid of her adventurous nature,
@@ -52,7 +52,7 @@ then moves the funds to outputs with scripts derived from it.</p><pre><code clas
 
 </code></pre><aside><div class=sidenote>Bitcoin supports absolute and relative time locks at the script level with
 OP_CHECKLOCKTIMEVERIFY (OP_CLTV), and OP_CHECKSEQUENCEVERIFY (OP_CSV).
-<a href=https://medium.com/summa-technology/bitcoins-time-locks-27e0c362d7a1>Here</a>, an excellent article explaining them.</div></aside><p>The descriptor rules that only Viserys key can move funds immediatly,
+Here, an excellent article explaining them.</div></aside><p>The descriptor rules that only Viserys key can move funds immediatly,
 but after a fixed number of block passed the key of Rhaenyra also becomes valid.
 Viserys number of block choice was enough to represent 1 years of wait.</p><p>A set of keys that can move the funds at any time is called the primary path,
 and any other sets of keys paired with a time lock are called recovery paths.</p><p>The new miniscript descriptor:</p><pre><code class=language-pink data-lang=pink>wsh(
@@ -129,8 +129,8 @@ and will take no rest until her murderers are hanged on the King&rsquo;s Landing
 
                           Aegon             Daemon
 </code></pre><aside><div class=sidenote>Miniscript can become tedious to read. Initiatives exist to facilitate
-readibility and development like <a href=https://min.sc/>min.sc</a>
-or visualize it: <a href=https://miniscript.fun>miniscript.fun</a></div></aside><pre><code class=language-pink data-lang=pink>wsh(
+readibility and development like min.sc
+or visualize it: miniscript.fun</div></aside><pre><code class=language-pink data-lang=pink>wsh(
   or_i(
     and_v(
       v:thresh(2,pkh(&lt;Aegon xpub&gt;),a:pkh(&lt;Daemon xpub&gt;)),
