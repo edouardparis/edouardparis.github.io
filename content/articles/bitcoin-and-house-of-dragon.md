@@ -55,7 +55,7 @@ responsibilities to come.
 ```
 
 {{< sidenote >}}
-<a href="ttps://bitcoin.sipa.be/miniscript">Miniscript</a> is a language for 
+[Miniscript](https://bitcoin.sipa.be/miniscript) is a language for 
 writing (a subset of) Bitcoin Scripts in a structured way, enabling analysis,
 composition, generic signing and more.
 {{< /sidenote >}}
@@ -96,8 +96,7 @@ then moves the funds to outputs with scripts derived from it.
 {{< sidenote >}}
 Bitcoin supports absolute and relative time locks at the script level with
 OP_CHECKLOCKTIMEVERIFY (OP_CLTV), and OP_CHECKSEQUENCEVERIFY (OP_CSV).
-<a href="https://medium.com/summa-technology/bitcoins-time-locks-27e0c362d7a1">
-Here</a>, an excellent article explaining them.
+[Here](https://medium.com/summa-technology/bitcoins-time-locks-27e0c362d7a1), an excellent article explaining them.
 {{< /sidenote >}}
 
 The descriptor rules that only Viserys key can move funds immediatly, 
@@ -209,8 +208,8 @@ and will take no rest until her murderers are hanged on the King's Landing main 
 
 {{< sidenote >}}
 Miniscript can become tedious to read. Initiatives exist to facilitate 
-readibility and development like <a href="https://min.sc/">min.sc</a> 
-or visualize it: <a href="https://miniscript.fun">miniscript.fun</a>
+readibility and development like [min.sc](https://min.sc/)</a> 
+or visualize it: [miniscript.fun](https://miniscript.fun)
 {{< /sidenote >}}
 
 ```pink
@@ -340,5 +339,5 @@ crown by using an allodial money.
 ```
 
 If you are interested for integrating this kind of solution for your
-entreprise or for your individual usage, Please go checkout WizarSardine
+entreprise or for your individual usage, Please go checkout WizardSardine
 product [Liana](https://github.com/wizardsardine/liana).
