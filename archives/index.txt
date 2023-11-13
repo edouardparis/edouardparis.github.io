@@ -12,6 +12,8 @@ draft = false
 
 [ 2023 ]
 
+Nov 13 | Paneception
+         ↪ /notes/paneception/
 Jul 27 | Leaving Twitter
          ↪ /blog/leaving-twitter/
 Jun 15 | Bitcoin and inheritance, a House of the Dragon story

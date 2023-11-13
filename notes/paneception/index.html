@@ -1,0 +1,40 @@
+<!doctype html><html><head><title>edouard.paris</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no"><meta name=description content="Edouard Paris personal website"><link rel="shortcut icon" href=/favicon.ico type=image/x-icon><link rel=stylesheet type=text/css href=/css/main.css></head><body><main><div class=article-header><a href=https://edouard.paris>~/edouard.paris</a><a href=https://edouard.paris/notes>/notes</a><a>/paneception</a></div><aside class=head-aside><div class=sidenote>created: Nov 13 2023<br>updated: Nov 13 2023<br><br>Read this page in your terminal with the command:<br><strong>$ curl -L
+edouard.paris/notes/paneception/index.txt | less</strong><br></div></aside><section><div class=article-body><pre><code class=language-ascii data-lang=ascii>┌────────────────────────┐
+│                    sway│  Paneception
+│ ┌───────────────┐      │  “Downward is the only way forward.”
+│ │           tmux│      │
+│ │ ┌──────┐      │      │
+│ │ │   vim│      │      │
+│ │ │      │      │      │
+│ │ │      │      │      │
+│ │ └──────┘      │      │
+│ └───────────────┘      │
+└────────────────────────┘
+
+</code></pre><p>I reinstalled Tmux.</p><p>I had been using i3, then Sway, since 2017 to navigate through window panels
+and open a terminal quickly on demand for swift command execution. But after
+installing NixOS on my laptop, I wanted to encapsulate libraries, required
+services, and environment variables of my personal and work projects into Nix
+files that I could load with <code>nix-shell</code>. When opening a new Kitty terminal
+window with Sway, the new instance does not inherit the state of the previous
+shell. I could have a simple script in the Sway configuration that, on the new
+window event, moves the user to the working directory and triggers the
+<code>nix-shell</code> command again if a <code>default.nix</code> file is present. However, I don’t
+really like to rely on extra configuration of my window manager to manage my
+programming workflow.</p><aside><div class=sidenote><blockquote><p>¹ I switched my primary development environment to a graphical NixOS VM on a
+macOS host. It has been wonderful. I can maintain the great GUI ecosystem of
+macOS, but all development tools are in a fullscreen VM. One person said, “It
+basically replaced your terminal app,” which is exactly how it feels.
+<a href=https://twitter.com/mitchellh/status/1346136404682625024>@mitchellh</a></p></blockquote><p>² <a href=https://github.com/mitchellh/nixos-config>Mitchell Hashimoto’s NixOS configuration</a></p></div></aside><p>In fact, I was really inspired by <a href=https://mitchellh.com/>Mitchell
+Hashimoto</a>’s experience with Nix¹². Simply put, a
+Nix-configured virtual machine delivers portability and reproducibility that
+guarantee a perfectly controlled experience on very good hardware; in his case,
+an Apple MacBook Pro. What if one day I wanted to develop with my full Neovim
+configuration, complete with all my shell aliases and scripts, on a virtual
+machine running on a lightweight iPad? By the time I decide to buy one, the
+performance will likely surpass that of my three-year-old laptop. What if I
+wanted to code from a distant VPS?</p><p>To maintain a simple environment, I don’t want window manager dependencies in
+it. I want to try to develop and manage projects from a single workspace pane,
+hence my return to the trusty <code>tmux</code>. A <code>tmux</code> session can open and close
+nested panes with the <code>nix-shell</code>-inherited sandboxing.</p><p>I could also revive my ossified Vim skills to manage everything from the editor
+in multiple buffers, but for now, the courage is lacking.</p><p>Some current commands:</p><table><thead><tr><th></th><th>vim</th><th>tmux</th><th>sway</th></tr></thead><tbody><tr><td>New vertical pane</td><td><code>:vsplit</code></td><td><code>Ctrl+a %</code></td><td><code>Mod+Enter</code></td></tr><tr><td>New horizontal pane</td><td><code>:split</code></td><td><code>Ctrl+a "</code></td><td><code>Mod+v Mod+Enter</code></td></tr><tr><td>Close current pane</td><td><code>:q</code></td><td><code>Ctrl+x y</code></td><td><code>Mod+Shift+q</code></td></tr><tr><td>Move cursor top</td><td><code>Ctrl+w k</code></td><td><code>Ctrl+a k</code></td><td><code>Mod+k</code></td></tr><tr><td>Move cursor bottom</td><td><code>Ctrl+w j</code></td><td><code>Ctrl+a j</code></td><td><code>Mod+j</code></td></tr><tr><td>Move cursor left</td><td><code>Ctrl+w h</code></td><td><code>Ctrl+a h</code></td><td><code>Mod+h</code></td></tr><tr><td>Move cursor right</td><td><code>Ctrl+w l</code></td><td><code>Ctrl+a l</code></td><td><code>Mod+l</code></td></tr></tbody></table></div></section><aside><div class=sidenote>&copy; 2023 EdouardParis.<br>Powered by <a href=http://gohugo.io target=_blank>Hugo</a></div></aside><footer id=footer></br></br></footer></main></body></html>
