@@ -1,8 +1,7 @@
 +++ 
 title = "Paneception" 
-date = "2023-11-05"
+date = "2023-11-13"
 slug = "paneception"
-draft = true
 +++
 
 ```ascii
@@ -62,7 +61,7 @@ nested panes with the `nix-shell`-inherited sandboxing.
 I could also revive my ossified Vim skills to manage everything from the editor
 in multiple buffers, but for now, the courage is lacking.
 
-Current commands:
+Some current commands:
 
 |                     | vim         | tmux       | sway              |
 |---------------------|-------------|------------|-------------------| 
