@@ -18,7 +18,7 @@ html, body {
   font-size: 10pt;
   font-family: 'MonaspaceArgonVar', 'MonaspaceArgon', monospace;
   color: #1F2429;
-  background-color: #fff;
+  background-color: hsla(0, 0%, 97%, 1);
   height: 100%;
   margin: 0;
   padding: 0;
@@ -62,6 +62,7 @@ code {
   padding: 5px;
   border-top: 1px solid #ddd8dd;
   border-bottom: 1px solid #ddd8dd;
+  background-color: #fff;
 }
 
 nav {
