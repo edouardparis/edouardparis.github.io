@@ -117,6 +117,11 @@ ol li:first-child {
   padding-right: 2.5rem;
 }
 
+.section-body>p, ul, li, h1, h2, h3, h4, h5, h6, blockquote {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 main {
   border-right: 1px solid #ddd8dd;
   border-left: 1px solid #ddd8dd;
@@ -378,22 +383,33 @@ hr {
 	}
 
     p, ul, li, h1, h2, h3, h4, h5, h6 {
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .article-body p, ul, li, h1, h2, h3, h4, h5, h6 {
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .article-body td:first-child {
+        padding-left: 1rem;
     }
 
     .article-header {
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .head-aside {
         padding-top: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .section-body>p, ul, li, h1, h2, h3, h4, h5, h6, blockquote {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
 	/* passer body (et tous les éléments de largeur fixe) en largeur automatique */
@@ -415,7 +431,6 @@ hr {
     width: auto;
     margin-top: 0px;
     margin-left: auto;
-    padding: 1rem;
     margin-right: auto;
   }
 
