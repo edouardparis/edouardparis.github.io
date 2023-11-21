@@ -1,22 +1,9 @@
-@font-face {
-  font-family: dejaVuSansMono;
-  src: url(/fonts/dejavu-fonts-ttf-2.37/ttf/DejaVuSansMono.ttf);
-}
-
-@font-face {
-    font-family: 'MonaspaceArgonVar';
-    src: url('/fonts/monaspace/MonaspaceArgonVarVF[wght,wdth,slnt].woff2') format('woff2'), /* Modern Browsers */
-         url('/fonts/monaspace/MonaspaceArgonVarVF[wght,wdth,slnt].woff') format('woff'); /* Older Browsers */
-}
-
-@font-face {
-    font-family: 'MonaspaceArgon';
-    src: url('/fonts/monaspace/MonaspaceArgon-Regular.woff') format('woff'); /* Older Browsers */
-}
+/* CSS */
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
 
 html, body {
   font-size: 10pt;
-  font-family: 'MonaspaceArgonVar', 'MonaspaceArgon', monospace;
+  font-family: 'Fira Code', monospace;
   color: #1F2429;
   background-color: hsla(0, 0%, 97%, 1);
   height: 100%;
@@ -53,7 +40,7 @@ blockquote {
 
 code {
  font-size: 10pt;
- font-family: 'dejaVuSansMono', monospace;
+ font-family: 'Fira Code', monospace;
 }
 
 .highlight {
