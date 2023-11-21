@@ -2,6 +2,7 @@
 <section>
   {{ partial "body" .}}
   <hr>
+  <div class="section-body">
   {{ range sort $.Site.Data.readings "name" "desc" }}
     <h2>{{ .name }}</h2>
     <p>
@@ -10,5 +11,6 @@
     {{ end }}
     </p>
   {{ end }}
+  </div>
 </section>
 {{ partial "foot" . }}
