@@ -185,29 +185,33 @@ article {
   line-height: 1.25em;
 }
 
-.article-body table {
+table {
     width: 100%;
 }
 
-.article-body table>thead>tr>th {
+table>thead>tr>th {
   font-weight: bold;
   text-align: left;
 }
 
-.article-body tr, td, th {
+tr, td, th {
   border-bottom: 1px solid #ddd8dd;
 }
 
-.article-body table>thead>tr>th,
-.article-body table>tbody>tr>th,
-.article-body table>tfoot>tr>th,
-.article-body table>thead>tr>td,
-.article-body table>tbody>tr>td,
-.article-body table>tfoot>tr>td {
+table>thead>tr>th,
+table>tbody>tr>th,
+table>tfoot>tr>th,
+table>thead>tr>td,
+table>tbody>tr>td,
+table>tfoot>tr>td {
   padding: 4px;
 }
 
-.article-body td:first-child {
+th:first-child {
+  padding-left: 2.5rem;
+}
+
+td:first-child {
   padding-left: 2.5rem;
 }
 
@@ -379,7 +383,11 @@ hr {
         padding-right: 1rem;
     }
 
-    .article-body td:first-child {
+    th:first-child {
+        padding-left: 1rem;
+    }
+
+    td:first-child {
         padding-left: 1rem;
     }
 
