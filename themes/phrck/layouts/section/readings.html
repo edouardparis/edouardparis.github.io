@@ -1,16 +1,21 @@
 {{ partial "head.html" . }}
 <section>
   {{ partial "body" .}}
-  <hr>
+  </br>
   <div class="section-body">
-  {{ range sort $.Site.Data.readings "name" "desc" }}
-    <h2>{{ .name }}</h2>
-    <p>
-    {{ range .readings }}
-      {{ partial "reading" . }}
-    {{ end }}
-    </p>
-  {{ end }}
+    <table>
+        <thead>
+        <tr><th>Title</th><th>Author</th></tr>
+        </thead>
+        <tbody>
+        {{ range sort $.Site.Data.readings "name" "desc" }}
+        <tr><td style="padding-top:2.5rem;"><strong>{{ .name }}</strong><td></tr>
+        {{ range .readings }}
+        <tr><td><em>{{ .title }}</em></td><td>{{ .author }}</td></tr>
+        {{ end }}
+        {{ end }}
+        </tbody>
+    </table>
   </div>
 </section>
 {{ partial "foot" . }}
