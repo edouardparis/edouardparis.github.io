@@ -185,9 +185,9 @@ image file using ImageMagick, you'll first need to install the Python library
 wand which is a ctypes-based simple ImageMagick binding for Python. 
 You can install it using pip:
 
-```code-pink
+{{< highlight shell >}}
 pip install Wand
-```  
+{{</ highlight >}}
 
 After installing the wand library, you can modify the script as follows:
 

@@ -62,9 +62,9 @@ composition, generic signing and more.
 
 The resulting [miniscript](https://bitcoin.sipa.be/miniscript/) descriptor:
 
-```pink
+{{< highlight Scheme >}}
 wsh(multi(1,<Jaehaerys xpub>,<Viserys xpub>))
-```
+{{</ highlight >}}
 
 ## A simple Inheritance Plan
 
@@ -108,7 +108,7 @@ and any other sets of keys paired with a time lock are called recovery paths.
 
 The new miniscript descriptor:
 
-```pink
+{{< highlight Scheme >}}
 wsh(
   or_d(
     pk(<Viserys xpub>),
@@ -118,7 +118,7 @@ wsh(
     )
   )
 )
-```
+{{</ highlight >}}
 
 The King with his new wallet with inheritance included have full
 disposal of his funds but in case of premature death, funds will be
@@ -160,7 +160,7 @@ becoming valid at different locking times.
 As the script grows, miniscript helps the targaryens to handle
 the new complexity:
 
-```pink
+{{< highlight Scheme >}}
 wsh(
   or_i(
     and_v(
@@ -176,7 +176,7 @@ wsh(
     )
   )
 )
-```
+{{</ highlight >}}
 
 
 ## A deterrent against assassination.
@@ -212,7 +212,7 @@ readibility and development like [min.sc](https://min.sc/)</a>
 or visualize it: [miniscript.fun](https://miniscript.fun)
 {{< /sidenote >}}
 
-```pink
+{{< highlight Scheme >}}
 wsh(
   or_i(
     and_v(
@@ -228,7 +228,7 @@ wsh(
     )
   )
 )
-```
+{{</ highlight >}}
 
 
 ## A dispute resolution
@@ -278,7 +278,7 @@ will always stay related to the general scope according to the "weakest" path.
 
 Behold the final descriptor of the royal family:
 
-```pink
+{{< highlight Scheme >}}
 wsh(
   or_i(
     and_v(
@@ -300,7 +300,7 @@ wsh(
     )
   )
 )
-```
+{{</ highlight >}}
 
 ## The end of our story
 

@@ -31,37 +31,39 @@ I compiled the lntop binary for arm64 and paste the command, the tag
 version of `lntop` and the [`go`](https://go.dev/) version I used 
 in a RELEASE.md file.
 
-```pink
+{{< highlight shell >}}
 git checkout tags/v0.3.0
 go version go1.16.4 linux/amd64
 GOOS=linux GOARCH=arm64 go build ./cmd/lntop
-```
+{{< / highlight >}}
 
 I created a directory with the release file, the binary and the LICENSE.
 
-```pink
+{{< highlight shell >}}
 release-v0.3.0
 ├── LICENSE
 ├── lntop
 └── RELEASE.md
-```
+{{< / highlight >}}
 
 gzip and tar it:
 
-```pink
+{{< highlight shell >}}
 tar -czf lntop-v0.3.0-Linux-arm64.tar.gz release-v0.3.0
-```
+{{< / highlight >}}
 
 got the sha256 checksum in a file:
 
-```pink
+{{< highlight shell >}}
+git checkout tags/v0.3.0
 sha256sum -b lntop-v0.3.0-Linux-arm64.tar.gz > checksums-lntop-v0.3.0.txt
-```
+{{< / highlight >}}
+
 gpg-key signed the checksum file:
 
-```pink
+{{< highlight shell >}}
 gpg --detach-sig --sign --default-key a8ba... checksums-lntop-v0.3.0.txt
-```
+{{< / highlight >}}
 
 I attached to the github release page of `lntop@v0.3.0` the files:
 `lntop-v0.3.0-Linux-arm64.tar.gz`, `checksums-lntop-v0.3.0.txt` 
@@ -70,14 +72,15 @@ and `checksums-lntop-v0.3.0.txt.sig`.
 If someone wants to download and verify that the archive is the one I
 created and signed, he/she can run:
 
-```pink
+{{< highlight shell >}}
 sha256sum --check checksums-lntop-v0.3.0.txt
 gpg --verify checksums-lntop-v0.3.0.txt.sig checksums-lntop-v0.3.0.txt
-```
+{{< / highlight >}}
+
 My gpg key fingerprint is in my [twitter
 bio](https://twitter.com/edouardparis).
 Finally the binary and release files are extracted with:
 
-```pink
+{{< highlight shell >}}
 tar -ztvf lntop-v0.3.0-Linux-arm64.tar.gz
-```
+{{< / highlight >}}

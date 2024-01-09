@@ -329,20 +329,6 @@ hr {
   margin-left: 2.5rem;
 }
 
-.language-pink {
-  display: block;
-  color: #ff0080;
-  margin-right: 2.5rem;
-  margin-left: 2.5rem;
-}
-
-.language-code-pink {
-  color: #ff0080;
-  display: block;
-  overflow: scroll;
-  max-width: 80ch;
-}
-
 .language-red {
   color: #ff5f56;
 }
@@ -497,17 +483,6 @@ hr {
         color: #27c93f;
         margin: 0px;
     }
-
-    .language-pink {
-        display: block;
-        color: #ff0080;
-        margin: 0px;
-    }
-
-    .language-code-pink {
-        margin: 0px;
-    }
-
 
     .language-ascii-art-black {
         margin: 0px;
