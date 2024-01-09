@@ -1,4 +1,4 @@
-<!doctype html><html><head><title>edouard.paris</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no"><meta name=description content="Edouard Paris personal website"><link rel="shortcut icon" href=/favicon.ico type=image/x-icon><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css><link rel=stylesheet type=text/css href=/css/main.css></head><body><main><div class=article-header><a href=https://edouard.paris>~/edouard.paris</a><a href=https://edouard.paris/notes>/notes</a><a>/how-i-sign-lntop-binary</a></div><aside class=head-aside><div class=sidenote>created: Jan 18 2022<br>updated: Nov 06 2023<br><br>Read this page in your terminal with the command:<br><strong>$ curl -L
+<!doctype html><html><head><title>edouard.paris</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no"><meta name=description content="Edouard Paris personal website"><link rel="shortcut icon" href=/favicon.ico type=image/x-icon><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css><link rel=stylesheet type=text/css href=/css/main.css></head><body><main><div class=article-header><a href=https://edouard.paris>~/edouard.paris</a><a href=https://edouard.paris/notes>/notes</a><a>/how-i-sign-lntop-binary</a></div><aside class=head-aside><div class=sidenote>created: Jan 18 2022<br>updated: Jan 09 2024<br><br>Read this page in your terminal with the command:<br><strong>$ curl -L
 edouard.paris/notes/how-i-sign-lntop-binary/index.txt | less</strong><br></div></aside><section><div class=article-body><h1 id=how-i-sign-a-lntop-binary>How I sign a LNTOP binary</h1><p>I am always amazed that someone, somewhere, is running my code or a
 binary built from it. Since I released a little software named
 <a href=https://github.com/edouardparis/lntop><code>lntop</code></a> a few years ago, I
@@ -17,22 +17,16 @@ hosting it and the developer who compiled it.
 For safety and for their (and my) peace of mind, I gpg-key signed
 the last <code>lntop</code> releases.</p><p>I compiled the lntop binary for arm64 and paste the command, the tag
 version of <code>lntop</code> and the <a href=https://go.dev/><code>go</code></a> version I used
-in a RELEASE.md file.</p><pre><code class=language-pink data-lang=pink>git checkout tags/v0.3.0
+in a RELEASE.md file.</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>git checkout tags/v0.3.0
 go version go1.16.4 linux/amd64
-GOOS=linux GOARCH=arm64 go build ./cmd/lntop
-</code></pre><p>I created a directory with the release file, the binary and the LICENSE.</p><pre><code class=language-pink data-lang=pink>release-v0.3.0
+<span style=color:#b04040>GOOS</span><span style=color:#666>=</span>linux <span style=color:#b04040>GOARCH</span><span style=color:#666>=</span>arm64 go build ./cmd/lntop</code></pre></div><p>I created a directory with the release file, the binary and the LICENSE.</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>release-v0.3.0
 ├── LICENSE
 ├── lntop
-└── RELEASE.md
-</code></pre><p>gzip and tar it:</p><pre><code class=language-pink data-lang=pink>tar -czf lntop-v0.3.0-Linux-arm64.tar.gz release-v0.3.0
-</code></pre><p>got the sha256 checksum in a file:</p><pre><code class=language-pink data-lang=pink>sha256sum -b lntop-v0.3.0-Linux-arm64.tar.gz &gt; checksums-lntop-v0.3.0.txt
-</code></pre><p>gpg-key signed the checksum file:</p><pre><code class=language-pink data-lang=pink>gpg --detach-sig --sign --default-key a8ba... checksums-lntop-v0.3.0.txt
-</code></pre><p>I attached to the github release page of <code>lntop@v0.3.0</code> the files:
+└── RELEASE.md</code></pre></div><p>gzip and tar it:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>tar -czf lntop-v0.3.0-Linux-arm64.tar.gz release-v0.3.0</code></pre></div><p>got the sha256 checksum in a file:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>git checkout tags/v0.3.0
+sha256sum -b lntop-v0.3.0-Linux-arm64.tar.gz &gt; checksums-lntop-v0.3.0.txt</code></pre></div><p>gpg-key signed the checksum file:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>gpg --detach-sig --sign --default-key a8ba... checksums-lntop-v0.3.0.txt</code></pre></div><p>I attached to the github release page of <code>lntop@v0.3.0</code> the files:
 <code>lntop-v0.3.0-Linux-arm64.tar.gz</code>, <code>checksums-lntop-v0.3.0.txt</code>
 and <code>checksums-lntop-v0.3.0.txt.sig</code>.</p><p>If someone wants to download and verify that the archive is the one I
-created and signed, he/she can run:</p><pre><code class=language-pink data-lang=pink>sha256sum --check checksums-lntop-v0.3.0.txt
-gpg --verify checksums-lntop-v0.3.0.txt.sig checksums-lntop-v0.3.0.txt
-</code></pre><p>My gpg key fingerprint is in my <a href=https://twitter.com/edouardparis>twitter
+created and signed, he/she can run:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>sha256sum --check checksums-lntop-v0.3.0.txt
+gpg --verify checksums-lntop-v0.3.0.txt.sig checksums-lntop-v0.3.0.txt</code></pre></div><p>My gpg key fingerprint is in my <a href=https://twitter.com/edouardparis>twitter
 bio</a>.
-Finally the binary and release files are extracted with:</p><pre><code class=language-pink data-lang=pink>tar -ztvf lntop-v0.3.0-Linux-arm64.tar.gz
-</code></pre></div></section><aside><div class=sidenote>&copy; 2023 EdouardParis.<br>Powered by <a href=http://gohugo.io target=_blank>Hugo</a></div></aside><footer id=footer></br></br></footer></main></body></html>
+Finally the binary and release files are extracted with:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>tar -ztvf lntop-v0.3.0-Linux-arm64.tar.gz</code></pre></div></div></section><aside><div class=sidenote>&copy; 2023 EdouardParis.<br>Powered by <a href=http://gohugo.io target=_blank>Hugo</a></div></aside><footer id=footer></br></br></footer></main></body></html>

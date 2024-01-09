@@ -1,6 +1,6 @@
 ------------------------------------------------
-commit: afc67dd406eaef780dc6871827d4a58803679b8a
-Date:   2023-11-06 09:44:23 +0100 +0100
+commit: 78e8f87fbd6d586b0a1fa701565d189db248c445
+Date:   2024-01-09 10:33:40 +0100 +0100
 ------------------------------------------------
 
 
@@ -184,9 +184,9 @@ image file using ImageMagick, you'll first need to install the Python library
 wand which is a ctypes-based simple ImageMagick binding for Python. 
 You can install it using pip:
 
-```code-pink
+{{< highlight shell >}}
 pip install Wand
-```  
+{{</ highlight >}}
 
 After installing the wand library, you can modify the script as follows:
 
