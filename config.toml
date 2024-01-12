@@ -35,9 +35,6 @@ topics = "/:slug"
 date = ["date", "lastmod"]
 lastmod = [":git"]
 
-[blackfriday]
-angledQuotes = false
-
 [outputFormats.Txt]
 name = "txt"
 baseName = "index"
@@ -51,6 +48,7 @@ section = ["HTML", "txt", "RSS"]
 
 [languages]
 [languages.en]
+[languages.en.params]
 redirect = "Read this page in your terminal with the command:"
 copyright = "2023 EdouardParis."
 description = "Edouard Paris personal website"
@@ -72,9 +70,12 @@ name = "writing"
 identifier = "writing"
 weight = 2
 [languages.fr]
+[languages.fr.params]
 redirect = "Lisez cette page dans un terminal avec la commande:"
 copyright = "2023 EdouardParis."
 description = "Site web personnel de Edouard Paris"
+[[languages.fr.params.blackfriday]]
+angledQuotes = true
 [[languages.fr.menu.lang]]
 url = "/fr"
 name = "fr"
@@ -88,5 +89,3 @@ weight = 0
 url = "/fr/lecture"
 name = "lecture"
 weight = 0
-[[languages.fr.blackfriday]]
-angledQuotes = true
