@@ -17,7 +17,6 @@ an interesting flake.
 
 you can connect with `ssh debian@<vps-ip>`.
 
-
 ## 2. Change password with `passwd` and add ssh key to authorized keys.
 
 {{< highlight shell >}}
@@ -36,13 +35,19 @@ exit and reconnect in a new root ssh session.
 
 {{< highlight shell >}}
 nix-env -iE "_: with import <nixpkgs/nixos> { configuration = {}; }; \
-  with config.system.build; \
-  [ nixos-generate-config nixos-install nixos-enter ]"
+  with config.system.build; [ nixos-generate-config ]"
 
 nixos-generate-config --no-filesystems --root /mnt
 {{</ highlight >}}
 
+Copy from `/mnt` the `hardware-configuration.nix` file. 
+
+The rest of the commands should be done on your local machine and not on the target host.
+
 ## 4. Prepare flake
+
+You can find an example of the flake [here](https://github.com/edouardparis/nixos-ovh-vps-example).
+Change the `hardware-configuration.nix` file with the one you copied and change `disk-config.nix`
 
 ## 5. Test flake
 
@@ -64,13 +69,16 @@ Add `screenfetch` to the flake configuration.nix `environment.systemPackages`
 nixos-rebuild switch --flake .#ovh-vps --target-host "root@<vps-ip>"
 {{</ highlight >}}
 
-Check that the `screenfetch` package was installed.
-
+Connect to the host
 
 {{< highlight shell >}}
 ssh root@<vps-ip>
 Last login: Tue Jan  2 15:18:52 2024 from <ip>
+{{</ highlight >}}
 
+then check that the `screenfetch` package was installed.
+
+{{< highlight console >}}
 [root@nixos:~]# screenfetch
           ::::.    ':::::     ::::'         root@nixos
           ':::::    ':::::.  ::::'          OS: NixOS 24.05.20231221.d6863cb
