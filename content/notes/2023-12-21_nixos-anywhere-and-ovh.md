@@ -1,6 +1,6 @@
 +++ 
 title = "nixos-anywhere and ovh" 
-date = "2023-12-21"
+date = "2024-01-12"
 slug = "nixos-anywhere-and-ovh"
 topics = ["nixos"]
 draft = true
