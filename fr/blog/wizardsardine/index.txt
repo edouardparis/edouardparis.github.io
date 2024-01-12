@@ -39,7 +39,7 @@ protection de fonds pour des protocoles monétaires utilisant le format
 de transaction des UTXOs (unspent transaction outputs) notamment Bitcoin. 
 
 ------------------------------------------------
-Copyright: 2023 EdouardParis.
+Copyright: 
 $ pwd :    ~/edouard.paris/fr/blog/2020-11-07-wizardsardine
 ------------------------------------------------
 

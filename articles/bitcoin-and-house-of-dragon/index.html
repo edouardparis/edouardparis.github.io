@@ -1,4 +1,5 @@
-<!doctype html><html><head><title>edouard.paris</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no"><meta name=description content="Edouard Paris personal website"><link rel="shortcut icon" href=/favicon.ico type=image/x-icon><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css><link rel=stylesheet type=text/css href=/css/main.css></head><body><main><div class=article-header><a href=https://edouard.paris>~/edouard.paris</a><a href=https://edouard.paris/articles>/articles</a><a>/bitcoin-and-house-of-dragon</a></div><aside class=head-aside><div class=sidenote>created: Jun 15 2023<br>updated: Jan 09 2024<br><br>Read this page in your terminal with the command:<br><strong>$ curl -L
+<!doctype html><html><head><title>edouard.paris</title>
+<meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no"><meta name=description content="Edouard Paris personal website"><link rel="shortcut icon" href=/favicon.ico type=image/x-icon><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css><link rel=stylesheet type=text/css href=/css/main.css></head><body><main><div class=article-header><a href=https://edouard.paris>~/edouard.paris</a><a href=https://edouard.paris/articles>/articles</a><a>/bitcoin-and-house-of-dragon</a></div><aside class=head-aside><div class=sidenote>created: Jun 15 2023<br>updated: Jan 09 2024<br><br>Read this page in your terminal with the command:<br><strong>$ curl -L
 edouard.paris/articles/bitcoin-and-house-of-dragon/index.txt | less</strong><br></div></aside><section><div class=article-body><h1 id=bitcoin-and-inheritance-a-house-of-the-dragon-story>Bitcoin and inheritance, a House of the Dragon story</h1><p><em>House of the Dragon is an American fantasy drama television series.
 A prequel to Game of Thrones (2011–2019), it is the second show in the franchise,
 created by George R. R. Martin and Ryan Condal for HBO. Beware, this
@@ -22,7 +23,7 @@ keys.</p><p>The Old King, Jaehaerys I Targaryen, did a secret ceremony with his
 grand son Viserys after choosing him as his Heir. They setted up a simple
 1 of 2 multisig and locked the family legacy in new Bitcoin outputs.
 At this time, Viserys was a grown adult, married and aware of the
-responsibilities to come.</p><pre><code class=language-ascii data-lang=ascii>                            │
+responsibilities to come.</p><pre tabindex=0><code class=language-ascii data-lang=ascii>                            │
                             │
                     ┌───────┴───────┐
                     │     1 of 2    │
@@ -30,12 +31,12 @@ responsibilities to come.</p><pre><code class=language-ascii data-lang=ascii>   
                Jaehaerys         Viserys
 </code></pre><aside><div class=sidenote><a href=https://bitcoin.sipa.be/miniscript>Miniscript</a> is a language for
 writing (a subset of) Bitcoin Scripts in a structured way, enabling analysis,
-composition, generic signing and more.</div></aside><p>The resulting <a href=https://bitcoin.sipa.be/miniscript/>miniscript</a> descriptor:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Scheme data-lang=Scheme><span style=color:#b04040>wsh</span><span style=color:#888>(</span><span style=color:#785840>multi</span><span style=color:#888>(</span><span style=color:#444>1</span><span style=color:#666>,</span><span style=color:#b04040>&lt;Jaehaerys</span> <span style=color:#b04040>xpub&gt;,&lt;Viserys</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>))</span></code></pre></div><h2 id=a-simple-inheritance-plan>A simple Inheritance Plan</h2><p>Rhaenyra is still young and Viserys is afraid of her adventurous nature,
+composition, generic signing and more.</div></aside><p>The resulting <a href=https://bitcoin.sipa.be/miniscript/>miniscript</a> descriptor:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Scheme data-lang=Scheme><span style=display:flex><span><span style=color:#b04040>wsh</span><span style=color:#888>(</span><span style=color:#785840>multi</span><span style=color:#888>(</span><span style=color:#444>1</span><span style=color:#666>,</span><span style=color:#b04040>&lt;Jaehaerys</span> <span style=color:#b04040>xpub&gt;,&lt;Viserys</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>))</span></span></span></code></pre></div><h2 id=a-simple-inheritance-plan>A simple Inheritance Plan</h2><p>Rhaenyra is still young and Viserys is afraid of her adventurous nature,
 She is the Heir but as long as Viserys is alive, He prefers to keep the
 key of the treasure himself. But what if something happens to him ? Rhaenyra must
 be able to somehow get control of the funds.</p><p>During a secret ceremony in front of the old skull of Balerion <em>the Black
 Dread</em>, Viserys creates a new descriptor and shares it to his daughter,
-then moves the funds to outputs with scripts derived from it.</p><pre><code class=language-ascii data-lang=ascii>              Viserys
+then moves the funds to outputs with scripts derived from it.</p><pre tabindex=0><code class=language-ascii data-lang=ascii>              Viserys
 
                  │
                  │
@@ -48,21 +49,20 @@ then moves the funds to outputs with scripts derived from it.</p><pre><code clas
                  │
 
              Rhaenyra
-
 </code></pre><aside><div class=sidenote>Bitcoin supports absolute and relative time locks at the script level with
 OP_CHECKLOCKTIMEVERIFY (OP_CLTV), and OP_CHECKSEQUENCEVERIFY (OP_CSV).
 <a href=https://medium.com/summa-technology/bitcoins-time-locks-27e0c362d7a1>Here</a>, an excellent article explaining them.</div></aside><p>The descriptor rules that only Viserys key can move funds immediatly,
 but after a fixed number of block passed the key of Rhaenyra also becomes valid.
 Viserys number of block choice was enough to represent 1 years of wait.</p><p>A set of keys that can move the funds at any time is called the primary path,
-and any other sets of keys paired with a time lock are called recovery paths.</p><p>The new miniscript descriptor:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Scheme data-lang=Scheme><span style=color:#b04040>wsh</span><span style=color:#888>(</span>
-  <span style=color:#b04040>or_d</span><span style=color:#888>(</span>
-    <span style=color:#b04040>pk</span><span style=color:#888>(</span><span style=color:#785840>&lt;Viserys</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>)</span><span style=color:#666>,</span>
-    <span style=color:#b04040>and_v</span><span style=color:#888>(</span>
-      <span style=color:#b04040>v:pkh</span><span style=color:#888>(</span><span style=color:#785840>&lt;Rhaenyra</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>)</span><span style=color:#666>,</span>
-      <span style=color:#b04040>older</span><span style=color:#888>(</span><span style=color:#444>52600</span><span style=color:#888>)</span>
-    <span style=color:#888>)</span>
-  <span style=color:#888>)</span>
-<span style=color:#888>)</span></code></pre></div><p>The King with his new wallet with inheritance included have full
+and any other sets of keys paired with a time lock are called recovery paths.</p><p>The new miniscript descriptor:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Scheme data-lang=Scheme><span style=display:flex><span><span style=color:#b04040>wsh</span><span style=color:#888>(</span>
+</span></span><span style=display:flex><span>  <span style=color:#b04040>or_d</span><span style=color:#888>(</span>
+</span></span><span style=display:flex><span>    <span style=color:#b04040>pk</span><span style=color:#888>(</span><span style=color:#785840>&lt;Viserys</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>)</span><span style=color:#666>,</span>
+</span></span><span style=display:flex><span>    <span style=color:#b04040>and_v</span><span style=color:#888>(</span>
+</span></span><span style=display:flex><span>      <span style=color:#b04040>v:pkh</span><span style=color:#888>(</span><span style=color:#785840>&lt;Rhaenyra</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>)</span><span style=color:#666>,</span>
+</span></span><span style=display:flex><span>      <span style=color:#b04040>older</span><span style=color:#888>(</span><span style=color:#444>52600</span><span style=color:#888>)</span>
+</span></span><span style=display:flex><span>    <span style=color:#888>)</span>
+</span></span><span style=display:flex><span>  <span style=color:#888>)</span>
+</span></span><span style=display:flex><span><span style=color:#888>)</span></span></span></code></pre></div><p>The King with his new wallet with inheritance included have full
 disposal of his funds but in case of premature death, funds will be
 spendable in 1 years maximum by Rhaenyra. King Viserys must
 move coins to new outputs before the sequence runs out, either passively
@@ -74,7 +74,7 @@ Rumors spread to the country that Aegon should be the new Heir, but
 Viserys does not change the succession order.
 Sick by a mysterious illness and advised by his ministers,
 Viserys wants to include the whole succession line in the bitcoin
-scripts locking the realm&rsquo;s treasure.</p><pre><code class=language-ascii data-lang=ascii>               Viserys
+scripts locking the realm&rsquo;s treasure.</p><pre tabindex=0><code class=language-ascii data-lang=ascii>               Viserys
 
                   │
                   ├──────────────────┐
@@ -87,30 +87,29 @@ scripts locking the realm&rsquo;s treasure.</p><pre><code class=language-ascii d
                                      │
 
                                    Aegon
-
 </code></pre><p>An inheritance plan can include multiple recovery paths, each of them
 becoming valid at different locking times.
 As the script grows, miniscript helps the targaryens to handle
-the new complexity:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Scheme data-lang=Scheme><span style=color:#b04040>wsh</span><span style=color:#888>(</span>
-  <span style=color:#b04040>or_i</span><span style=color:#888>(</span>
-    <span style=color:#b04040>and_v</span><span style=color:#888>(</span>
-      <span style=color:#b04040>v:pkh</span><span style=color:#888>(</span><span style=color:#785840>&lt;Aegon</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>)</span><span style=color:#666>,</span>
-      <span style=color:#b04040>older</span><span style=color:#888>(</span><span style=color:#444>65000</span><span style=color:#888>)</span>
-    <span style=color:#888>)</span><span style=color:#666>,</span>
-    <span style=color:#b04040>or_d</span><span style=color:#888>(</span>
-      <span style=color:#b04040>pk</span><span style=color:#888>(</span><span style=color:#785840>&lt;Viserys</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>)</span><span style=color:#666>,</span>
-      <span style=color:#b04040>and_v</span><span style=color:#888>(</span>
-        <span style=color:#b04040>v:pkh</span><span style=color:#888>(</span><span style=color:#785840>&lt;Rhaenyra</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>)</span><span style=color:#666>,</span>
-        <span style=color:#b04040>older</span><span style=color:#888>(</span><span style=color:#444>52600</span><span style=color:#888>)</span>
-      <span style=color:#888>)</span>
-    <span style=color:#888>)</span>
-  <span style=color:#888>)</span>
-<span style=color:#888>)</span></code></pre></div><h2 id=a-deterrent-against-assassination>A deterrent against assassination.</h2><p>Rhaenyra is furious against her father. She confronts him and makes him
+the new complexity:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Scheme data-lang=Scheme><span style=display:flex><span><span style=color:#b04040>wsh</span><span style=color:#888>(</span>
+</span></span><span style=display:flex><span>  <span style=color:#b04040>or_i</span><span style=color:#888>(</span>
+</span></span><span style=display:flex><span>    <span style=color:#b04040>and_v</span><span style=color:#888>(</span>
+</span></span><span style=display:flex><span>      <span style=color:#b04040>v:pkh</span><span style=color:#888>(</span><span style=color:#785840>&lt;Aegon</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>)</span><span style=color:#666>,</span>
+</span></span><span style=display:flex><span>      <span style=color:#b04040>older</span><span style=color:#888>(</span><span style=color:#444>65000</span><span style=color:#888>)</span>
+</span></span><span style=display:flex><span>    <span style=color:#888>)</span><span style=color:#666>,</span>
+</span></span><span style=display:flex><span>    <span style=color:#b04040>or_d</span><span style=color:#888>(</span>
+</span></span><span style=display:flex><span>      <span style=color:#b04040>pk</span><span style=color:#888>(</span><span style=color:#785840>&lt;Viserys</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>)</span><span style=color:#666>,</span>
+</span></span><span style=display:flex><span>      <span style=color:#b04040>and_v</span><span style=color:#888>(</span>
+</span></span><span style=display:flex><span>        <span style=color:#b04040>v:pkh</span><span style=color:#888>(</span><span style=color:#785840>&lt;Rhaenyra</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>)</span><span style=color:#666>,</span>
+</span></span><span style=display:flex><span>        <span style=color:#b04040>older</span><span style=color:#888>(</span><span style=color:#444>52600</span><span style=color:#888>)</span>
+</span></span><span style=display:flex><span>      <span style=color:#888>)</span>
+</span></span><span style=display:flex><span>    <span style=color:#888>)</span>
+</span></span><span style=display:flex><span>  <span style=color:#888>)</span>
+</span></span><span style=display:flex><span><span style=color:#888>)</span></span></span></code></pre></div><h2 id=a-deterrent-against-assassination>A deterrent against assassination.</h2><p>Rhaenyra is furious against her father. She confronts him and makes him
 aware that she will be at risk of being assassinated between the time Viserys dies
 of his sickness and the expiration of the sequence of block disallowing her to move the funds.
 She wants for Daemon, her uncle, a fierce warrior and loyal friend, to hold a key along with
 Aegon key. Rhaenyra is confident that in case she get murdered, Daemon will lock the funds
-and will take no rest until her murderers are hanged on the King&rsquo;s Landing main place.</p><pre><code class=language-ascii data-lang=ascii>               Viserys
+and will take no rest until her murderers are hanged on the King&rsquo;s Landing main place.</p><pre tabindex=0><code class=language-ascii data-lang=ascii>               Viserys
 
                   │
                   ├──────────────────┐
@@ -127,21 +126,21 @@ and will take no rest until her murderers are hanged on the King&rsquo;s Landing
                           Aegon             Daemon
 </code></pre><aside><div class=sidenote>Miniscript can become tedious to read. Initiatives exist to facilitate
 readibility and development like <a href=https://min.sc/>min.sc</a>
-or visualize it: <a href=https://miniscript.fun>miniscript.fun</a></div></aside><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Scheme data-lang=Scheme><span style=color:#b04040>wsh</span><span style=color:#888>(</span>
-  <span style=color:#b04040>or_i</span><span style=color:#888>(</span>
-    <span style=color:#b04040>and_v</span><span style=color:#888>(</span>
-      <span style=color:#b04040>v:thresh</span><span style=color:#888>(</span><span style=color:#444>2</span><span style=color:#666>,</span><span style=color:#b04040>pkh</span><span style=color:#888>(</span><span style=color:#785840>&lt;Aegon</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>)</span><span style=color:#666>,</span><span style=color:#b04040>a:pkh</span><span style=color:#888>(</span><span style=color:#785840>&lt;Daemon</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>))</span><span style=color:#666>,</span>
-      <span style=color:#b04040>older</span><span style=color:#888>(</span><span style=color:#444>65000</span><span style=color:#888>)</span>
-    <span style=color:#888>)</span><span style=color:#666>,</span>
-    <span style=color:#b04040>or_d</span><span style=color:#888>(</span>
-      <span style=color:#b04040>pk</span><span style=color:#888>(</span><span style=color:#785840>&lt;Viserys</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>)</span><span style=color:#666>,</span>
-      <span style=color:#b04040>and_v</span><span style=color:#888>(</span>
-        <span style=color:#b04040>v:pkh</span><span style=color:#888>(</span><span style=color:#785840>&lt;Rhaenyra</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>)</span><span style=color:#666>,</span>
-        <span style=color:#b04040>older</span><span style=color:#888>(</span><span style=color:#444>52600</span><span style=color:#888>)</span>
-      <span style=color:#888>)</span>
-    <span style=color:#888>)</span>
-  <span style=color:#888>)</span>
-<span style=color:#888>)</span></code></pre></div><h2 id=a-dispute-resolution>A dispute resolution</h2><p>Viserys wants to accept Rhaenyra solution but he knows too well the
+or visualize it: <a href=https://miniscript.fun>miniscript.fun</a></div></aside><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Scheme data-lang=Scheme><span style=display:flex><span><span style=color:#b04040>wsh</span><span style=color:#888>(</span>
+</span></span><span style=display:flex><span>  <span style=color:#b04040>or_i</span><span style=color:#888>(</span>
+</span></span><span style=display:flex><span>    <span style=color:#b04040>and_v</span><span style=color:#888>(</span>
+</span></span><span style=display:flex><span>      <span style=color:#b04040>v:thresh</span><span style=color:#888>(</span><span style=color:#444>2</span><span style=color:#666>,</span><span style=color:#b04040>pkh</span><span style=color:#888>(</span><span style=color:#785840>&lt;Aegon</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>)</span><span style=color:#666>,</span><span style=color:#b04040>a:pkh</span><span style=color:#888>(</span><span style=color:#785840>&lt;Daemon</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>))</span><span style=color:#666>,</span>
+</span></span><span style=display:flex><span>      <span style=color:#b04040>older</span><span style=color:#888>(</span><span style=color:#444>65000</span><span style=color:#888>)</span>
+</span></span><span style=display:flex><span>    <span style=color:#888>)</span><span style=color:#666>,</span>
+</span></span><span style=display:flex><span>    <span style=color:#b04040>or_d</span><span style=color:#888>(</span>
+</span></span><span style=display:flex><span>      <span style=color:#b04040>pk</span><span style=color:#888>(</span><span style=color:#785840>&lt;Viserys</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>)</span><span style=color:#666>,</span>
+</span></span><span style=display:flex><span>      <span style=color:#b04040>and_v</span><span style=color:#888>(</span>
+</span></span><span style=display:flex><span>        <span style=color:#b04040>v:pkh</span><span style=color:#888>(</span><span style=color:#785840>&lt;Rhaenyra</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>)</span><span style=color:#666>,</span>
+</span></span><span style=display:flex><span>        <span style=color:#b04040>older</span><span style=color:#888>(</span><span style=color:#444>52600</span><span style=color:#888>)</span>
+</span></span><span style=display:flex><span>      <span style=color:#888>)</span>
+</span></span><span style=display:flex><span>    <span style=color:#888>)</span>
+</span></span><span style=display:flex><span>  <span style=color:#888>)</span>
+</span></span><span style=display:flex><span><span style=color:#888>)</span></span></span></code></pre></div><h2 id=a-dispute-resolution>A dispute resolution</h2><p>Viserys wants to accept Rhaenyra solution but he knows too well the
 explosive temperament of his brother and the ambition that any Targaryen
 carries with him. Aegon is young and does not seems interested in
 politics, Daemon could leverage his position to keep funds in hostage
@@ -149,7 +148,7 @@ by not collaborating and gain enormous power over the royal court.</p><p>As Vise
 and his religious faith makes him believe that including the grand
 maester may be a good idea. He then adds a third recovery path with
 the clerical power as a third party, that will be in charge of dispute resolution
-between Aegon and Daemon.</p><pre><code class=language-ascii data-lang=ascii>           Viserys
+between Aegon and Daemon.</p><pre tabindex=0><code class=language-ascii data-lang=ascii>           Viserys
 
               │
               ├──────────────────┬────────────────────┐
@@ -175,27 +174,27 @@ a decaying multisig with a threshold decreasing over time, new third parties
 like insurance company or notary agencies are added to the policy.
 The threshold can be increased to prevent malicious collaboration at the path scope
 but the minimal number of key required for an attacker to retrieve the funds
-will always stay related to the general scope according to the &ldquo;weakest&rdquo; path.</p><p>Behold the final descriptor of the royal family:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Scheme data-lang=Scheme><span style=color:#b04040>wsh</span><span style=color:#888>(</span>
-  <span style=color:#b04040>or_i</span><span style=color:#888>(</span>
-    <span style=color:#b04040>and_v</span><span style=color:#888>(</span>
-      <span style=color:#b04040>v:thresh</span><span style=color:#888>(</span><span style=color:#444>3</span><span style=color:#666>,</span><span style=color:#b04040>pkh</span><span style=color:#888>(</span><span style=color:#785840>&lt;Aegon</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>)</span><span style=color:#666>,</span><span style=color:#b04040>a:pkh</span><span style=color:#888>(</span><span style=color:#785840>&lt;Daemon</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>)</span><span style=color:#666>,</span><span style=color:#b04040>a:pkh</span><span style=color:#888>(</span><span style=color:#785840>&lt;Maester</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>))</span><span style=color:#666>,</span>
-      <span style=color:#b04040>older</span><span style=color:#888>(</span><span style=color:#444>65535</span><span style=color:#888>)</span>
-    <span style=color:#888>)</span><span style=color:#666>,</span>
-    <span style=color:#b04040>or_i</span><span style=color:#888>(</span>
-      <span style=color:#b04040>and_v</span><span style=color:#888>(</span>
-        <span style=color:#b04040>v:thresh</span><span style=color:#888>(</span><span style=color:#444>2</span><span style=color:#666>,</span><span style=color:#b04040>pkh</span><span style=color:#888>(</span><span style=color:#785840>&lt;Aegon</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>)</span><span style=color:#666>,</span><span style=color:#b04040>a:pkh</span><span style=color:#888>(</span><span style=color:#785840>&lt;Daemon</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>))</span><span style=color:#666>,</span>
-        <span style=color:#b04040>older</span><span style=color:#888>(</span><span style=color:#444>65000</span><span style=color:#888>)</span>
-      <span style=color:#888>)</span><span style=color:#666>,</span>
-      <span style=color:#b04040>or_d</span><span style=color:#888>(</span>
-        <span style=color:#b04040>pk</span><span style=color:#888>(</span><span style=color:#785840>&lt;Viserys</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>)</span><span style=color:#666>,</span>
-        <span style=color:#b04040>and_v</span><span style=color:#888>(</span>
-          <span style=color:#b04040>v:pkh</span><span style=color:#888>(</span><span style=color:#785840>&lt;Rhaenyra</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>)</span><span style=color:#666>,</span>
-          <span style=color:#b04040>older</span><span style=color:#888>(</span><span style=color:#444>52600</span><span style=color:#888>)</span>
-        <span style=color:#888>)</span>
-      <span style=color:#888>)</span>
-    <span style=color:#888>)</span>
-  <span style=color:#888>)</span>
-<span style=color:#888>)</span></code></pre></div><h2 id=the-end-of-our-story>The end of our story</h2><p>Blinded by hate and biases, the Greens, Alicent family, prefer war and the risk of
+will always stay related to the general scope according to the &ldquo;weakest&rdquo; path.</p><p>Behold the final descriptor of the royal family:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Scheme data-lang=Scheme><span style=display:flex><span><span style=color:#b04040>wsh</span><span style=color:#888>(</span>
+</span></span><span style=display:flex><span>  <span style=color:#b04040>or_i</span><span style=color:#888>(</span>
+</span></span><span style=display:flex><span>    <span style=color:#b04040>and_v</span><span style=color:#888>(</span>
+</span></span><span style=display:flex><span>      <span style=color:#b04040>v:thresh</span><span style=color:#888>(</span><span style=color:#444>3</span><span style=color:#666>,</span><span style=color:#b04040>pkh</span><span style=color:#888>(</span><span style=color:#785840>&lt;Aegon</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>)</span><span style=color:#666>,</span><span style=color:#b04040>a:pkh</span><span style=color:#888>(</span><span style=color:#785840>&lt;Daemon</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>)</span><span style=color:#666>,</span><span style=color:#b04040>a:pkh</span><span style=color:#888>(</span><span style=color:#785840>&lt;Maester</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>))</span><span style=color:#666>,</span>
+</span></span><span style=display:flex><span>      <span style=color:#b04040>older</span><span style=color:#888>(</span><span style=color:#444>65535</span><span style=color:#888>)</span>
+</span></span><span style=display:flex><span>    <span style=color:#888>)</span><span style=color:#666>,</span>
+</span></span><span style=display:flex><span>    <span style=color:#b04040>or_i</span><span style=color:#888>(</span>
+</span></span><span style=display:flex><span>      <span style=color:#b04040>and_v</span><span style=color:#888>(</span>
+</span></span><span style=display:flex><span>        <span style=color:#b04040>v:thresh</span><span style=color:#888>(</span><span style=color:#444>2</span><span style=color:#666>,</span><span style=color:#b04040>pkh</span><span style=color:#888>(</span><span style=color:#785840>&lt;Aegon</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>)</span><span style=color:#666>,</span><span style=color:#b04040>a:pkh</span><span style=color:#888>(</span><span style=color:#785840>&lt;Daemon</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>))</span><span style=color:#666>,</span>
+</span></span><span style=display:flex><span>        <span style=color:#b04040>older</span><span style=color:#888>(</span><span style=color:#444>65000</span><span style=color:#888>)</span>
+</span></span><span style=display:flex><span>      <span style=color:#888>)</span><span style=color:#666>,</span>
+</span></span><span style=display:flex><span>      <span style=color:#b04040>or_d</span><span style=color:#888>(</span>
+</span></span><span style=display:flex><span>        <span style=color:#b04040>pk</span><span style=color:#888>(</span><span style=color:#785840>&lt;Viserys</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>)</span><span style=color:#666>,</span>
+</span></span><span style=display:flex><span>        <span style=color:#b04040>and_v</span><span style=color:#888>(</span>
+</span></span><span style=display:flex><span>          <span style=color:#b04040>v:pkh</span><span style=color:#888>(</span><span style=color:#785840>&lt;Rhaenyra</span> <span style=color:#b04040>xpub&gt;</span><span style=color:#888>)</span><span style=color:#666>,</span>
+</span></span><span style=display:flex><span>          <span style=color:#b04040>older</span><span style=color:#888>(</span><span style=color:#444>52600</span><span style=color:#888>)</span>
+</span></span><span style=display:flex><span>        <span style=color:#888>)</span>
+</span></span><span style=display:flex><span>      <span style=color:#888>)</span>
+</span></span><span style=display:flex><span>    <span style=color:#888>)</span>
+</span></span><span style=display:flex><span>  <span style=color:#888>)</span>
+</span></span><span style=display:flex><span><span style=color:#888>)</span></span></span></code></pre></div><h2 id=the-end-of-our-story>The end of our story</h2><p>Blinded by hate and biases, the Greens, Alicent family, prefer war and the risk of
 loss of the realm funds than letting Rhaenyra sit on the throne.
 During the weeks the old King Viserys died, a race begins between them and
 the Blacks, Rhaenyra clan, to rally allies and gather troops while Aegon is
@@ -206,16 +205,16 @@ another war from the powerfuls as a new peril from North is marching
 upon them. For thousands of year, they live under a feudal system where
 basics rights differs according to bloodline and nobility. May they
 discover the secret power of the Targaryens and free themselves from any
-crown by using an allodial money.</p><hr><pre><code class=language-ascii data-lang=ascii>     *                          O    .           ____
-            *       /\            .   o        .'* *.'            *
+crown by using an allodial money.</p><hr><pre tabindex=0><code class=language-ascii data-lang=ascii>     *                          O    .           ____
+            *       /\            .   o        .&#39;* *.&#39;            *
        *           /*.\            o        __/_*_*(_
-                  /----\     Advertisement   /o )   \ ,';     *
-             ;`, /   ( o\        O .         \ ,'    ;  /
-       *     \  ;    `, /       .    o        &quot;-.__.'&quot;\_;       *
-             ;_/&quot;`.__.-&quot;       _________                   *        *
-                             c(`       ')o
+                  /----\     Advertisement   /o )   \ ,&#39;;     *
+             ;`, /   ( o\        O .         \ ,&#39;    ;  /
+       *     \  ;    `, /       .    o        &#34;-.__.&#39;&#34;\_;       *
+             ;_/&#34;`.__.-&#34;       _________                   *        *
+                             c(`       &#39;)o
     *             *            \.     ,/             *         *
                               _//^---^\\_   
 </code></pre><p>If you are interested for integrating this kind of solution for your
 entreprise or for your individual usage, Please go checkout WizardSardine
-product <a href=https://github.com/wizardsardine/liana>Liana</a>.</p></div></section><aside><div class=sidenote>&copy; 2023 EdouardParis.<br>Powered by <a href=http://gohugo.io target=_blank>Hugo</a></div></aside><footer id=footer></br></br></footer></main></body></html>
+product <a href=https://github.com/wizardsardine/liana>Liana</a>.</p></div></section><aside><div class=sidenote>&copy;<br>Powered by <a href=http://gohugo.io target=_blank>Hugo</a></div></aside><footer id=footer></br></br></footer></main></body></html>

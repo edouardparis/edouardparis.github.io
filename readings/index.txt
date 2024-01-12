@@ -142,7 +142,7 @@ L'hibiscus pourpre - Chimamanda Ngozi Adichie
 
 
 ------------------------------------------------
-Copyright: 2023 EdouardParis.
+Copyright: 
 $ pwd :    ~/edouard.paris/reading
 ------------------------------------------------
 

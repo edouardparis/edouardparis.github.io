@@ -21,7 +21,7 @@ vous pouvez me retrouver sur :
 / [LinkedIn](https://www.linkedin.com/in/parisedouard/)
 
 ------------------------------------------------
-Copyright: 2023 EdouardParis.
+Copyright: 
 $ pwd :    ~/edouard.paris/fr
 ------------------------------------------------
 

@@ -312,7 +312,7 @@ Thank you to the organizers, it was awesome.
 
 
 ------------------------------------------------
-Copyright: 2023 EdouardParis.
+Copyright: 
 $ pwd :    ~/edouard.paris/blog/2019-10-21-tlc2019
 ------------------------------------------------
 

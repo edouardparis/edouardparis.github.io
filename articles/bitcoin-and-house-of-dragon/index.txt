@@ -51,17 +51,17 @@ responsibilities to come.
                Jaehaerys         Viserys
 ```
 
-{{< sidenote >}}
+
 [Miniscript](https://bitcoin.sipa.be/miniscript) is a language for 
 writing (a subset of) Bitcoin Scripts in a structured way, enabling analysis,
 composition, generic signing and more.
-{{< /sidenote >}}
+
 
 The resulting [miniscript](https://bitcoin.sipa.be/miniscript/) descriptor:
 
-{{< highlight Scheme >}}
+
 wsh(multi(1,<Jaehaerys xpub>,<Viserys xpub>))
-{{</ highlight >}}
+
 
 ## A simple Inheritance Plan
 
@@ -90,11 +90,11 @@ then moves the funds to outputs with scripts derived from it.
              Rhaenyra
 
 ```
-{{< sidenote >}}
+
 Bitcoin supports absolute and relative time locks at the script level with
 OP_CHECKLOCKTIMEVERIFY (OP_CLTV), and OP_CHECKSEQUENCEVERIFY (OP_CSV).
 [Here](https://medium.com/summa-technology/bitcoins-time-locks-27e0c362d7a1), an excellent article explaining them.
-{{< /sidenote >}}
+
 
 The descriptor rules that only Viserys key can move funds immediatly, 
 but after a fixed number of block passed the key of Rhaenyra also becomes valid.
@@ -105,7 +105,7 @@ and any other sets of keys paired with a time lock are called recovery paths.
 
 The new miniscript descriptor:
 
-{{< highlight Scheme >}}
+
 wsh(
   or_d(
     pk(<Viserys xpub>),
@@ -115,7 +115,7 @@ wsh(
     )
   )
 )
-{{</ highlight >}}
+
 
 The King with his new wallet with inheritance included have full
 disposal of his funds but in case of premature death, funds will be
@@ -157,7 +157,7 @@ becoming valid at different locking times.
 As the script grows, miniscript helps the targaryens to handle
 the new complexity:
 
-{{< highlight Scheme >}}
+
 wsh(
   or_i(
     and_v(
@@ -173,7 +173,7 @@ wsh(
     )
   )
 )
-{{</ highlight >}}
+
 
 
 ## A deterrent against assassination.
@@ -203,13 +203,13 @@ and will take no rest until her murderers are hanged on the King's Landing main 
                           Aegon             Daemon
 ```
 
-{{< sidenote >}}
+
 Miniscript can become tedious to read. Initiatives exist to facilitate 
 readibility and development like [min.sc](https://min.sc/)</a> 
 or visualize it: [miniscript.fun](https://miniscript.fun)
-{{< /sidenote >}}
 
-{{< highlight Scheme >}}
+
+
 wsh(
   or_i(
     and_v(
@@ -225,7 +225,7 @@ wsh(
     )
   )
 )
-{{</ highlight >}}
+
 
 
 ## A dispute resolution
@@ -275,7 +275,7 @@ will always stay related to the general scope according to the "weakest" path.
 
 Behold the final descriptor of the royal family:
 
-{{< highlight Scheme >}}
+
 wsh(
   or_i(
     and_v(
@@ -297,7 +297,7 @@ wsh(
     )
   )
 )
-{{</ highlight >}}
+
 
 ## The end of our story
 
@@ -307,11 +307,11 @@ During the weeks the old King Viserys died, a race begins between them and
 the Blacks, Rhaenyra clan, to rally allies and gather troops while Aegon is
 proclaimed King.
 
-{{< sidenote >}}
+
 Disclaimer: Bitcoin can not and will not liberate you. Only you can free yourself 
 for whatever it means to you.
 Bitcoin is just a tool and a very bad one if you do not know how to use it.
-{{< /sidenote >}}
+
 
 Dear reader, pity the poor citizen of Westeros as they will suffer yet
 another war from the powerfuls as a new peril from North is marching
@@ -340,7 +340,7 @@ entreprise or for your individual usage, Please go checkout WizardSardine
 product [Liana](https://github.com/wizardsardine/liana).
 
 ------------------------------------------------
-Copyright: 2023 EdouardParis.
+Copyright: 
 $ pwd :    ~/edouard.paris/articles/bitcoin-and-house-of-dragon
 ------------------------------------------------
 

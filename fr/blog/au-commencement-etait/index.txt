@@ -244,7 +244,7 @@ _Les fondements historiques de la critique indigène_
 ## Liste des figures
 
 ------------------------------------------------
-Copyright: 2023 EdouardParis.
+Copyright: 
 $ pwd :    ~/edouard.paris/fr/blog/2022-03-01-au-commencement-etait
 ------------------------------------------------
 

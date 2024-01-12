@@ -3,10 +3,6 @@ commit: 28b7406be59635d86f20c93119a252e6be94fb58
 Date:   2023-06-23 17:46:00 +0200 +0200
 ------------------------------------------------
 
-+++
-title = "Archives"
-draft = false
-+++
 
 
 
@@ -20,7 +16,7 @@ Mar 01 | Lecture: Au commencement était… - D. Graeber, D. Wengrow
 Nov 07 | WizardSardine
          ↪ /fr/blog/wizardsardine/
 ------------------------------------------------
-Copyright: 2023 EdouardParis.
+Copyright: 
 $ pwd :    ~/edouard.paris/fr/archives
 ------------------------------------------------
 

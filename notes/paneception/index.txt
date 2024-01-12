@@ -33,7 +33,7 @@ window event, moves the user to the working directory and triggers the
 really like to rely on extra configuration of my window manager to manage my
 programming workflow.
 
-{{< sidenote >}}
+
 > ¹ I switched my primary development environment to a graphical NixOS VM on a
 > macOS host. It has been wonderful. I can maintain the great GUI ecosystem of
 > macOS, but all development tools are in a fullscreen VM. One person said, “It
@@ -41,7 +41,7 @@ programming workflow.
 > [@mitchellh](https://twitter.com/mitchellh/status/1346136404682625024)
 
 ² [Mitchell Hashimoto’s NixOS configuration](https://github.com/mitchellh/nixos-config)
-{{</ sidenote >}}
+
 
 In fact, I was really inspired by [Mitchell
 Hashimoto](https://mitchellh.com/)’s experience with Nix¹². Simply put, a
@@ -74,7 +74,7 @@ Some current commands:
 | Move cursor right   | `Ctrl+w l`  | `Ctrl+a l` | `Mod+l`           |
 
 ------------------------------------------------
-Copyright: 2023 EdouardParis.
+Copyright: 
 $ pwd :    ~/edouard.paris/notes/2023-11-13_paneception
 ------------------------------------------------
 

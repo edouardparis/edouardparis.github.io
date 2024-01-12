@@ -27,7 +27,7 @@ The main product is [Revault](https://revault.dev), a multi-party
 Bitcoin vault architecture. 
 
 ------------------------------------------------
-Copyright: 2023 EdouardParis.
+Copyright: 
 $ pwd :    ~/edouard.paris/blog/2020-11-07-wizardsardine
 ------------------------------------------------
 

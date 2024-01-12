@@ -37,7 +37,7 @@ Oct 21 | The Lightning Conference 2019
 Jul 15 | Hello World
          ↪ /blog/hello-world/
 ------------------------------------------------
-Copyright: 2023 EdouardParis.
+Copyright: 
 $ pwd :    ~/edouard.paris/blog
 ------------------------------------------------
 

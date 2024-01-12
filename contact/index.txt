@@ -14,7 +14,7 @@ If you want to contact me please use :
 
 
 ------------------------------------------------
-Copyright: 2023 EdouardParis.
+Copyright: 
 $ pwd :    ~/edouard.paris/contact
 ------------------------------------------------
 

@@ -73,7 +73,7 @@ mathematics and physics.
 
 
 ------------------------------------------------
-Copyright: 2023 EdouardParis.
+Copyright: 
 $ pwd :    ~/edouard.paris/cv
 ------------------------------------------------
 

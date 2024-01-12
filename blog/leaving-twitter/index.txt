@@ -54,7 +54,7 @@ I will try to write more content on my website and
 maybe join later mastodon, nostr or bluesky.
 
 ------------------------------------------------
-Copyright: 2023 EdouardParis.
+Copyright: 
 $ pwd :    ~/edouard.paris/blog/leaving-twitter
 ------------------------------------------------
 

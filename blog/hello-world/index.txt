@@ -39,7 +39,7 @@ sites that give me inspiration are:
 - https://マリウス.com/
 
 ------------------------------------------------
-Copyright: 2023 EdouardParis.
+Copyright: 
 $ pwd :    ~/edouard.paris/blog/2019-07-15-hello-world
 ------------------------------------------------
 
