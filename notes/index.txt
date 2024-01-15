@@ -10,6 +10,10 @@ In case of typographical or grammar errors, tickets are welcomed on the
 [github repository](https://github.com/edouardparis/edouard.paris).
 
 
+[ 2024 ]
+
+Jan 15 | Install NixOs on an OVH vps with nixos-anywhere
+         ↪ /notes/install-nixos-on-an-ovh-vps-with-nixos-anywhere/
 [ 2023 ]
 
 Nov 13 | Paneception
