@@ -1,13 +1,33 @@
 +++ 
-title = "nixos-anywhere and ovh" 
-date = "2024-01-12"
-slug = "nixos-anywhere-and-ovh"
+title = "Install NixOs on an OVH vps with nixos-anywhere" 
+date = "2024-01-15"
+slug = "install-nixOs-on-an-ovh-vps-with-nixos-anywhere"
 topics = ["nixos"]
-draft = true
 +++
 
-[nixos-anywhere](https://github.com/nix-community/nixos-anywhere) is 
-an interesting flake.
+# Install NixOs on an OVH vps with nixos-anywhere
+
+2023 was the year I was nix pilled. 2024 is the year for the experimentations.
+I discovered the power of NixOs for server deployment with this talk from
+Carl Dong: [The dark arts of NixOs deployments](https://www.youtube.com/watch?v=bKTbis4elR8&t=5519s).
+
+{{< sidenote >}}
+In his talk, Carl referenced a 
+[blog post from Haskell for all](https://www.haskellforall.com/2023/01/announcing-nixos-rebuild-new-deployment.html) 
+about nixos-rebuild usage for deployment.
+{{</ sidenote >}}
+
+He talked about the new nixos-rebuild command to easily change and deploy the
+configuration of a server and how using [kexec(8)](https://www.man7.org/linux/man-pages/man8/kexec.8.html)
+and [disko](https://github.com/nix-community/disko)
+to install NixOs on it without the [nixos-infect](https://github.com/elitak/nixos-infect) scripts
+(which are more a hack than a clean way to do it).
+
+This inevitably leads me to [nixos-anywhere](https://github.com/nix-community/nixos-anywhere) 
+a great tool using kexec and disko to deploy custom flakes !
+
+The repository gives an example using Hetzner vps provider, but I wanted to try to install
+nixos on an OVH vps. Here a quick guide of how I did it:
 
 ## 1. Create vps and get credentials
 
@@ -19,25 +39,25 @@ you can connect with `ssh debian@<vps-ip>`.
 
 ## 2. Change password with `passwd` and add ssh key to authorized keys.
 
-{{< highlight shell >}}
-sudo vim /root/.ssh/authorized_keys
-sudo systemctl restart ssh
+{{< highlight console >}}
+$ sudo vim /root/.ssh/authorized_keys
+$ sudo systemctl restart ssh
 {{</ highlight >}}
 
 ## 3. Install nix
 
-{{< highlight shell >}}
-sh <(curl -L https://nixos.org/nix/install) --daemon
+{{< highlight console >}}
+$ sh <(curl -L https://nixos.org/nix/install) --daemon
 {{</ highlight >}}
 
-Nix won't work in active shell sessions until you restart them.
+Nix won't work in active console sessions until you restart them.
 exit and reconnect in a new root ssh session.
 
-{{< highlight shell >}}
-nix-env -iE "_: with import <nixpkgs/nixos> { configuration = {}; }; \
+{{< highlight console >}}
+$ nix-env -iE "_: with import <nixpkgs/nixos> { configuration = {}; }; \
   with config.system.build; [ nixos-generate-config ]"
 
-nixos-generate-config --no-filesystems --root /mnt
+$ nixos-generate-config --no-filesystems --root /mnt
 {{</ highlight >}}
 
 Copy from `/mnt` the `hardware-configuration.nix` file. 
@@ -51,28 +71,28 @@ Change the `hardware-configuration.nix` file with the one you copied and change 
 
 ## 5. Test flake
 
-{{< highlight shell >}}
-nix run github:nix-community/nixos-anywhere -- --flake .#ovh-vps --vm-test
+{{< highlight console >}}
+$ nix run github:nix-community/nixos-anywhere -- --flake .#ovh-vps --vm-test
 {{</ highlight >}}
 
 ## 6. Load nixos-anywhere
 
-{{< highlight shell >}}
-nix run github:nix-community/nixos-anywhere -- --flake .#ovh-vps root@<vps-ip>
+{{< highlight console >}}
+$ nix run github:nix-community/nixos-anywhere -- --flake .#ovh-vps root@<vps-ip>
 {{</ highlight >}}
 
 ## 7. Reload configuration
 
 Add `screenfetch` to the flake configuration.nix `environment.systemPackages`
 
-{{< highlight shell >}}
-nixos-rebuild switch --flake .#ovh-vps --target-host "root@<vps-ip>"
+{{< highlight console >}}
+$ nixos-rebuild switch --flake .#ovh-vps --target-host "root@<vps-ip>"
 {{</ highlight >}}
 
 Connect to the host
 
-{{< highlight shell >}}
-ssh root@<vps-ip>
+{{< highlight console >}}
+$ ssh root@<vps-ip>
 Last login: Tue Jan  2 15:18:52 2024 from <ip>
 {{</ highlight >}}
 
