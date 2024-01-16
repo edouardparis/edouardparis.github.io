@@ -125,6 +125,7 @@ section {
   border-right: 1px solid #ddd8dd;
   min-height: 100vh;
   padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 section li {
@@ -187,6 +188,7 @@ article {
 
 table {
     width: 100%;
+    border-collapse: collapse;
 }
 
 table>thead>tr>th {
@@ -300,8 +302,11 @@ hr {
 }
 
 #footer {
-  position: relative;
-  width: 80ch;
+  padding-left: 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid #ddd8dd;
+  border-bottom: 1px solid #ddd8dd;
 }
 
 .menu {
