@@ -272,7 +272,9 @@ img {
 hr {
   width: 100%;
   border-top: 1px solid #ddd8dd;
-  border-bottom: 1px solid #fff;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
 }
 
 .article-body ul {
