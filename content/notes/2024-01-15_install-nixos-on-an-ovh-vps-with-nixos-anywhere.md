@@ -39,25 +39,25 @@ you can connect with `ssh debian@<vps-ip>`.
 
 ## 2. Change password with `passwd` and add ssh key to authorized keys.
 
-{{< highlight console >}}
-$ sudo vim /root/.ssh/authorized_keys
-$ sudo systemctl restart ssh
+{{< highlight shell >}}
+sudo vim /root/.ssh/authorized_keys
+sudo systemctl restart ssh
 {{</ highlight >}}
 
 ## 3. Install nix
 
-{{< highlight console >}}
-$ sh <(curl -L https://nixos.org/nix/install) --daemon
+{{< highlight shell >}}
+sh <(curl -L https://nixos.org/nix/install) --daemon
 {{</ highlight >}}
 
 Nix won't work in active console sessions until you restart them.
 exit and reconnect in a new root ssh session.
 
-{{< highlight console >}}
-$ nix-env -iE "_: with import <nixpkgs/nixos> { configuration = {}; }; \
+{{< highlight shell >}}
+nix-env -iE "_: with import <nixpkgs/nixos> { configuration = {}; }; \
   with config.system.build; [ nixos-generate-config ]"
 
-$ nixos-generate-config --no-filesystems --root /mnt
+nixos-generate-config --no-filesystems --root /mnt
 {{</ highlight >}}
 
 Copy from `/mnt` the `hardware-configuration.nix` file. 
@@ -71,32 +71,25 @@ Change the `hardware-configuration.nix` file with the one you copied and change 
 
 ## 5. Test flake
 
-{{< highlight console >}}
-$ nix run github:nix-community/nixos-anywhere -- --flake .#ovh-vps --vm-test
+{{< highlight shell >}}
+nix run github:nix-community/nixos-anywhere -- --flake .#ovh-vps --vm-test
 {{</ highlight >}}
 
 ## 6. Load nixos-anywhere
 
-{{< highlight console >}}
-$ nix run github:nix-community/nixos-anywhere -- --flake .#ovh-vps root@<vps-ip>
+{{< highlight shell >}}
+nix run github:nix-community/nixos-anywhere -- --flake .#ovh-vps root@<vps-ip>
 {{</ highlight >}}
 
 ## 7. Reload configuration
 
 Add `screenfetch` to the flake configuration.nix `environment.systemPackages`
 
-{{< highlight console >}}
-$ nixos-rebuild switch --flake .#ovh-vps --target-host "root@<vps-ip>"
+{{< highlight shell >}}
+nixos-rebuild switch --flake .#ovh-vps --target-host "root@<vps-ip>"
 {{</ highlight >}}
 
-Connect to the host
-
-{{< highlight console >}}
-$ ssh root@<vps-ip>
-Last login: Tue Jan  2 15:18:52 2024 from <ip>
-{{</ highlight >}}
-
-then check that the `screenfetch` package was installed.
+Connect to the host then check that the `screenfetch` package was installed.
 
 {{< highlight console >}}
 [root@nixos:~]# screenfetch

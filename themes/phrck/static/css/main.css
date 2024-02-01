@@ -41,6 +41,7 @@ blockquote {
 code {
  font-size: 10pt;
  font-family: 'Fira Code', monospace;
+ background-color: #fff;
 }
 
 .highlight {
