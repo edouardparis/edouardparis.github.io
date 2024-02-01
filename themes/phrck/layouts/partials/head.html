@@ -27,7 +27,7 @@
                     {{ end }}
                     <br/>
                     {{ .Site.Params.Redirect | markdownify }}<br/><strong>$ curl -L
-                        edouard.paris{{ .RelPermalink }} | less</strong>
+                        edouard.paris{{ strings.TrimSuffix "/" (.RelPermalink) }} | less</strong>
                     <br/>
                     {{ if .Params.toc }}
                         {{.TableOfContents}}
