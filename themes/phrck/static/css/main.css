@@ -321,24 +321,7 @@ hr {
   display: block;
   margin-right: 2.5rem;
   margin-left: 2.5rem;
-}
-
-.language-blue {
-  color: #067df7;
-}
-
-.language-prompt {
-  color: #067df7;
-}
-
-.language-green {
-  color: #27c93f;
-  margin-right: 2.5rem;
-  margin-left: 2.5rem;
-}
-
-.language-red {
-  color: #ff5f56;
+  background-color: transparent;
 }
 
 .language-ascii-art-black {
@@ -346,6 +329,7 @@ hr {
   display: block;
   margin-right: 2.5rem;
   margin-left: 2.5rem;
+  background-color: transparent;
 }
 
 .language-ascii-art-blue {
@@ -353,6 +337,7 @@ hr {
   display: block;
   margin-right: 2.5rem;
   margin-left: 2.5rem;
+  background-color: transparent;
 }
 
 .language-ascii-art-pink {
@@ -360,6 +345,7 @@ hr {
   display: block;
   margin-right: 2.5rem;
   margin-left: 2.5rem;
+  background-color: transparent;
 }
 
 @media (max-width: 640px) {
@@ -487,13 +473,9 @@ hr {
 		display: none !important;
 	}
 
-    .language-green {
-        color: #27c93f;
-        margin: 0px;
-    }
-
     .language-ascii-art-black {
         margin: 0px;
+        background-color: transparent;
     }
 
     .language-ascii-art-blue {
@@ -508,24 +490,28 @@ hr {
         font-size: 8px;
         display: block;
         margin: 0px;
+        background-color: transparent;
     }
 
     .language-ascii-art-black {
         font-size: 8px;
         display: block;
         margin: 0px;
+        background-color: transparent;
     }
 
     .language-ascii-art-blue {
         font-size: 8px;
         display: block;
         margin: 0px;
+        background-color: transparent;
     }
 
     .language-ascii-art-pink {
         font-size: 8px;
         display: block;
         margin: 0px;
+        background-color: transparent;
     }
 
     .menu {
