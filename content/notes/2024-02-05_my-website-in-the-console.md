@@ -1,9 +1,8 @@
 +++
 title = "My website in the console" 
-date = "2024-02-01"
-slug = "my-website-in-console"
-topics = ["Caddy", "hugo"]
-draft = true
+date = "2024-02-05"
+slug = "my-website-in-the-console"
+topics = ["caddy", "hugo"]
 +++
 
 # My website in the console
@@ -28,6 +27,7 @@ plain text.
 Here a small guide to use this Hugo feature with Caddy to have blog posts 
 readable in the console.
 
+
  ## 1. Configuring Hugo for Plain Text Output
 
 First define the plain text format as an output format in the theme's `config.toml`
@@ -45,6 +45,7 @@ home = ["HTML", "txt"]
 page = ["HTML", "txt"]
 section = ["HTML", "txt", "RSS"]
 {{</ highlight >}}
+
 
 ## 2. Creating TXT Templates in Hugo
 
