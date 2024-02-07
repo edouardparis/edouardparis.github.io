@@ -55,12 +55,19 @@ code {
 
 nav {
   display: block;
-  margin-top: 50px;
-  margin-left: -40px;
+  margin-top: 25px;
 }
 
 nav ul {
   list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+nav>ul>li {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .menu-section {
