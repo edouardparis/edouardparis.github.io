@@ -18,12 +18,12 @@ Find me on:
 [GitHub](https://github.com/edouardparis)
 / [LinkedIn](https://www.linkedin.com/in/parisedouard/)
 
-find all my writing content in [/archives](/archives).
+Find all my writing content in [/archives](/archives).
 
 [/notes](/notes) -> short notes for myself and others
 {{<latest section="notes">}}
 
-[/notes](/articles) -> long format articles
+[/articles](/articles) -> long format articles
 {{<latest section="articles">}}
 
 [/blog](/blog) -> my personal blog
