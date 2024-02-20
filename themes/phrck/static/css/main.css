@@ -320,6 +320,32 @@ hr {
   counter-increment: item;
 }
 
+.latest ul {
+  list-style: none;
+  max-width: none;
+}
+
+.latest ul li {
+  list-style: none;
+  margin-left: 0;
+  text-indent: 0;
+  padding-left: 2.5rem;
+}
+
+.latest ul li:before {
+    content: none;
+}
+
+.latest a {
+  color: #1F2429;
+  text-decoration: none;
+}
+
+.latest a:hover, a:focus {
+  color: #fff;
+  background-color: #1F2429;
+}
+
 #footer {
   padding-left: 2.5rem;
   padding-top: 2rem;

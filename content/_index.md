@@ -19,3 +19,12 @@ Find me on:
 / [LinkedIn](https://www.linkedin.com/in/parisedouard/)
 
 find all my writing content in [/archives](/archives).
+
+[/notes](/notes) -> short notes for myself and others
+{{<latest section="notes">}}
+
+[/notes](/articles) -> long format articles
+{{<latest section="articles">}}
+
+[/blog](/blog) -> my personal blog
+{{<latest section="blog">}}

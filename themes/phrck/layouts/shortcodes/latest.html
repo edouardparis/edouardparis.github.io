@@ -1,0 +1,20 @@
+<div class="latest">
+<ul>
+    {{ $section := .Get "section" }}
+    {{ $posts := (where .Site.RegularPages "Type" $section).ByDate.Reverse | first 5 }}
+    {{ range $posts }}
+    <li>
+        <span>
+            <time>
+                {{ with .Site.Params.DateForm }}
+                {{ .Date.Format . }}
+                {{ else }}
+                {{ .Date.Format "2006 Jan 02" }}
+                {{ end }}
+            </time>
+        </span>|
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+</ul>
+</div>
