@@ -1,17 +1,17 @@
 {{ partial "head.html" . }}
 <section>
-  {{ partial "body" . }}
-  {{ range .Site.RegularPages.GroupByDate "2006" }}
-  {{ if ne .Key "0001" }}
-  <h1>{{ .Key }} --</h1>
-  <ul>
-    {{ range .Pages }}
-    <li>
-    {{ .Render "li" }}
-    </li>
+    {{ partial "body" . }}
+    {{ range .Site.RegularPages.GroupByDate "2006" }}
+    {{ if ne .Key "0001" }}
+    <h1>{{ .Key }} --</h1>
+    <ul>
+        {{ range .Pages }}
+        <li>
+            {{ .Render "li" }}
+        </li>
+        {{ end }}
+    </ul>
     {{ end }}
-  </ul>
-  {{ end }}
-{{ end }}
+    {{ end }}
 </section>
 {{ partial "foot.html" . }}

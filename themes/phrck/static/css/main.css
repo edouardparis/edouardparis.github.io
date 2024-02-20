@@ -167,6 +167,15 @@ section a {
   background-color: #067df7;
 }
 
+.blue-link>a {
+  color: #067df7;
+}
+.blue-link a:hover,
+.blue-link a:focus {
+  color: #fff;
+  background-color: #067df7;
+}
+
 @media not all and (max-width: 43.6rem) {
   aside {
     position: absolute;
