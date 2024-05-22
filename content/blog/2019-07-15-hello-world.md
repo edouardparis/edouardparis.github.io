@@ -17,9 +17,10 @@ database and I have no abhorrence against editing configuration files.
 
 ## 2.1 Privacy
 
-This website has no javascript, no cookie, no tracker whatsoever. I do
+This website has no javascript, no cookie, no tracker whatsoever. ~~I do
 not spend time watching my caddy server logs and elaborate statistic
-about its visitors. I just want a little part of internet where a
+about its visitors~~. (Edit: I found a way to have logs without storing visitors IPs, cf [notes/caddy-logs-and-goaccess](/notes/caddy-logs-and-goaccess)).
+I just want a little part of internet where a
 visitor can read content without no exchange of information.
 
 This website has no comment section. I do not want to add complexity to

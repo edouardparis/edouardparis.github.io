@@ -1,5 +1,5 @@
 {{ partial "head.txt" . }}
-{{ .RawContent }}
+{{ .RenderShortcodes }}
 {{ range .Site.RegularPages.GroupByDate "2006" }}
 {{ if ne .Key "0001"}}
 [ {{ .Key }} ]

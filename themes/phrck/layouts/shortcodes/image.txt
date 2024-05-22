@@ -1,0 +1,2 @@
+ image: {{ .Get "alt" }}
+ ({{ .Get "src"}})

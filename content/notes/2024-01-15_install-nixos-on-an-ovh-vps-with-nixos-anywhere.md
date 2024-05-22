@@ -1,5 +1,5 @@
-+++ 
-title = "Install NixOs on an OVH vps with nixos-anywhere" 
++++
+title = "Install NixOs on an OVH vps with nixos-anywhere"
 date = "2024-01-15"
 slug = "install-nixOs-on-an-ovh-vps-with-nixos-anywhere"
 topics = ["nixos"]
@@ -12,8 +12,8 @@ I discovered the power of NixOs for server deployment with this talk from
 Carl Dong: [The dark arts of NixOs deployments](https://www.youtube.com/watch?v=bKTbis4elR8&t=5519s).
 
 {{< sidenote >}}
-In his talk, Carl referenced a 
-[blog post from Haskell for all](https://www.haskellforall.com/2023/01/announcing-nixos-rebuild-new-deployment.html) 
+In his talk, Carl referenced a
+[blog post from Haskell for all](https://www.haskellforall.com/2023/01/announcing-nixos-rebuild-new-deployment.html)
 about nixos-rebuild usage for deployment.
 {{</ sidenote >}}
 
@@ -23,7 +23,7 @@ and [disko](https://github.com/nix-community/disko)
 to install NixOs on it without the [nixos-infect](https://github.com/elitak/nixos-infect) scripts
 (which are more a hack than a clean way to do it).
 
-This inevitably leads me to [nixos-anywhere](https://github.com/nix-community/nixos-anywhere) 
+This inevitably leads me to [nixos-anywhere](https://github.com/nix-community/nixos-anywhere)
 a great tool using kexec and disko to deploy custom flakes !
 
 The repository gives an example using Hetzner vps provider, but I wanted to try to install
@@ -33,34 +33,34 @@ nixos on an OVH vps. Here a quick guide of how I did it:
 
 - Create an ovh account
 - Order vps with debian 12
-- Ovh send to you email with id, ip, and link to create a password 
+- Ovh send to you email with id, ip, and link to create a password
 
 you can connect with `ssh debian@<vps-ip>`.
 
 ## 2. Change password with `passwd` and add ssh key to authorized keys.
 
-{{< highlight shell >}}
+{{< code lang="shell" >}}
 sudo vim /root/.ssh/authorized_keys
 sudo systemctl restart ssh
-{{</ highlight >}}
+{{</ code >}}
 
 ## 3. Install nix
 
-{{< highlight shell >}}
+{{< code lang="shell" >}}
 sh <(curl -L https://nixos.org/nix/install) --daemon
-{{</ highlight >}}
+{{</ code >}}
 
 Nix won't work in active console sessions until you restart them.
 exit and reconnect in a new root ssh session.
 
-{{< highlight shell >}}
+{{< code lang="shell" >}}
 nix-env -iE "_: with import <nixpkgs/nixos> { configuration = {}; }; \
   with config.system.build; [ nixos-generate-config ]"
 
 nixos-generate-config --no-filesystems --root /mnt
-{{</ highlight >}}
+{{</ code >}}
 
-Copy from `/mnt` the `hardware-configuration.nix` file. 
+Copy from `/mnt` the `hardware-configuration.nix` file.
 
 The rest of the commands should be done on your local machine and not on the target host.
 
@@ -71,27 +71,27 @@ Change the `hardware-configuration.nix` file with the one you copied and change 
 
 ## 5. Test flake
 
-{{< highlight shell >}}
+{{< code lang="shell" >}}
 nix run github:nix-community/nixos-anywhere -- --flake .#ovh-vps --vm-test
-{{</ highlight >}}
+{{</ code >}}
 
 ## 6. Load nixos-anywhere
 
-{{< highlight shell >}}
+{{< code lang="shell" >}}
 nix run github:nix-community/nixos-anywhere -- --flake .#ovh-vps root@<vps-ip>
-{{</ highlight >}}
+{{</ code >}}
 
 ## 7. Reload configuration
 
 Add `screenfetch` to the flake configuration.nix `environment.systemPackages`
 
-{{< highlight shell >}}
+{{< code lang="shell" >}}
 nixos-rebuild switch --flake .#ovh-vps --target-host "root@<vps-ip>"
-{{</ highlight >}}
+{{</ code >}}
 
 Connect to the host then check that the `screenfetch` package was installed.
 
-{{< highlight console >}}
+{{< code lang="console" >}}
 [root@nixos:~]# screenfetch
           ::::.    ':::::     ::::'         root@nixos
           ':::::    ':::::.  ::::'          OS: NixOS 24.05.20231221.d6863cb
@@ -103,16 +103,16 @@ Connect to the host then check that the `screenfetch` package was installed.
           :::::            '::' :::::'      CPU: Intel Core (Haswell, no TSX)
  ........:::::               ' :::::::::::. GPU: Cirrus Logic GD 5446
 :::::::::::::                 ::::::::::::: RAM: 250MiB / 1935MiB
- ::::::::::: ..              :::::           
-     .::::: .:::            :::::            
-    .:::::  :::::          '''''    .....    
-    :::::   ':::::.  ......:::::::::::::'    
-     :::     ::::::. ':::::::::::::::::'     
-            .:::::::: '::::::::::            
-           .::::''::::.     '::::.           
-          .::::'   ::::.     '::::.          
-         .::::      ::::      '::::.         
+ ::::::::::: ..              :::::
+     .::::: .:::            :::::
+    .:::::  :::::          '''''    .....
+    :::::   ':::::.  ......:::::::::::::'
+     :::     ::::::. ':::::::::::::::::'
+            .:::::::: '::::::::::
+           .::::''::::.     '::::.
+          .::::'   ::::.     '::::.
+         .::::      ::::      '::::.
 
-{{</ highlight >}}
+{{</ code >}}
 
 The Nixos VPS is ready ! Modify and reload configuration as you will ! ❄️

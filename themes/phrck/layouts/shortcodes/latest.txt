@@ -1,0 +1,10 @@
+{{ $section := .Get "section" }}
+{{ $posts := (where .Site.RegularPages "Type" $section).ByDate.Reverse | first 5 }}
+{{ range $posts }}
+{{ with .Site.Params.DateForm }}
+{{ .Date.Format . }}
+{{ else }}
+{{ .Date.Format "2006 Jan 02" }}
+{{ end }}
+{{ .Permalink }} -> {{ .Title }}
+{{ end }}

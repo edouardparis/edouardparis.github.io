@@ -9,13 +9,13 @@ topics:  ["bitcoin"]
 
 # Bitcoin and inheritance, a House of the Dragon story
 
-*House of the Dragon is an American fantasy drama television series. 
-A prequel to Game of Thrones (2011–2019), it is the second show in the franchise, 
+*House of the Dragon is an American fantasy drama television series.
+A prequel to Game of Thrones (2011–2019), it is the second show in the franchise,
 created by George R. R. Martin and Ryan Condal for HBO. Beware, this
 article contains spoilers*.
 
 Nobody is safe in the realm of the Seven Kingdom, known for the
-brutality and the trickery of its subjects. 
+brutality and the trickery of its subjects.
 Seated on the Iron Throne, King Viserys I Targaryen must handle the burden
 of the crown and the tumultuous behavior of his brother, *the Rogue
 Prince*, Daemon Targaryen. The Targaryens are the most powerful family of
@@ -55,16 +55,16 @@ responsibilities to come.
 ```
 
 {{< sidenote >}}
-[Miniscript](https://bitcoin.sipa.be/miniscript) is a language for 
+[Miniscript](https://bitcoin.sipa.be/miniscript) is a language for
 writing (a subset of) Bitcoin Scripts in a structured way, enabling analysis,
 composition, generic signing and more.
 {{< /sidenote >}}
 
 The resulting [miniscript](https://bitcoin.sipa.be/miniscript/) descriptor:
 
-{{< highlight Scheme >}}
+{{< code lang="Scheme" >}}
 wsh(multi(1,<Jaehaerys xpub>,<Viserys xpub>))
-{{</ highlight >}}
+{{</ code >}}
 
 ## A simple Inheritance Plan
 
@@ -99,7 +99,7 @@ OP_CHECKLOCKTIMEVERIFY (OP_CLTV), and OP_CHECKSEQUENCEVERIFY (OP_CSV).
 [Here](https://medium.com/summa-technology/bitcoins-time-locks-27e0c362d7a1), an excellent article explaining them.
 {{< /sidenote >}}
 
-The descriptor rules that only Viserys key can move funds immediatly, 
+The descriptor rules that only Viserys key can move funds immediatly,
 but after a fixed number of block passed the key of Rhaenyra also becomes valid.
 Viserys number of block choice was enough to represent 1 years of wait.
 
@@ -108,7 +108,7 @@ and any other sets of keys paired with a time lock are called recovery paths.
 
 The new miniscript descriptor:
 
-{{< highlight Scheme >}}
+{{< code lang="Scheme" >}}
 wsh(
   or_d(
     pk(<Viserys xpub>),
@@ -118,7 +118,7 @@ wsh(
     )
   )
 )
-{{</ highlight >}}
+{{</ code >}}
 
 The King with his new wallet with inheritance included have full
 disposal of his funds but in case of premature death, funds will be
@@ -160,7 +160,7 @@ becoming valid at different locking times.
 As the script grows, miniscript helps the targaryens to handle
 the new complexity:
 
-{{< highlight Scheme >}}
+{{< code lang="Scheme" >}}
 wsh(
   or_i(
     and_v(
@@ -176,7 +176,7 @@ wsh(
     )
   )
 )
-{{</ highlight >}}
+{{</ code >}}
 
 
 ## A deterrent against assassination.
@@ -207,12 +207,12 @@ and will take no rest until her murderers are hanged on the King's Landing main 
 ```
 
 {{< sidenote >}}
-Miniscript can become tedious to read. Initiatives exist to facilitate 
-readibility and development like [min.sc](https://min.sc/)</a> 
+Miniscript can become tedious to read. Initiatives exist to facilitate
+readibility and development like [min.sc](https://min.sc/)</a>
 or visualize it: [miniscript.fun](https://miniscript.fun)
 {{< /sidenote >}}
 
-{{< highlight Scheme >}}
+{{< code lang="Scheme" >}}
 wsh(
   or_i(
     and_v(
@@ -228,7 +228,7 @@ wsh(
     )
   )
 )
-{{</ highlight >}}
+{{</ code >}}
 
 
 ## A dispute resolution
@@ -269,7 +269,7 @@ between Aegon and Daemon.
                                         Aegon       Daemon      Maester
 ```
 
-Institutions and entreprise may use the same idea for their funds. Instead of 
+Institutions and entreprise may use the same idea for their funds. Instead of
 a decaying multisig with a threshold decreasing over time, new third parties
 like insurance company or notary agencies are added to the policy.
 The threshold can be increased to prevent malicious collaboration at the path scope
@@ -278,7 +278,7 @@ will always stay related to the general scope according to the "weakest" path.
 
 Behold the final descriptor of the royal family:
 
-{{< highlight Scheme >}}
+{{< code lang="Scheme" >}}
 wsh(
   or_i(
     and_v(
@@ -300,7 +300,7 @@ wsh(
     )
   )
 )
-{{</ highlight >}}
+{{</ code >}}
 
 ## The end of our story
 
@@ -311,14 +311,14 @@ the Blacks, Rhaenyra clan, to rally allies and gather troops while Aegon is
 proclaimed King.
 
 {{< sidenote >}}
-Disclaimer: Bitcoin can not and will not liberate you. Only you can free yourself 
+Disclaimer: Bitcoin can not and will not liberate you. Only you can free yourself
 for whatever it means to you.
 Bitcoin is just a tool and a very bad one if you do not know how to use it.
 {{< /sidenote >}}
 
 Dear reader, pity the poor citizen of Westeros as they will suffer yet
 another war from the powerfuls as a new peril from North is marching
-upon them. For thousands of year, they live under a feudal system where 
+upon them. For thousands of year, they live under a feudal system where
 basics rights differs according to bloodline and nobility. May they
 discover the secret power of the Targaryens and free themselves from any
 crown by using an allodial money.
@@ -335,7 +335,7 @@ crown by using an allodial money.
              ;_/"`.__.-"       _________                   *        *
                              c(`       ')o
     *             *            \.     ,/             *         *
-                              _//^---^\\_   
+                              _//^---^\\_
 ```
 
 If you are interested for integrating this kind of solution for your

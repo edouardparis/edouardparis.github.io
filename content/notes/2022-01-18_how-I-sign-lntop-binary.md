@@ -13,8 +13,8 @@ binary built from it. Since I released a little software named
 receive sometimes notifications from people asking for help or
 new features and new release tags.
 Because `lntop` is native to the terminal, it was added to the
-[RaspiBolt](https://github.com/raspibolt/raspibolt/) guide as a little 
-optional tool for the cli-lover node operator. RaspiBolt developers 
+[RaspiBolt](https://github.com/raspibolt/raspibolt/) guide as a little
+optional tool for the cli-lover node operator. RaspiBolt developers
 [asked](https://github.com/edouardparis/lntop/issues/49) me
 about binaries release especially for ARM64 for their raspberry pi
 users and I felt happily obliged to answer their request.
@@ -24,63 +24,63 @@ toward the people who will download it. Releasing code only is
 convenient, people have to read it and then run it before making you
 responsible for their loss. With a binary, they trust the platform
 hosting it and the developer who compiled it.
-For safety and for their (and my) peace of mind, I gpg-key signed 
+For safety and for their (and my) peace of mind, I gpg-key signed
 the last `lntop` releases.
 
 I compiled the lntop binary for arm64 and paste the command, the tag
-version of `lntop` and the [`go`](https://go.dev/) version I used 
+version of `lntop` and the [`go`](https://go.dev/) version I used
 in a RELEASE.md file.
 
-{{< highlight shell >}}
+{{< code lang="shell" >}}
 git checkout tags/v0.3.0
 go version go1.16.4 linux/amd64
 GOOS=linux GOARCH=arm64 go build ./cmd/lntop
-{{< / highlight >}}
+{{< / code >}}
 
 I created a directory with the release file, the binary and the LICENSE.
 
-{{< highlight shell >}}
+{{< code lang="shell" >}}
 release-v0.3.0
 ├── LICENSE
 ├── lntop
 └── RELEASE.md
-{{< / highlight >}}
+{{< / code >}}
 
 gzip and tar it:
 
-{{< highlight shell >}}
+{{< code lang="shell" >}}
 tar -czf lntop-v0.3.0-Linux-arm64.tar.gz release-v0.3.0
-{{< / highlight >}}
+{{< / code >}}
 
 got the sha256 checksum in a file:
 
-{{< highlight shell >}}
+{{< code lang="shell" >}}
 git checkout tags/v0.3.0
 sha256sum -b lntop-v0.3.0-Linux-arm64.tar.gz > checksums-lntop-v0.3.0.txt
-{{< / highlight >}}
+{{< / code >}}
 
 gpg-key signed the checksum file:
 
-{{< highlight shell >}}
+{{< code lang="shell" >}}
 gpg --detach-sig --sign --default-key a8ba... checksums-lntop-v0.3.0.txt
-{{< / highlight >}}
+{{< / code >}}
 
 I attached to the github release page of `lntop@v0.3.0` the files:
-`lntop-v0.3.0-Linux-arm64.tar.gz`, `checksums-lntop-v0.3.0.txt` 
+`lntop-v0.3.0-Linux-arm64.tar.gz`, `checksums-lntop-v0.3.0.txt`
 and `checksums-lntop-v0.3.0.txt.sig`.
 
 If someone wants to download and verify that the archive is the one I
 created and signed, he/she can run:
 
-{{< highlight shell >}}
+{{< code lang="shell" >}}
 sha256sum --check checksums-lntop-v0.3.0.txt
 gpg --verify checksums-lntop-v0.3.0.txt.sig checksums-lntop-v0.3.0.txt
-{{< / highlight >}}
+{{< / code >}}
 
 My gpg key fingerprint is in my [twitter
 bio](https://twitter.com/edouardparis).
 Finally the binary and release files are extracted with:
 
-{{< highlight shell >}}
+{{< code lang="shell" >}}
 tar -ztvf lntop-v0.3.0-Linux-arm64.tar.gz
-{{< / highlight >}}
+{{< / code >}}
