@@ -38,6 +38,8 @@ fail to parse the logs files.
 goaccess /var/log/caddy/edouardparis.log --log-format=CADDY
 {{< / code >}}
 
+{{<image src="/notes/images/2024-05-22_caddy-logs-and-goaccess/goaccess-cli.png" alt="goaccess console interface" >}}
+
 If I want to have on my laptop a better overview with graphs,
 I use goaccess to generate a HTML file with the output flag and fetch it through `SSH`.
 
