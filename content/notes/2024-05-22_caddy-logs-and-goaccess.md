@@ -51,3 +51,52 @@ I read then the `stats.html` file using a local server (`python -m http.server`)
 that let me access it at `localhost:8000/stats.html`
 
 {{<image src="/notes/images/2024-05-22_caddy-logs-and-goaccess/goaccess-html-file.png" alt="goaccess generated HTML file" >}}
+
+
+{{< code lang="shell" >}}
+caddy hash-password --plaintext "<password>"
+{{< / code >}}
+
+It provides a `bcrypt` hash of the password that we use in the
+caddy section of the website as an authentication requirement
+using the [`basicauth` directive](https://caddyserver.com/docs/caddyfile/directives/basicauth).
+
+Define the file server directory with authentication requirement:
+
+{{< code lang="caddyfile" >}}
+stats.edouard.paris {
+    root * /var/www/stats.edouard.paris
+    file_server
+
+    basicauth {
+        edouard <hash>
+	}
+}
+{{< / code >}}
+
+{{< code lang="nix" >}}
+system.activationScripts = {
+  goaccessPermissions = ''
+    mkdir -p /var/www/stats.edouard.paris
+    chown caddy:caddy /var/www/stats.edouard.paris
+    chmod 750 /var/www/stats.edouard.paris
+  '';
+};
+
+systemd.services.goaccess = {
+  description = "Run goaccess to generate website statistics";
+  serviceConfig = {
+    ExecStart = "${pkgs.bash}/bin/bash -c '${pkgs.goaccess}/bin/goaccess -f /var/log/caddy/edouardparis.log --log-format=CADDY -o /var/www/stats.edouard.paris/index.html --persist'";
+    User = "caddy";
+  };
+};
+
+systemd.timers.goaccess = {
+  description = "Run goaccess every 10 minutes";
+  wantedBy = [ "timers.target" ];
+  timerConfig = {
+    OnBootSec = "5min";
+    OnUnitActiveSec = "10min";
+  };
+};
+{{< / code >}}
