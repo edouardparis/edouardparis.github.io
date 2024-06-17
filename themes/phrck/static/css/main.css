@@ -216,11 +216,6 @@ section a {
     }
 }
 
-.article-body ul {
-    padding-left: 4ch;
-    max-width: 68ch;
-}
-
 .title {
     margin: 7%;
     text-align: center;
@@ -328,11 +323,6 @@ hr {
     border-bottom: none;
     border-left: none;
     border-right: none;
-}
-
-.article-body ul {
-    padding-left: 4ch;
-    max-width: 68ch;
 }
 
 .article-body ol {
@@ -628,5 +618,9 @@ a:focus {
     .menu-section {
         width: 30%;
         float: left;
+    }
+
+    .latest ul li {
+        padding-left: 1rem;
     }
 }
