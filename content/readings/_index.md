@@ -22,3 +22,9 @@ Computer science and programming manuals are not included. I mostly
 cherry pick information from them.
 
 If the title is translated in French: I read the French translation.
+
+{{< sidenote >}}
+![Ex Libris](exlibris.jpeg)
+
+My Ex Libris from [Morgane Rospars](morganerospars.com)
+{{</ sidenote >}}
