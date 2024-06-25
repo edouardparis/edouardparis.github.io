@@ -26,5 +26,5 @@ If the title is translated in French: I read the French translation.
 {{< sidenote >}}
 ![Ex Libris](exlibris.jpeg)
 
-My Ex Libris from [Morgane Rospars](morganerospars.com)
+My Ex Libris from [Morgane Rospars](https://morganerospars.com)
 {{</ sidenote >}}
