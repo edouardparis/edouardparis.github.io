@@ -131,6 +131,7 @@ blockquote {
 .article-body>img {
     padding-left: 0;
     padding-right: 0;
+    max-width: 80ch;
 }
 
 .section-body>p,
@@ -312,7 +313,21 @@ td:first-child {
     background-color: #067df7;
 }
 
-img {
+.article-body-image {
+    border-bottom: 1px solid #ddd8dd;
+    border-top: 1px solid #ddd8dd;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #fff;
+}
+
+.article-body img {
+    display: block;
+    max-width: calc(80ch + 5rem - 10px);
+    margin: auto;
+}
+
+.sidenote img {
     display: block;
     max-width: 100%;
 }
