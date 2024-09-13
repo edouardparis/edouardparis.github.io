@@ -33,3 +33,8 @@ Find all my writing content in [/archives](/archives).
 
 I keep updated a list of books I read here: [/readings](/readings).
 It keeps me motivated to read more.
+
+GPG keys:
+
+- [5B63F3B97699C7EEF3B040B19B7F629A53E77B83](/keys/5B63F3B97699C7EEF3B040B19B7F629A53E77B83.asc)
+- [A8BA5205BFCBC668853D560247EEBB014DD80918](/keys/A8BA5205BFCBC668853D560247EEBB014DD80918.asc)
