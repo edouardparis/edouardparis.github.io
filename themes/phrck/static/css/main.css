@@ -330,6 +330,9 @@ td:first-child {
 .sidenote img {
     display: block;
     max-width: 100%;
+    border: 1px solid #ddd8dd;
+    padding: 5px;
+    background-color: #fff;
 }
 
 hr {
