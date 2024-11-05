@@ -316,8 +316,7 @@ td:first-child {
 .article-body-image {
     border-bottom: 1px solid #ddd8dd;
     border-top: 1px solid #ddd8dd;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 5px;
     background-color: #fff;
 }
 
@@ -527,6 +526,11 @@ a:focus {
         margin-right: auto;
     }
 
+    aside {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
     /* fixer une largeur maximale de 100% aux éléments potentiellement problématiques */
 
     img,
@@ -548,6 +552,7 @@ a:focus {
 
     img {
         height: auto;
+        width: 100%;
     }
 
     /* gestion des mots longs */
